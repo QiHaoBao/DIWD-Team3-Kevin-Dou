@@ -1,8 +1,8 @@
 {
-  "name": "ThreeNodes.js",
-  "version": "0.2.0",
-  "author": "David Mignot (http://idflood.com)",
-  "repository": "git://github.com/idflood/ThreeNodes.js",
+  "name": "CMUCoOnVisTrails",
+  "version": "0.1.0",
+  "author": "CMUSV",
+  "repository": "https://github.com/cmusv-sc/Online-VisTrails",
   "dependencies": {
     "socket.io-client": ">= 0.9.2",
     "watch": ">= 0.5.1",
