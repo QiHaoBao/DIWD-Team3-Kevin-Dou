@@ -310,6 +310,7 @@ caption {
 .mono-font,
 body h3,
 .node .head,
+.node .type,
 .context-menu li a {
   font-family: "andale mono", "lucida console", monospace;
 }
@@ -348,7 +349,8 @@ body h3 {
   color: #777;
   font-size: 10px;
 }
-.node .head {
+.node .head,
+.node .type {
   font-weight: normal;
   letter-spacing: 1px;
   text-align: center;
@@ -1828,6 +1830,9 @@ body > header h2 {
   color: #f00;
 }
 .node-Group > .head span {
+  color: #fff;
+}
+.node-Group > .type span {
   color: #fff;
 }
 .node-Group h3 {
