@@ -61,10 +61,12 @@ define [
       stop: =>
         @$el.removeClass("state-run")
 
+      # Note some actions are repeated in @render
       makeElement: () =>
         # Compile the template file
         @template = _.template(_view_node_template, @model)
         @$el.html(@template)
+        @$('.type').hide()
 
         # Add the node group name as a class to the node element for easier styling
         @$el.addClass("type-" + @model.constructor.group_name)
@@ -78,6 +80,8 @@ define [
           top: parseInt @model.get("y")
         @$el.find("> .head span").text(@model.get("name"))
         @$el.find("> .head span").show()
+        if @model.get 'name' is @model.typename()
+          @$('.type').show()
 
       highlighAnimations: () =>
         nodeAnimation = false
@@ -152,6 +156,8 @@ define [
 
 
 
+      # dblclick to change the name of the node
+      # will show type info if it is diff from the node name
       initTitleClick: () ->
         self = this
         @$el.find("> .head span").dblclick (e) ->
@@ -166,8 +172,12 @@ define [
 
           apply_input_result = () ->
             self.model.set('name', $input.val())
+            # if name doesn't change, just restore the span
             if $input.val() is self.model.get 'name'
               $(that).show()
+            # if name is diff from node type, show the type
+            if $input.val() isnt self.model.typename()
+              self.$el.find('.type').show()
             $input.remove()
 
           $input.blur (e) ->
