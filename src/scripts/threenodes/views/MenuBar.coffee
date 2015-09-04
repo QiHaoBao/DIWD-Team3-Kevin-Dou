@@ -6,12 +6,19 @@ define [
 ], (_, Backbone, _view_menubar) ->
   #"use strict"
 
+  ###
+  The menubar uses jQuery UI Menubar 1.9m6
+  No ducumentation available. Get source code from github and look into the Demos
+  folder
+  ###
   namespace "ThreeNodes",
     MenuBar: class MenuBar extends Backbone.View
       @template: _view_menubar
 
       initialize: () ->
-        @$el.menubar()
+        # jQuery 1.9m6 menubar
+        @$el.menubar
+          autoExpand: true
 
         self = this
         $("a", @$el).click (event) ->
