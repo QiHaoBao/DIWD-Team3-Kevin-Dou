@@ -157,10 +157,7 @@ define [
             indexer: @indexer
 
           target = if field.get("is_output") == false then "inputs" else "outputs"
-          field_index = field.get("name")
-          if field.subfield
-            # In group nodes we want to have a unique field index
-            field_index += "-" + field.subfield.node.get("nid")
+          field_index = field.getIndex()
           #j keep a shallow copy of the fields in this collection
           # this.inputs.out1 = ...
           @[target][field_index] = field
@@ -168,6 +165,12 @@ define [
           @add(field)
         return field
 
+      # @param {Field} field
+      # @param {String} direction
+      removeField: (field, direction)->
+        @remove field
+        field_index = field.getIndex()
+        delete @[direction][field_index]
 
       addFields: (fields_obj) =>
         #j dir is short for direction

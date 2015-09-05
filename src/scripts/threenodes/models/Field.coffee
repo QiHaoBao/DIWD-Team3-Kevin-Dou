@@ -90,6 +90,14 @@ define [
         for c in @connections
           if c.to_field is @ then return true
 
+
+      getIndex: ->
+        field_index = @get("name")
+        if @subfield
+          # In group nodes we want to have a unique field index
+          field_index += "-" + @subfield.node.get("nid")
+        field_index
+
       remove: () =>
         delete @on_value_update_hooks
         delete @node

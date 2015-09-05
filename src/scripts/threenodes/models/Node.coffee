@@ -435,6 +435,16 @@ define [
         value = null
         @fields.addField(name, {type: type, val: value, default: false}, direction, props)
 
+      # @todo: listen for events in view
+      # 1. remove from @.custom_fields
+      # 2. remove from @fields: remove from self, remove from self.inputs/outputs
+      removeCustomFiled: (field)->
+        direction = if field.get('is_output') then 'outputs' else 'inputs'
+        name = field.get('name')
+        delete @custom_fields[direction][name]
+        @fields.removeField field, direction
+
+
       #j convert to JSON object, not json string
       toJSON: () =>
         res = super
