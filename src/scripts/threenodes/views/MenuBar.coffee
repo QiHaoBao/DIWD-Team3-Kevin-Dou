@@ -17,8 +17,7 @@ define [
 
       initialize: () ->
         # jQuery 1.9m6 menubar
-        @$el.menubar
-          autoExpand: true
+        @$el.menubar()
 
         self = this
         $("a", @$el).click (event) ->
