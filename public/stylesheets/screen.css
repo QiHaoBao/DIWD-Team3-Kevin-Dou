@@ -1407,12 +1407,19 @@ body > header h2 {
   border-bottom: 1px solid #444;
   padding-bottom: 3px;
 }
-#tab-attribute h3 {
+#tab-attribute .field-wrapper {
+  padding-bottom: 8px;
+}
+#tab-attribute .field-wrapper h3 {
+  float: left;
   margin-left: 0;
   margin-top: 5px;
 }
-#tab-attribute .field-wrapper {
-  padding-bottom: 8px;
+#tab-attribute .field-wrapper .remove {
+  float: right;
+}
+#tab-attribute .field-wrapper .clear {
+  clear: both;
 }
 #node_filter {
   position: absolute;

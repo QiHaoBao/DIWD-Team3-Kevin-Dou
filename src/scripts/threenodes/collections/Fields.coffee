@@ -21,6 +21,8 @@ define [
 
         @addFields(@node.getFields())
 
+        @on 'destroy', @removeField, @
+
 
       # Remove connections, fields and delete variables
       destroy: () =>

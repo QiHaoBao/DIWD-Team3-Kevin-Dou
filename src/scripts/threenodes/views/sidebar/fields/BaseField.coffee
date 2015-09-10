@@ -18,7 +18,14 @@ define [
         # if you want to unbind all events from this view to the model, even
         # if the event handler uses fat arrow
         @model.on "value_updated", @on_value_updated, @
+        @model.on 'destroy', @remove, @
         @render()
+
+      events: ->
+        'click .remove': 'onRemove'
+
+      onRemove: ->
+        @model.customRemove()
 
       on_value_updated: (new_val) => return @
 
@@ -69,6 +76,7 @@ define [
         return @$el
 
       remove: =>
+        console.log 'called'
         for view in @subviews
           view.remove()
           view.off()

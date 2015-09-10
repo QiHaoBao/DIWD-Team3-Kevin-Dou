@@ -98,6 +98,11 @@ define [
           field_index += "-" + @subfield.node.get("nid")
         field_index
 
+      customRemove: ->
+        # @todo: should check if this field is a custom field first
+        # should add a property specifying this model is custom added or not
+        @remove()
+
       remove: () =>
         delete @on_value_update_hooks
         delete @node
