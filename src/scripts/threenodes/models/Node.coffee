@@ -433,7 +433,7 @@ define [
         @custom_fields[direction][name] = field
 
         value = null
-        @fields.addField(name, {type: type, val: value, default: false}, direction, props)
+        @fields.addField(name, {type: type, custom: true, val: value, default: false}, direction, props)
 
       # @todo: listen for events in view
       # 1. remove from @.custom_fields

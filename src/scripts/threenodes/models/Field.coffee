@@ -18,6 +18,7 @@ define [
         is_output: false
         value: 0
         default: null
+        custom: false
 
       # Override the backbone sync method since the field is not directly stored on a server
       sync: () =>
@@ -98,10 +99,16 @@ define [
           field_index += "-" + @subfield.node.get("nid")
         field_index
 
-      customRemove: ->
+      # if this is a custom added field, remove it
+      removeCustom: ->
         # @todo: should check if this field is a custom field first
         # should add a property specifying this model is custom added or not
-        @remove()
+        if @get 'custom'
+          index = @getIndex()
+          direction = if @get('is_output') then 'outputs' else 'inputs'
+          @trigger 'removeCustom', direction, index
+          @remove()
+
 
       remove: () =>
         delete @on_value_update_hooks

@@ -17,8 +17,9 @@ define [
         @container.append @template(@.model.toJSON())
         @
 
-      events:
-        'submit': 'onSubmit'
+      events: ->
+        _.extend super,
+          'submit': 'onSubmit'
 
       onSubmit: (e)->
         e.preventDefault()

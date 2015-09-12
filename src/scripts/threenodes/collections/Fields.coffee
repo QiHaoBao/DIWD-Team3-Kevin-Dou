@@ -21,7 +21,7 @@ define [
 
         @addFields(@node.getFields())
 
-        @on 'destroy', @removeField, @
+        @on 'removeCustom', @removeCustomField, @
 
 
       # Remove connections, fields and delete variables
@@ -145,7 +145,7 @@ define [
         value = tmp
         if props then _.extend value, props
 
-        field = {}
+        field = {}  # declare variable to use
         # value: {type: 'Any', val: 0}, it might also has data, dataset, datatype
         # if we are loading from JSON file
         if ThreeNodes.fields[value.type]
@@ -167,12 +167,11 @@ define [
           @add(field)
         return field
 
-      # @param {Field} field
-      # @param {String} direction
-      removeField: (field, direction)->
-        @remove field
-        field_index = field.getIndex()
-        delete @[direction][field_index]
+      # remove the custom field from @inputs/outputs hook
+      removeCustomField: (direction, index)->
+        # field.subfield has already been deleted, can't call getIndex; index should
+        # be passed as parameter
+        delete @[direction][index]
 
       addFields: (fields_obj) =>
         #j dir is short for direction

@@ -25,7 +25,7 @@ define [
         'click .remove': 'onRemove'
 
       onRemove: ->
-        @model.customRemove()
+        @model.removeCustom()
 
       on_value_updated: (new_val) => return @
 
@@ -76,7 +76,6 @@ define [
         return @$el
 
       remove: =>
-        console.log 'called'
         for view in @subviews
           view.remove()
           view.off()
