@@ -9,7 +9,10 @@ define [
 ], (_, Backbone, UiView, _view_node_field_in, _view_node_field_out) ->
   #"use strict"
 
-  ### FieldButton View ###
+  ###
+  # FieldButton View
+  # model: Field
+  ###
   namespace "ThreeNodes",
     FieldButton: class FieldButton extends Backbone.View
       className: "field"
@@ -18,6 +21,7 @@ define [
         super
         @makeElement()
         @render()
+        @model.on 'removeCustom', @remove, @
 
       events:
         "click" : "onClick"
@@ -34,6 +38,8 @@ define [
         # Remove the inner DOM element to also unbind some possible events
         $inner.remove()
         super
+        @off()
+        @model.off null, null, @
 
       makeElement: () =>
         layout = if @model.get("is_output") then _view_node_field_out else _view_node_field_in

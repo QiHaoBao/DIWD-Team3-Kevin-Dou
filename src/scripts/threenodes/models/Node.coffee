@@ -64,6 +64,7 @@ define [
         # Create the fields collections
         @fields = new ThreeNodes.FieldsCollection(false, {node: this, indexer: @indexer})
 
+        @fields.on 'removeCustom', @removeCustomField, @
 
         # Call onFieldsCreated so that nodes can alias fields
         @onFieldsCreated()
@@ -137,6 +138,7 @@ define [
 
       # Cleanup the variables and destroy internal anims and fields for garbage collection
       remove: () =>
+        @fields.off null, null, @
         if @anim
           @anim.destroy()
         @fields.destroy()
@@ -435,14 +437,8 @@ define [
         value = null
         @fields.addField(name, {type: type, custom: true, val: value, default: false}, direction, props)
 
-      # @todo: listen for events in view
-      # 1. remove from @.custom_fields
-      # 2. remove from @fields: remove from self, remove from self.inputs/outputs
-      removeCustomFiled: (field)->
-        direction = if field.get('is_output') then 'outputs' else 'inputs'
-        name = field.get('name')
+      removeCustomField: (direction, index, name)->
         delete @custom_fields[direction][name]
-        @fields.removeField field, direction
 
 
       #j convert to JSON object, not json string

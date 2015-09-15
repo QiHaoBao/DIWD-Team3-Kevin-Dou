@@ -101,12 +101,13 @@ define [
 
       # if this is a custom added field, remove it
       removeCustom: ->
-        # @todo: should check if this field is a custom field first
-        # should add a property specifying this model is custom added or not
         if @get 'custom'
+          name = @get 'name'
           index = @getIndex()
           direction = if @get('is_output') then 'outputs' else 'inputs'
-          @trigger 'removeCustom', direction, index
+          # for fields, node, to remove the hook
+          @trigger 'removeCustom', direction, index, name
+          # destroy the model
           @remove()
 
 
