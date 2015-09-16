@@ -38,6 +38,8 @@ define [
           fid: @model.get("fid")
           model: @
           name: name
+          custom: @model.get('custom')
+        console.log @model.get('custom')
         @container = $(_.template(_view_field_sidebar_container, options))
         @$el.append(@container)
 

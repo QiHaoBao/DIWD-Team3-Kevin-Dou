@@ -1,5 +1,7 @@
 <div data-fid="<%= fid %>" class='field-wrapper'>
   <h3><%= name %></h3>
-  <button class='remove'>Remove</button>
+  <% if(custom){ %>
+    <button class='remove'>Remove</button>
+  <% } %>
   <div class='clear'></div>
 </div>
