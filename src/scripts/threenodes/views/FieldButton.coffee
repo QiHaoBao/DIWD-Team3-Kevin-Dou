@@ -21,13 +21,17 @@ define [
         super
         @makeElement()
         @render()
-        @model.on 'removeCustom', @remove, @
+        @model.on 'removeCustom', @removeCustom, @
 
       events:
         "click" : "onClick"
 
       onClick: ->
         @model.trigger "select", @model
+
+      removeCustom: ->
+        @model.removeConnections()
+        @remove()
 
       remove: () =>
         $inner = $(".inner-field", @$el)

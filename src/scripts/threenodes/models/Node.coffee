@@ -64,13 +64,14 @@ define [
         # Create the fields collections
         @fields = new ThreeNodes.FieldsCollection(false, {node: this, indexer: @indexer})
 
-        @fields.on 'removeCustom', @removeCustomField, @
 
         # Call onFieldsCreated so that nodes can alias fields
         @onFieldsCreated()
 
         # Load saved data after the fields have been set
         @fields.load(@options.fields)
+
+        @fields.on 'removeCustom', @removeCustomField, @
 
         # Init animation for current fields
         @anim = @createAnimContainer()
@@ -196,7 +197,8 @@ define [
               return true
         false
 
-      # Compare with @loadFields, this serves as the default value
+      # Compare with @loadFields, this serves as the default value, subclasses will
+      # override and extend this to add more fields
       getFields: =>
         fields = @loadFields()
         fields
@@ -256,7 +258,7 @@ define [
       loadFields: ->
         fields = {}
         # if we are loading from saved json file, we would have the
-        # fields attr already set
+        # fields attr already set, the json data
         if @has 'fields'
           options = @get 'fields'
           # fields =
@@ -284,6 +286,7 @@ define [
               data: cur.data
               dataset: cur.dataset
               datatype: cur.datatype
+              custom: cur.custom
             return memo
 
           if inputs.length > 0

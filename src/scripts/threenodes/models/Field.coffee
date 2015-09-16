@@ -198,8 +198,9 @@ define [
         res =
           name: @get("name")
 
-        #j should add type?
         res.type = @get("type")
+        res.custom = @get 'custom'
+        console.log res.custom
 
         # Add the node nid for fields that are part of subnodes (group)
         if @subfield
