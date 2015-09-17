@@ -82,7 +82,7 @@ define [
 
         # Initialize the user interface and timeline
         @initUI()
-        @initTimeline()
+        # @initTimeline()
 
         # Initialize the workspace view
         @workspace = new ThreeNodes.Workspace

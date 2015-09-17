@@ -42,7 +42,7 @@ define [
         @out_connections = []
 
         # Keep reference of some variables
-        @apptimeline = options.timeline
+        # @apptimeline = options.timeline
         @settings = options.settings
         @indexer = options.indexer
         @options = options
