@@ -8,7 +8,7 @@ define [
   'cs!threenodes/collections/Nodes',
   'cs!threenodes/collections/GroupDefinitions',
   'cs!threenodes/views/UI',
-  'cs!threenodes/views/Timeline',
+  'cs!threenodes/views/Toolbar',
   'cs!threenodes/views/GroupDefinitionView',
   'cs!threenodes/views/Workspace',
   'cs!threenodes/utils/AppWebsocket',
@@ -83,6 +83,7 @@ define [
         # Initialize the user interface and timeline
         @initUI()
         # @initTimeline()
+        @initToolbar()
 
         # Initialize the workspace view
         @workspace = new ThreeNodes.Workspace
@@ -100,6 +101,10 @@ define [
           pushState: false
 
         return true
+
+      initToolbar: ->
+        @toolbar = new ThreeNodes.Toolbar
+          el: $('#timeline')
 
       openSubworkflow: (subworkflow)->
         # inputNames: [], outputNames: []
@@ -295,5 +300,5 @@ define [
         @nodes.clearWorkspace()
         @group_definitions.removeAll()
         if @ui then @ui.clearWorkspace()
-        @initTimeline()
+        # @initTimeline()
 

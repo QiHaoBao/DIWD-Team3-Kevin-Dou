@@ -144,7 +144,7 @@ define [
           @anim.destroy()
         @fields.destroy()
         delete @fields
-        delete @apptimeline
+        # delete @apptimeline
         delete @anim
         delete @options
         delete @settings
