@@ -290,7 +290,7 @@ define [
         base_fields = super
         fields =
           inputs:
-            "in": ""
+            "in": 0
           outputs:
             "out0": {type: "Any", val: @value}
             "out1": {type: "Any", val: @value}
