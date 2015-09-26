@@ -671,8 +671,38 @@ button.ui-button::-moz-focus-inner {
 .ui-slider-vertical .ui-slider-range-max {
   top: 0;
 }
+#timeline ul {
+  height: 100%;
+}
 #timeline li {
-  display: inline;
+  display: inline-block;
+  height: 100%;
+  margin: 0px 5px;
+}
+#timeline li a {
+  height: 100%;
+  display: inline-block;
+  width: 35px;
+  text-align: center;
+  border: 1px solid #000;
+}
+#timeline li a span {
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+#timeline li a[href='#File'] {
+  background: url("../assets/images/new.png") no-repeat;
+}
+#timeline li a[href='#Edit'] {
+  background: url("../assets/images/open.png") no-repeat;
+}
+#timeline li a[href='#Project'] {
+  background: url("../assets/images/save.png") no-repeat;
 }
 #sound-input,
 #sound-input-flash {

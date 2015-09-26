@@ -1,4 +1,30 @@
 #timeline
+  ul
+    height: 100%
 
   li
-    display: inline
+    display: inline-block
+    height: 100%
+    margin: 0px 5px
+
+    a
+      height: 100%
+      display: inline-block
+      width: 35px
+      text-align: center
+      border: 1px solid black
+
+      span
+        position: absolute
+        bottom: 0
+        transform: translateX(-50%)
+
+
+    a[href='#File']
+      background: url(../assets/images/new.png) no-repeat
+
+    a[href='#Edit']
+      background: url(../assets/images/open.png) no-repeat
+
+    a[href='#Project']
+      background: url(../assets/images/save.png) no-repeat
