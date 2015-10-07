@@ -9,6 +9,7 @@ define [
   'cs!threenodes/collections/GroupDefinitions',
   'cs!threenodes/views/UI',
   'cs!threenodes/views/Toolbar',
+  'cs!threenodes/views/Timeline',
   'cs!threenodes/views/GroupDefinitionView',
   'cs!threenodes/views/Workspace',
   'cs!threenodes/utils/AppWebsocket',
