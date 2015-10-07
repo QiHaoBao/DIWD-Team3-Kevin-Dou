@@ -680,15 +680,13 @@ button.ui-button::-moz-focus-inner {
 #timeline li {
   display: inline-block;
   height: 100%;
-  margin: 0px 10px;
 }
-#timeline li a {
-  height: 100%;
-  display: inline-block;
+#timeline li li {
+  margin: 0px 10px;
   width: 35px;
   text-align: center;
 }
-#timeline li a span {
+#timeline li li span {
   position: absolute;
   bottom: 0;
   -webkit-transform: translateX(-50%);
@@ -697,34 +695,34 @@ button.ui-button::-moz-focus-inner {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
-#timeline li a[href='#New'] {
+#timeline li .new {
   background: url("../assets/images/new.png") no-repeat center top;
 }
-#timeline li a[href='#Open'] {
+#timeline li .open {
   background: url("../assets/images/open.png") no-repeat center top;
 }
-#timeline li a[href='#Save'] {
+#timeline li .save {
   background: url("../assets/images/save.png") no-repeat center top;
 }
-#timeline li a[href='#Pipeline'] {
+#timeline li .pipeline {
   background: url("../assets/images/pipeline.png") no-repeat center top;
 }
-#timeline li a[href='#History'] {
+#timeline li .history {
   background: url("../assets/images/history.png") no-repeat center top;
 }
-#timeline li a[href='#Search'] {
+#timeline li .search {
   background: url("../assets/images/search.png") no-repeat center top;
 }
-#timeline li a[href='#Explore'] {
+#timeline li .explore {
   background: url("../assets/images/explore.png") no-repeat center top;
 }
-#timeline li a[href='#Provenance'] {
+#timeline li .provenance {
   background: url("../assets/images/provenance.png") no-repeat center top;
 }
-#timeline li a[href='#Mashup'] {
+#timeline li .mashup {
   background: url("../assets/images/mashup.png") no-repeat center top;
 }
-#timeline li a[href='#Execute'] {
+#timeline li .execute {
   background: url("../assets/images/execute.png") no-repeat center top;
 }
 #sound-input,
