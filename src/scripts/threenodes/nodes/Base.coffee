@@ -308,14 +308,10 @@ define [
         base_fields = super
         fields =
           inputs:
-            "in": ""
+            "in": true
           outputs:
-            "out": {type: "Any", val: @value}
+            "out": {type: "Bool", val: @value}
         return $.extend(true, base_fields, fields)
-
-      compute: =>
-        @fields.setField("out", @fields.getField("in").getValue())
-
 
     List: class List extends ThreeNodes.NodeBase
       @node_name = 'List'
@@ -358,6 +354,7 @@ define [
 
       compute: =>
         @fields.setField("out", @fields.getField("string").getValue())
+
 
     StringConcatenate: class StringConcatenate extends ThreeNodes.NodeBase
       @node_name = 'StringConcatenate'
