@@ -178,6 +178,7 @@ define [
           @ui.toolbar.on 'open', @triggerLoadFile
           @ui.toolbar.on 'save', @file_handler.saveLocalFile
           @ui.toolbar.on 'pipeline', @toSetup
+          @ui.toolbar.on 'execute', @execute, @
 
 
           # Special events
@@ -196,6 +197,9 @@ define [
 
 
         return this
+
+      execute: =>
+        @runWorkflow()
 
       triggerLoadFile: ->
         # handled in menubar view
@@ -220,30 +224,6 @@ define [
         @clearWorkspace()
         @file_handler.loadFromJsonData(wf)
 
-      initTimeline: () =>
-        # Remove old timeline DOM elements
-        $("#timeline-container, #keyEditDialog").remove()
-
-        # Cleanup the old timeline if there was one
-        if @timelineView
-          @nodes.off("remove", @timelineView.onNodeRemove)
-          @timelineView.remove()
-          if @ui
-            @timelineView.off("TimelineCreated", @ui.onUiWindowResize)
-
-        # Create a new timeline
-        @timelineView = new ThreeNodes.AppTimeline
-          el: $("#timeline")
-          ui: @ui
-
-        # Bind events to it
-        @nodes.bindTimelineEvents(@timelineView)
-        @nodes.on("remove", @timelineView.onNodeRemove)
-        @timelineView.on("runWorkflow", @runWorkflow)
-        if @ui then @ui.onUiWindowResize()
-
-        #j this is App, not timelineview, why return this?
-        return this
 
       #j start running the workflow if it is not running,
       # run next node if it is
