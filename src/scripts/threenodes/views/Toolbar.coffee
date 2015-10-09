@@ -10,8 +10,17 @@ define [
     Toolbar: class Toolbar extends Backbone.View
       initialize: ->
         @render()
+        @setUpEvents()
 
       template: _.template app_toolbar
+
+      setUpEvents: ->
+        _.each @$('li[data-event]'), (elem, idx) =>
+          # console.log $(elem).data() is an obj: {event: "new"}
+          $elem = $(elem)
+          $elem.click =>
+            @trigger $elem.data().event
+
 
       render: ->
         html = @template()

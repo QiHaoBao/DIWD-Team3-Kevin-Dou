@@ -57,6 +57,7 @@ define [
         # Setup the sidebar and menu subviews
         @sidebar = new ThreeNodes.Sidebar({el: $("#sidebar")})
         @initMenubar()
+        @initToolbar()
         @dialogView = new ThreeNodes.DialogView(model: @workflowState.get('context'))
         @$('#dialog').append(@dialogView.render().el)
 
@@ -134,6 +135,10 @@ define [
         @menubar.on "ToggleTimeline", () => if @layout then @layout.toggle("south")
 
         return this
+
+      initToolbar: () ->
+        @toolbar = new ThreeNodes.Toolbar
+          el: $('#timeline')
 
       # Setup layout
       initLayout: () =>

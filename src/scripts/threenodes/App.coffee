@@ -83,8 +83,6 @@ define [
 
         # Initialize the user interface and timeline
         @initUI()
-        # @initTimeline()
-        @initToolbar()
 
         # Initialize the workspace view
         @workspace = new ThreeNodes.Workspace
@@ -102,10 +100,6 @@ define [
           pushState: false
 
         return true
-
-      initToolbar: ->
-        @toolbar = new ThreeNodes.Toolbar
-          el: $('#timeline')
 
       openSubworkflow: (subworkflow)->
         # inputNames: [], outputNames: []
@@ -177,6 +171,15 @@ define [
           # Added by Gautam
           @ui.menubar.on("Execute", @file_handler.executeAndSave)
 
+          # Setup toolbar events
+          @ui.toolbar.on 'new', @createNewWorkflow
+          # the `open` event should be set up separately,
+          # cause the handler expects some event data
+          @ui.toolbar.on 'open', @triggerLoadFile
+          @ui.toolbar.on 'save', @file_handler.saveLocalFile
+          @ui.toolbar.on 'pipeline', @toSetup
+
+
           # Special events
           @ui.on("CreateNode", @nodes.createNode)
           @nodes.on("nodeslist:rebuild", @ui.onNodeListRebuild)
@@ -193,6 +196,13 @@ define [
 
 
         return this
+
+      triggerLoadFile: ->
+        # handled in menubar view
+        $("#main_file_input_open").click()
+
+      toSetup: ->
+        console.log 'got the event and needs to setup the api in back end'
 
       backToSuperworkflow: ()->
         # pop from stack the saved superworkflow
