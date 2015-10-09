@@ -695,6 +695,9 @@ button.ui-button::-moz-focus-inner {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
+#timeline li li:hover {
+  cursor: pointer;
+}
 #timeline li .new {
   background: url("../assets/images/new.png") no-repeat center top;
 }
