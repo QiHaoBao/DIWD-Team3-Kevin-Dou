@@ -162,6 +162,23 @@ define [
           inputs:
             "in": ""
         return $.extend(true, base_fields, fields)
+	
+    ReadFile: class ReadFile extends ThreeNodes.NodeBase
+      @node_name = 'ReadFile'
+      @group_name = 'BasicModules'
+
+      initialize: (options) =>
+        @value = ""
+        super
+
+      getFields: =>
+        base_fields = super
+        fields =
+          inputs:
+            "in" : {type: "File", val: @value}
+          outputs:
+            "out" : {type: "String", val: @value}
+        return $.extend(true, base_fields, fields)
 
     AssertEqual: class AssertEqual extends ThreeNodes.NodeBase
       @node_name = 'AsserEqual'
@@ -253,9 +270,11 @@ define [
       getFields: =>
         base_fields = super
         fields =
-          inputs: {}
+          inputs: 
+            "in0": ""
           outputs:
-            "fileName": {type: "String", val: @value}
+            "filename": {type: "String", val: @value}
+            "file": {type: "File", val: @value}
         return $.extend(true, base_fields, fields)
 
 
@@ -401,9 +420,9 @@ define [
         base_fields = super
         fields =
           inputs:
-            "in" : {type: "Any", val: @value}
+            "in" : {type: "String", val: @value}
           outputs:
-            "out" : {type: "Any", val: @value}
+            "out" : {type: "File", val: @value}
         return $.extend(true, base_fields, fields)
 
       compute: =>
@@ -613,7 +632,7 @@ define [
             "in0": ""
             "in1": ""
           outputs:
-            "out": {type: "Any", val: @value}
+            "out": {type: "File", val: @value}
         return $.extend(true, base_fields, fields)
 
 

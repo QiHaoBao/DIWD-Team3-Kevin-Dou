@@ -342,6 +342,11 @@ define [
         return val
 
     #Compute the value of write file
+    File: class File extends NodeField
+      computeValue : (val) =>
+        return val
+
+    #Compute the value of write file
     FileSink: class FileSink extends NodeField
       computeValue : (val) =>
         return val
