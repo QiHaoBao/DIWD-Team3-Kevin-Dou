@@ -37,6 +37,11 @@ define [
         # a stack to store the plain JSON representation of subworkflow instance
         @enteredSubworkflows = []
 
+        # How many nodes in this workflow are abstract
+        # Invariants: will only change when you add/remove abstract node to/of the graph
+        # or implement any abstract node in the graph; always non-negative
+        @abstractCount = 0
+
         # Define renderer mouseX/Y for use in utils.Mouse node for instance
         ThreeNodes.renderer =
           mouseX: 0
@@ -74,6 +79,24 @@ define [
             view.bind "edit", @setWorkspaceFromDefinition
             view.render()
 
+
+        # Increase abstractCount if an abstract node is added
+        @nodes.on 'add', (node) =>
+          if node instanceof ThreeNodes.nodes.models.AbstractTask &&
+            !node.get 'implemented'
+              @increaseAbstractCount()
+
+        # Decrease abstractCount if an abstract node is removed
+        @nodes.on 'remove', (node) =>
+          if node instanceof ThreeNodes.nodes.models.AbstractTask &&
+            !node.get 'implemented'
+              @decreaseAbstractCount()
+
+        # Decrease abstractCount if an abstract node is implemented
+        @nodes.on 'change:implemented', (node) =>
+          console.log node.get 'implemented'
+          @decreaseAbstractCount()
+
         # File and url events
         @file_handler.on("ClearWorkspace", () => @clearWorkspace())
         @url_handler.on("ClearWorkspace", () => @clearWorkspace())
@@ -100,6 +123,21 @@ define [
           pushState: false
 
         return true
+
+      decreaseAbstractCount: =>
+        @abstractCount--
+        console.log 'decrease abstract'
+        if @abstractCount <= 0
+          @workflowState.set 'abstract', false
+          console.log 'no abstract in the workflow'
+
+        console.log @workflowState.get 'abstract'
+
+      increaseAbstractCount: =>
+        @abstractCount++
+        @workflowState.set 'abstract', true
+        console.log 'add abstract'
+        console.log @workflowState.get 'abstract'
 
       openSubworkflow: (subworkflow)->
         # inputNames: [], outputNames: []
@@ -211,13 +249,14 @@ define [
       backToSuperworkflow: ()->
         # pop from stack the saved superworkflow
         if @superworkflows.length != 0
+          implemented = not @workflowState.get 'abstract'
           cur = @file_handler.getLocalJson(true)
           superworkflow = @superworkflows.pop()
           @loadNewSceneFromJSONString(superworkflow)
           # find the subworkflow module by nid and set the implementation attr
           # @note: the cid will change each time a new model is created.
           enteredSubworkflow = @enteredSubworkflows.pop()
-          @nodes.get(enteredSubworkflow.nid).set({implementation: cur})
+          @nodes.get(enteredSubworkflow.nid).set({implementation: cur, implemented: implemented})
           if @superworkflows.length is 0 then @ui.hideBackButton()
 
       loadNewSceneFromJSONString: (wf)->

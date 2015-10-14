@@ -22,6 +22,14 @@ define [
       @node_name = 'AbstractTask'
       @group_name = 'Abstract'
 
+      defaults: ->
+        _.extend super,
+          # Once the user entered the subworkflow implementation, it will be
+          # considered implemented unless there are abstract modules
+          implemented: false
+          # A JSON __String__ (not object) representation of the implemented workflow
+          implementation: null
+
       initialize: (options) =>
         options = options || {}
         @value = ""
@@ -29,8 +37,6 @@ define [
         # nested model, inherit initial context from the workflow
         # the same model instance for contextFormView
         @context = new ThreeNodes.Context options.context || null
-        @set {implementation: options.implementation || null}
-
 
       # backbone model's toJSON method has been completely overriden in node model,
       # so you have to add each prop you want it to have to your own toJSON
