@@ -42,7 +42,7 @@ define [
         @out_connections = []
 
         # Keep reference of some variables
-        @apptimeline = options.timeline
+        # @apptimeline = options.timeline
         @settings = options.settings
         @indexer = options.indexer
         @options = options
@@ -144,7 +144,7 @@ define [
           @anim.destroy()
         @fields.destroy()
         delete @fields
-        delete @apptimeline
+        # delete @apptimeline
         delete @anim
         delete @options
         delete @settings

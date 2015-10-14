@@ -103,6 +103,7 @@ define [
 				bb = new BlobBuilder()
 				bb.append(res.responseText)
 				fileSaver = saveAs(bb.getBlob("text/html;charset=utf-8"), "result.txt")
+
 		# Send Data to the server
 			sendToServer: (data) =>
 				console.log "sending to server"
