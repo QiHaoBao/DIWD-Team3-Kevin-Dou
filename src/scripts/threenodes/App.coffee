@@ -94,7 +94,6 @@ define [
 
         # Decrease abstractCount if an abstract node is implemented
         @nodes.on 'change:implemented', (node) =>
-          console.log node.get 'implemented'
           @decreaseAbstractCount()
 
         # File and url events
@@ -126,18 +125,12 @@ define [
 
       decreaseAbstractCount: =>
         @abstractCount--
-        console.log 'decrease abstract'
         if @abstractCount <= 0
           @workflowState.set 'abstract', false
-          console.log 'no abstract in the workflow'
-
-        console.log @workflowState.get 'abstract'
 
       increaseAbstractCount: =>
         @abstractCount++
         @workflowState.set 'abstract', true
-        console.log 'add abstract'
-        console.log @workflowState.get 'abstract'
 
       openSubworkflow: (subworkflow)->
         # inputNames: [], outputNames: []
@@ -207,7 +200,7 @@ define [
           @ui.menubar.on("ExportImage", @webgl.exportImage)
           @ui.menubar.on("GroupSelectedNodes", @group_definitions.groupSelectedNodes)
           # Added by Gautam
-          @ui.menubar.on("Execute", @file_handler.executeAndSave)
+          @ui.menubar.on("Execute", @execute, @)
 
           # Setup toolbar events
           @ui.toolbar.on 'new', @createNewWorkflow
@@ -237,7 +230,10 @@ define [
         return this
 
       execute: =>
-        @runWorkflow()
+        if @workflowState.get 'abstract'
+          @runWorkflow()
+        else
+          @file_handler.executeAndSave()
 
       triggerLoadFile: ->
         # handled in menubar view
