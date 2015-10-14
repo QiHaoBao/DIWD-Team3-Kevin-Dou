@@ -175,7 +175,7 @@ define [
         base_fields = super
         fields =
           inputs:
-            "in" : {type: "File", val: @value}
+            "in" : {type: "String", val: @value}
           outputs:
             "out" : {type: "String", val: @value}
         return $.extend(true, base_fields, fields)
