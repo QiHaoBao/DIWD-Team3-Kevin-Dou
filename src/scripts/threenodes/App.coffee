@@ -8,6 +8,7 @@ define [
   'cs!threenodes/collections/Nodes',
   'cs!threenodes/collections/GroupDefinitions',
   'cs!threenodes/views/UI',
+  'cs!threenodes/views/Toolbar',
   'cs!threenodes/views/Timeline',
   'cs!threenodes/views/GroupDefinitionView',
   'cs!threenodes/views/Workspace',
@@ -35,6 +36,11 @@ define [
         @superworkflows = []
         # a stack to store the plain JSON representation of subworkflow instance
         @enteredSubworkflows = []
+
+        # How many nodes in this workflow are abstract
+        # Invariants: will only change when you add/remove abstract node to/of the graph
+        # or implement any abstract node in the graph; always non-negative
+        @abstractCount = 0
 
         # Define renderer mouseX/Y for use in utils.Mouse node for instance
         ThreeNodes.renderer =
@@ -73,6 +79,23 @@ define [
             view.bind "edit", @setWorkspaceFromDefinition
             view.render()
 
+
+        # Increase abstractCount if an abstract node is added
+        @nodes.on 'add', (node) =>
+          if node instanceof ThreeNodes.nodes.models.AbstractTask &&
+            !node.get 'implemented'
+              @increaseAbstractCount()
+
+        # Decrease abstractCount if an abstract node is removed
+        @nodes.on 'remove', (node) =>
+          if node instanceof ThreeNodes.nodes.models.AbstractTask &&
+            !node.get 'implemented'
+              @decreaseAbstractCount()
+
+        # Decrease abstractCount if an abstract node is implemented
+        @nodes.on 'change:implemented', (node) =>
+          @decreaseAbstractCount()
+
         # File and url events
         @file_handler.on("ClearWorkspace", () => @clearWorkspace())
         @url_handler.on("ClearWorkspace", () => @clearWorkspace())
@@ -82,7 +105,6 @@ define [
 
         # Initialize the user interface and timeline
         @initUI()
-        @initTimeline()
 
         # Initialize the workspace view
         @workspace = new ThreeNodes.Workspace
@@ -100,6 +122,15 @@ define [
           pushState: false
 
         return true
+
+      decreaseAbstractCount: =>
+        @abstractCount--
+        if @abstractCount <= 0
+          @workflowState.set 'abstract', false
+
+      increaseAbstractCount: =>
+        @abstractCount++
+        @workflowState.set 'abstract', true
 
       openSubworkflow: (subworkflow)->
         # inputNames: [], outputNames: []
@@ -169,7 +200,17 @@ define [
           @ui.menubar.on("ExportImage", @webgl.exportImage)
           @ui.menubar.on("GroupSelectedNodes", @group_definitions.groupSelectedNodes)
           # Added by Gautam
-          @ui.menubar.on("Execute", @file_handler.executeAndSave)
+          @ui.menubar.on("Execute", @execute, @)
+
+          # Setup toolbar events
+          @ui.toolbar.on 'new', @createNewWorkflow
+          # the `open` event should be set up separately,
+          # cause the handler expects some event data
+          @ui.toolbar.on 'open', @triggerLoadFile
+          @ui.toolbar.on 'save', @file_handler.saveLocalFile
+          @ui.toolbar.on 'pipeline', @toSetup
+          @ui.toolbar.on 'execute', @execute, @
+
 
           # Special events
           @ui.on("CreateNode", @nodes.createNode)
@@ -188,46 +229,36 @@ define [
 
         return this
 
+      execute: =>
+        if @workflowState.get 'abstract'
+          @runWorkflow()
+        else
+          @file_handler.executeAndSave()
+
+      triggerLoadFile: ->
+        # handled in menubar view
+        $("#main_file_input_open").click()
+
+      toSetup: ->
+        console.log 'got the event and needs to setup the api in back end'
+
       backToSuperworkflow: ()->
         # pop from stack the saved superworkflow
         if @superworkflows.length != 0
+          implemented = not @workflowState.get 'abstract'
           cur = @file_handler.getLocalJson(true)
           superworkflow = @superworkflows.pop()
           @loadNewSceneFromJSONString(superworkflow)
           # find the subworkflow module by nid and set the implementation attr
           # @note: the cid will change each time a new model is created.
           enteredSubworkflow = @enteredSubworkflows.pop()
-          @nodes.get(enteredSubworkflow.nid).set({implementation: cur})
+          @nodes.get(enteredSubworkflow.nid).set({implementation: cur, implemented: implemented})
           if @superworkflows.length is 0 then @ui.hideBackButton()
 
       loadNewSceneFromJSONString: (wf)->
         @clearWorkspace()
         @file_handler.loadFromJsonData(wf)
 
-      initTimeline: () =>
-        # Remove old timeline DOM elements
-        $("#timeline-container, #keyEditDialog").remove()
-
-        # Cleanup the old timeline if there was one
-        if @timelineView
-          @nodes.off("remove", @timelineView.onNodeRemove)
-          @timelineView.remove()
-          if @ui
-            @timelineView.off("TimelineCreated", @ui.onUiWindowResize)
-
-        # Create a new timeline
-        @timelineView = new ThreeNodes.AppTimeline
-          el: $("#timeline")
-          ui: @ui
-
-        # Bind events to it
-        @nodes.bindTimelineEvents(@timelineView)
-        @nodes.on("remove", @timelineView.onNodeRemove)
-        @timelineView.on("runWorkflow", @runWorkflow)
-        if @ui then @ui.onUiWindowResize()
-
-        #j this is App, not timelineview, why return this?
-        return this
 
       #j start running the workflow if it is not running,
       # run next node if it is
@@ -295,5 +326,5 @@ define [
         @nodes.clearWorkspace()
         @group_definitions.removeAll()
         if @ui then @ui.clearWorkspace()
-        @initTimeline()
+        # @initTimeline()
 

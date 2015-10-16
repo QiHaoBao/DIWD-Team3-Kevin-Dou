@@ -671,62 +671,62 @@ button.ui-button::-moz-focus-inner {
 .ui-slider-vertical .ui-slider-range-max {
   top: 0;
 }
-#timeline {
-  overflow: hidden;
+#timeline ul {
+  height: 96%;
 }
-#keyEditDialog {
-  background: #383838 !important;
-  border: 1px solid #555 !important;
-  line-height: 13px;
-  font-size: 12px;
-  margin-top: -42px;
-  z-index: 970;
-  -webkit-box-shadow: #000 0 1px 4px;
-  box-shadow: #000 0 1px 4px;
-}
-#keyEditDialog input {
-  display: inline;
-  width: auto;
-  padding: 3px 5px;
-}
-#keyEditDialog label {
-  display: block;
-  position: relative;
-  width: 180px;
-  line-height: 23px;
-  padding-bottom: 3px;
-}
-#keyEditDialog label input,
-#keyEditDialog label select {
-  margin-left: 8px;
-  position: absolute;
-  left: 43px;
-}
-#keyEditDialog label input {
-  right: -5px;
-  top: 3px;
-}
-#keyEditDialogOK {
-  margin-left: 51px !important;
-}
-#keyEditDialogCancel {
-  text-transform: uppercase;
-}
-#keyEditDialogDelete {
+#timeline .more {
   float: right;
-  width: 18px;
-  height: 18px;
-  background: url("../assets/images/icon-trash.png") no-repeat center center;
-  font-size: 0;
-  text-indent: -9999px;
-  opacity: 0.4;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-  filter: alpha(opacity=40);
 }
-#keyEditDialogDelete:hover {
-  opacity: 1;
-  -ms-filter: none;
-  filter: none;
+#timeline li {
+  display: inline-block;
+  height: 100%;
+}
+#timeline li li {
+  margin: 0px 10px;
+  width: 35px;
+  text-align: center;
+}
+#timeline li li span {
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+#timeline li li:hover {
+  cursor: pointer;
+}
+#timeline li .new {
+  background: url("../assets/images/new.png") no-repeat center top;
+}
+#timeline li .open {
+  background: url("../assets/images/open.png") no-repeat center top;
+}
+#timeline li .save {
+  background: url("../assets/images/save.png") no-repeat center top;
+}
+#timeline li .pipeline {
+  background: url("../assets/images/pipeline.png") no-repeat center top;
+}
+#timeline li .history {
+  background: url("../assets/images/history.png") no-repeat center top;
+}
+#timeline li .search {
+  background: url("../assets/images/search.png") no-repeat center top;
+}
+#timeline li .explore {
+  background: url("../assets/images/explore.png") no-repeat center top;
+}
+#timeline li .provenance {
+  background: url("../assets/images/provenance.png") no-repeat center top;
+}
+#timeline li .mashup {
+  background: url("../assets/images/mashup.png") no-repeat center top;
+}
+#timeline li .execute {
+  background: url("../assets/images/execute.png") no-repeat center top;
 }
 #sound-input,
 #sound-input-flash {
