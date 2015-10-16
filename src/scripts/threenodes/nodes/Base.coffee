@@ -50,7 +50,8 @@ define [
           inputs:
             "in": 0
           outputs:
-            "out0": {type: "Any", val: @value}
+            "out0": {type: "String", val: @value}
+            "out1": {type: "Integer", val: @value}
         return $.extend(true, base_fields, fields)
 
     # Will need this in subworkflow as connection to outer world

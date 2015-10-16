@@ -29,6 +29,11 @@ define [
       getFields: =>
         base_fields = super
         fields =
+          inputs:
+            "cacheable": true
+            "default": ""
+            "label": ""
+            "title": ""
           outputs:
             "out" : {type: "Any", val: @value}
         return $.extend(true, base_fields, fields)
