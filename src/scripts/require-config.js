@@ -25,7 +25,8 @@ require.config({
     ShaderExtras: 'libs/three-extras/js/ShaderExtras',
     timeline: "libs/timeline.js/timeline",
     'timeline-gui': "libs/timeline.js/timeline-gui",
-    'jqueryForm':'libs/jquery.form.min'
+    'jqueryForm':'libs/jquery.form.min',
+    'nofity': 'libs/notify.min'
   },
   shim: {
     'Three':{
@@ -74,5 +75,6 @@ require.config({
     'MaskPass': ['Three'],
     'DotScreenPass': ['Three'],
     'ShaderExtras': ['Three'],
+    'notify': ['jquery']
   }
 });

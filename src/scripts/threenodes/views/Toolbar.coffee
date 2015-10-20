@@ -18,9 +18,12 @@ define [
         _.each @$('li[data-event]'), (elem, idx) =>
           # console.log $(elem).data() is an obj: {event: "new"}
           $elem = $(elem)
-          $elem.click =>
+          $elem.click (e) =>
             @trigger $elem.data().event
-
+            if $elem.data().event is 'execute'
+              Backbone.Events.trigger 'notify',
+                $elem: $(e.target)
+                position: 'left'
 
       render: ->
         html = @template()

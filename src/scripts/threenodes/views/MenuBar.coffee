@@ -36,7 +36,6 @@ define [
 
         if data_event
           #event.preventDefault()
-
           @trigger(data_event, data_attr)
 
           # exceptions and special event handling
@@ -45,6 +44,10 @@ define [
               Backbone.history.navigate("", false)
             when "OpenFile"
               $("#main_file_input_open").click()
+            when "Execute"
+              Backbone.Events.trigger 'notify',
+                $elem: $('a[href="#Project"]')
+                position: 'bottom'
           return true
 
         # sends "normal" urls to the router

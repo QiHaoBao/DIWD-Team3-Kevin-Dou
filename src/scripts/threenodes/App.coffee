@@ -16,6 +16,7 @@ define [
   'cs!threenodes/utils/FileHandler',
   'cs!threenodes/utils/UrlHandler',
   "cs!threenodes/utils/WebglBase",
+  'libs/notify.min',
 ], (_, Backbone) ->
   #### App
 
@@ -102,6 +103,7 @@ define [
         @url_handler.on("LoadJSON", @file_handler.loadFromJsonData)
 
         Backbone.Events.on 'openSubworkflow', @openSubworkflow, @
+        Backbone.Events.on 'notify', @notify, @
 
         # Initialize the user interface and timeline
         @initUI()
@@ -122,6 +124,18 @@ define [
           pushState: false
 
         return true
+
+      # options.$elem, options.position
+      notify: (options) =>
+        if !@workflowState.get 'abstract'
+          options.$elem.notify 'Executing...',
+            className: 'success'
+            autoHide: true
+            autoHideDelay: 1000
+            hideAnimation: 'fadeOut'
+            hideDuration: 500
+            position: options.position
+
 
       decreaseAbstractCount: =>
         @abstractCount--

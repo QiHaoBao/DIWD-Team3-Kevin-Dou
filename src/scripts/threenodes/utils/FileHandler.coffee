@@ -96,7 +96,6 @@ define [
 		# Execute event to give output
 			executeAndSave: () =>
 				#convert to JSON and send to Server
-				console.log "execute and save"
 				json = @getLocalJson(true)
 				res = @sendToServer(json)
 				console.log res.responseText

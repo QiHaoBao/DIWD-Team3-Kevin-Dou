@@ -18,3 +18,4 @@ dist/*/*/*
 dist/*/*/*/*
 .idea/
 logo_old.png
+mv_to_node.sh
