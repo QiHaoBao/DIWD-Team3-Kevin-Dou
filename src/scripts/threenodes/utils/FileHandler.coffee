@@ -115,7 +115,7 @@ define [
 					# crossDomain: true
 					# dataType: "json"
 					cache: false
-					async: false
+					# async: false
 					success: (xml) ->
 						console.log "success"
 						return xml
