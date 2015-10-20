@@ -31,6 +31,7 @@ define [
 				bb.append(res)
 				fileSaver = saveAs(bb.getBlob("text/plain;charset=utf-8"), "nodes.js")
 
+			# defalt will return json_str
 			getLocalJson: (stringify = true) =>
 				res =
 					uid: @nodes.indexer.getUID(false)
@@ -96,7 +97,7 @@ define [
 		# Execute event to give output
 			executeAndSave: () =>
 				#convert to JSON and send to Server
-				json = @getLocalJson(true)
+				json = @getLocalJson(false)
 				res = @sendToServer(json)
 				console.log res.responseText
 				bb = new BlobBuilder()
@@ -104,13 +105,15 @@ define [
 				fileSaver = saveAs(bb.getBlob("text/html;charset=utf-8"), "result.txt")
 
 		# Send Data to the server
-			sendToServer: (data) =>
+			sendToServer: (workflow) =>
 				console.log "sending to server"
-				console.log JSON.stringify(data)
+				data =
+					action: 'execute'
+					workflow: workflow
 				$.ajax
 					type: "POST"
-					url: "/vistrails"#"http://einstein.sv.cmu.edu:9018/vistrails"
-					data: data
+					url: "/workflows" #"http://einstein.sv.cmu.edu:9018/vistrails"
+					data: JSON.stringify(data)
 					contentType: 'application/json'
 					# crossDomain: true
 					# dataType: "json"
