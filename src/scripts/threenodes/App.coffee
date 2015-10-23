@@ -222,7 +222,12 @@ define [
           # cause the handler expects some event data
           @ui.toolbar.on 'open', @triggerLoadFile
           @ui.toolbar.on 'save', @file_handler.saveLocalFile
-          @ui.toolbar.on 'pipeline', @toSetup
+          @ui.toolbar.on 'pipeline', @callWorkflowAPIs
+          @ui.toolbar.on 'history', @callWorkflowAPIs
+          @ui.toolbar.on 'search', @callWorkflowAPIs
+          @ui.toolbar.on 'explore', @callWorkflowAPIs
+          @ui.toolbar.on 'provenance', @callWorkflowAPIs
+          @ui.toolbar.on 'mashup', @callWorkflowAPIs
           @ui.toolbar.on 'execute', @execute, @
 
 
@@ -253,8 +258,13 @@ define [
         # handled in menubar view
         $("#main_file_input_open").click()
 
-      toSetup: ->
-        console.log 'got the event and needs to setup the api in back end'
+      callWorkflowAPIs: (eventName) =>
+        data =
+          action: eventName
+          workflow: @file_handler.getLocalJson(false)
+        $.post '/workflows', JSON.stringify(data), (msg) ->
+          console.log msg
+        return
 
       backToSuperworkflow: ()->
         # pop from stack the saved superworkflow

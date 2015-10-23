@@ -19,8 +19,9 @@ define [
           # console.log $(elem).data() is an obj: {event: "new"}
           $elem = $(elem)
           $elem.click (e) =>
-            @trigger $elem.data().event
-            if $elem.data().event is 'execute'
+            eventName = $elem.data().event
+            @trigger eventName, eventName
+            if eventName is 'execute'
               Backbone.Events.trigger 'notify',
                 $elem: $(e.target)
                 position: 'left'
@@ -29,4 +30,3 @@ define [
         html = @template()
         @$el.append html
         @
-
