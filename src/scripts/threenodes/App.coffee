@@ -217,7 +217,11 @@ define [
           @ui.menubar.on("Execute", @execute, @)
 
           # Setup toolbar events
-          @ui.toolbar.on 'new', @createNewWorkflow
+
+          # @createNewWorkflow(wf) is expecting diff param than the `new` event is to
+          # offer (eventName), so wrap it with another function
+          @ui.toolbar.on 'new', =>
+            @createNewWorkflow()
           # the `open` event should be set up separately,
           # cause the handler expects some event data
           @ui.toolbar.on 'open', @triggerLoadFile
