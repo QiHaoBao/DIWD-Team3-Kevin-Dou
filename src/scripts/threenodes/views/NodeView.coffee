@@ -66,7 +66,8 @@ define [
         # Compile the template file
         @template = _.template(_view_node_template, @model)
         @$el.html(@template)
-        @$('.type').hide()
+        if @.model.get('name') is @model.typename()
+          @$('.type').hide()
 
         # Add the node group name as a class to the node element for easier styling
         @$el.addClass("type-" + @model.constructor.group_name)
