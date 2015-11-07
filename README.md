@@ -57,6 +57,7 @@ Qestions:
 * if you change a obj after add, sometimes the id of the obj will increase by 2. Don't know why.
 * what is cache of the module, is it always 1?
 * what is pos of parameter and fuction? Is is always 0?
+It might indicate the position of the parameter, i.e. the first or second parameter of the input port
 
 One example: 
 ```
