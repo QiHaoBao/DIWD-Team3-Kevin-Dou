@@ -25,6 +25,7 @@ define [
     App: class App
       constructor: (options) ->
         # Default settings
+        window.app = @
         settings =
           test: false
           player_mode: false
@@ -38,11 +39,6 @@ define [
         # a stack to store the plain JSON representation of subworkflow instance
         @enteredSubworkflows = []
 
-        # How many nodes in this workflow are abstract
-        # Invariants: will only change when you add/remove abstract node to/of the graph
-        # or implement any abstract node in the graph; always non-negative
-        @abstractCount = 0
-
         # Define renderer mouseX/Y for use in utils.Mouse node for instance
         ThreeNodes.renderer =
           mouseX: 0
@@ -54,48 +50,10 @@ define [
 
         # Initialize some core classes
         @url_handler = new ThreeNodes.UrlHandler()
-        @group_definitions = new ThreeNodes.GroupDefinitions([])
-        @nodes = new ThreeNodes.NodesCollection([], {settings: settings})
         @socket = new ThreeNodes.AppWebsocket(websocket_enabled)
         @webgl = new ThreeNodes.WebglBase()
-        @file_handler = new ThreeNodes.FileHandler(@, @nodes, @group_definitions)
+        @file_handler = new ThreeNodes.FileHandler(@workflowState, @group_definitions)
 
-        # Create a group node when selected nodes are grouped
-        @group_definitions.bind "definition:created", @nodes.createGroup
-
-        # When a group definition is removed delete all goup nodes using this definition
-        @group_definitions.bind "remove", @nodes.removeGroupsByDefinition
-
-        # Create views if the application is not in test mode
-        if @settings.test == false
-          # Create group definition views when a new one is created
-          @group_definitions.bind "add", (definition) =>
-            template = ThreeNodes.GroupDefinitionView.template
-            tmpl = _.template(template, definition)
-            $tmpl = $(tmpl).appendTo("#library")
-
-            view = new ThreeNodes.GroupDefinitionView
-              model: definition
-              el: $tmpl
-            view.bind "edit", @setWorkspaceFromDefinition
-            view.render()
-
-
-        # Increase abstractCount if an abstract node is added
-        @nodes.on 'add', (node) =>
-          if node instanceof ThreeNodes.nodes.models.AbstractTask &&
-            !node.get 'implemented'
-              @increaseAbstractCount()
-
-        # Decrease abstractCount if an abstract node is removed
-        @nodes.on 'remove', (node) =>
-          if node instanceof ThreeNodes.nodes.models.AbstractTask &&
-            !node.get 'implemented'
-              @decreaseAbstractCount()
-
-        # Decrease abstractCount if an abstract node is implemented
-        @nodes.on 'change:implemented', (node) =>
-          @decreaseAbstractCount()
 
         # File and url events
         @file_handler.on("ClearWorkspace", () => @clearWorkspace())
@@ -113,7 +71,8 @@ define [
           el: "#container"
           settings: @settings
         # Make the workspace display the global nodes and connections
-        @workspace.render(@nodes)
+        # todo:
+        @workspace.render(@workflowState.nodes)
 
         # Start the url handling
         #
@@ -137,15 +96,6 @@ define [
             position: options.position
 
 
-      decreaseAbstractCount: =>
-        @abstractCount--
-        if @abstractCount <= 0
-          @workflowState.set 'abstract', false
-
-      increaseAbstractCount: =>
-        @abstractCount++
-        @workflowState.set 'abstract', true
-
       openSubworkflow: (subworkflow)->
         # inputNames: [], outputNames: []
         # key is field name
@@ -162,11 +112,11 @@ define [
           @createNewWorkflow(null)
           count = 0
           for inputName in inputNames
-            @nodes.createNode({type:'InputPort', x: 3, y: 5 + 50 * count, name: inputName, definition: null, context: null})
+            @workflowState.nodes.createNode({type:'InputPort', x: 3, y: 5 + 50 * count, name: inputName, definition: null, context: null})
             count++
           count = 0
           for outputName in outputNames
-            @nodes.createNode({type:'OutputPort', x: 803, y: 5 + 50 * count, name: outputName, definition: null, context: null})
+            @workflowState.nodes.createNode({type:'OutputPort', x: 803, y: 5 + 50 * count, name: outputName, definition: null, context: null})
             count++
         @ui.showBackButton()
         # toggle the tabs to new
@@ -180,11 +130,11 @@ define [
           # maybe sync new modifications...
 
         if definition == "global"
-          @workspace.render(@nodes)
+          @workspace.render(@workflowState.nodes)
           @ui.breadcrumb.reset()
         else
           # create a hidden temporary group node from this definition
-          @edit_node = @nodes.createGroup
+          @edit_node = @workflowState.nodes.createGroup
             type: "Group"
             definition: definition
             x: -9999
@@ -201,18 +151,28 @@ define [
 
 
           # Link UI to render events
-          @ui.on("render", @nodes.render)
-          @ui.on("renderConnections", @nodes.renderAllConnections)
+          @ui.on("render", (options) =>
+            @workflowState.nodes.render(options))
+          @ui.on("renderConnections", (options) =>
+            @workflowState.nodes.renderAllConnections(options))
 
           # Setup the main menu events
-          @ui.menubar.on("RemoveSelectedNodes", @nodes.removeSelectedNodes)
-          @ui.menubar.on("CreateNewWorkflow", @createNewWorkflow)
-          @ui.menubar.on("SaveFile", @file_handler.saveLocalFile)
-          @ui.menubar.on("ExportCode", @file_handler.exportCode)
-          @ui.menubar.on("LoadJSON", @file_handler.loadFromJsonData)
-          @ui.menubar.on("LoadFile", @file_handler.loadLocalFile)
-          @ui.menubar.on("ExportImage", @webgl.exportImage)
-          @ui.menubar.on("GroupSelectedNodes", @group_definitions.groupSelectedNodes)
+          @ui.menubar.on("RemoveSelectedNodes", (options) =>
+            @workflowState.nodes.removeSelectedNodes(options))
+          @ui.menubar.on("CreateNewWorkflow", (options) =>
+            @createNewWorkflow(options))
+          @ui.menubar.on("SaveFile", (options) =>
+            @file_handler.saveLocalFile(options))
+          @ui.menubar.on("ExportCode", (options) =>
+            @file_handler.exportCode(options))
+          @ui.menubar.on("LoadJSON", (options) =>
+            @file_handler.loadFromJsonData(options))
+          @ui.menubar.on("LoadFile", (options) =>
+            @file_handler.loadLocalFile(options))
+          @ui.menubar.on("ExportImage", (options) =>
+            @webgl.exportImage(options))
+          @ui.menubar.on("GroupSelectedNodes", (options) =>
+            @workflowState.group_definitions.groupSelectedNodes(options))
           # Added by Gautam
           @ui.menubar.on("Execute", @execute, @)
 
@@ -236,8 +196,9 @@ define [
 
 
           # Special events
-          @ui.on("CreateNode", @nodes.createNode)
-          @nodes.on("nodeslist:rebuild", @ui.onNodeListRebuild)
+          @ui.on("CreateNode", (options) =>
+            @workflowState.nodes.createNode(options))
+          @initWorkflowEvents()
 
           #breadcrumb
           @ui.breadcrumb.on("click", @setWorkspaceFromDefinition)
@@ -251,6 +212,12 @@ define [
 
 
         return this
+
+
+      initWorkflowEvents: =>
+        @workflowState.nodes.on("nodeslist:rebuild", (options) =>
+          @ui.onNodeListRebuild(options)
+        , @)
 
       execute: =>
         if @workflowState.get 'abstract'
@@ -280,7 +247,7 @@ define [
           # find the subworkflow module by nid and set the implementation attr
           # @note: the cid will change each time a new model is created.
           enteredSubworkflow = @enteredSubworkflows.pop()
-          @nodes.get(enteredSubworkflow.nid).set({implementation: cur, implemented: implemented})
+          @workflowState.nodes.get(enteredSubworkflow.nid).set({implementation: cur, implemented: implemented})
           if @superworkflows.length is 0 then @ui.hideBackButton()
 
       loadNewSceneFromJSONString: (wf)->
@@ -288,56 +255,18 @@ define [
         @file_handler.loadFromJsonData(wf)
 
 
-      #j start running the workflow if it is not running,
-      # run next node if it is
-      runWorkflow: =>
-        if !@workflowState.workflow_state
-          @startRunningWorkflow()
-        else
-          @runNext()
-        null
-
-
-      startRunningWorkflow: =>
-        # start_nodes: [] of node models
-        start_nodes = @nodes.findStartNodesAndMarkReady()
-        for node in start_nodes
-          node.run()
-        @workflowState.workflow_state = true
-        @workflowState.running_nodes = start_nodes
-        null
-
-      runNext: =>
-        # get nodes to run
-        nodes_to_run = [].concat @workflowState.waiting_nodes
-        @workflowState.waiting_nodes = []
-        for node in @workflowState.running_nodes
-          # get nodes to run next
-          nodes_to_run = nodes_to_run.concat node.next()
-          # stop current running
-          node.stop()
-        @workflowState.running_nodes = []
-
-        # if the end of workflow, change the workflow_state
-        if !nodes_to_run.length
-          @workflowState.workflow_state = false
-        # else continue running
-        else
-          # run nodes_to_run
-          for node in nodes_to_run
-            if node.ready
-              node.run()
-              @workflowState.running_nodes.push node
-            else
-              @workflowState.waiting_nodes.push node
-        null
-
-
       # replace old one with the new one, deal with all dependencies
       replaceWorkflowState: (workflowState)->
+        # Going to drop the old workflow model, first remove the corresponding view
+        # stop listening events on this model
+        @workflowState.nodes.off null, null, @
         @workflowState = workflowState
-        # we don't have events on @workflow
+
+        # Bind events on the new model
+        @initWorkflowEvents();
         @ui.replaceWorkflowState(@workflowState)
+        # Workspace has coupling with the workflowState.nodes
+        @workspace.render(workflowState.nodes)
 
 
       # create a new workflow or use the provided workflow to replace the old one
@@ -351,8 +280,7 @@ define [
         @ui.dialogView.openDialog()
 
       clearWorkspace: () =>
-        @nodes.clearWorkspace()
-        @group_definitions.removeAll()
+        @workflowState.clearWorkspace()
         if @ui then @ui.clearWorkspace()
         # @initTimeline()
 

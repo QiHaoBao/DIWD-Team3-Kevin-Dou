@@ -11,7 +11,7 @@ define [
 
 	namespace "ThreeNodes",
 		FileHandler: class FileHandler extends Backbone.Events
-			constructor: (@app, @nodes, @group_definitions) ->
+			constructor: (@workflowState, @group_definitions) ->
         		_.extend(FileHandler::, Backbone.Events)
 
 			saveLocalFile: () =>
@@ -34,10 +34,10 @@ define [
 			# defalt will return json_str
 			getLocalJson: (stringify = true) =>
 				res =
-					uid: @nodes.indexer.getUID(false)
-					workflowState: @app.workflowState.toJSON()
-					nodes: jQuery.map(@nodes.models, (n, i) -> n.toJSON())
-					connections: jQuery.map(@nodes.connections.models, (c, i) -> c.toJSON())
+					uid: @workflowState.nodes.indexer.getUID(false)
+					workflowState: @workflowState.toJSON()
+					nodes: jQuery.map(@workflowState.nodes.models, (n, i) -> n.toJSON())
+					connections: jQuery.map(@workflowState.nodes.connections.models, (c, i) -> c.toJSON())
 					groups: jQuery.map(@group_definitions.models, (g, i) -> g.toJSON())
 
 				if stringify
@@ -45,6 +45,7 @@ define [
 				else
 					return res
 
+			# todo
 			loadFromJsonData: (txt) =>
 				# Parse the json string
 				loaded_data = JSON.parse(txt)
