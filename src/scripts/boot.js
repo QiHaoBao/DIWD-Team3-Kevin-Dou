@@ -7,6 +7,11 @@ require.config({
   }
 });
 
+require(['logger'], function(Logger) {
+  window.Logger = Logger;
+  Logger.useDefaults();
+});
+
 require(['cs!threenodes/App'], function () {
   return new ThreeNodes.App();
 });

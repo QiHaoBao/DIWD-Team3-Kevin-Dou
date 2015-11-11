@@ -26,7 +26,8 @@ require.config({
     timeline: "libs/timeline.js/timeline",
     'timeline-gui': "libs/timeline.js/timeline-gui",
     'jqueryForm':'libs/jquery.form.min',
-    'nofity': 'libs/notify.min'
+    'nofity': 'libs/notify.min',
+    'logger': 'libs/logger.min'
   },
   shim: {
     'Three':{

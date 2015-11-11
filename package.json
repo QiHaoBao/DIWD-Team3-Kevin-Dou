@@ -21,6 +21,7 @@
   },
   "engine": "node >= 0.8.x",
   "devDependencies": {
-    "flightplan": "^0.5.5"
+    "flightplan": "^0.5.5",
+    "js-logger": "^1.2.0"
   }
 }

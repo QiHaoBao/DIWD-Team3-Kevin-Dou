@@ -82,6 +82,7 @@ define [
         Backbone.history.start
           pushState: false
 
+
         return true
 
       # options.$elem, options.position
