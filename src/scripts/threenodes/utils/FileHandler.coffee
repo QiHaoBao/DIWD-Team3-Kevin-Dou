@@ -11,8 +11,11 @@ define [
 
 	namespace "ThreeNodes",
 		FileHandler: class FileHandler extends Backbone.Events
-			constructor: (@workflowState, @group_definitions) ->
+			constructor: (@workflowState) ->
         		_.extend(FileHandler::, Backbone.Events)
+
+      replaceWorkflowState: (workflowState) =>
+      	@workflowState = workflowState
 
 			saveLocalFile: () =>
 				bb = new BlobBuilder()
@@ -38,7 +41,7 @@ define [
 					workflowState: @workflowState.toJSON()
 					nodes: jQuery.map(@workflowState.nodes.models, (n, i) -> n.toJSON())
 					connections: jQuery.map(@workflowState.nodes.connections.models, (c, i) -> c.toJSON())
-					groups: jQuery.map(@group_definitions.models, (g, i) -> g.toJSON())
+					groups: jQuery.map(@workflowState.group_definitions.models, (g, i) -> g.toJSON())
 
 				if stringify
 					return JSON.stringify(res)
@@ -52,34 +55,37 @@ define [
 
 				# load workflow model
 				workflowState = new ThreeNodes.WorkflowState(loaded_data.workflowState)
-				@app.replaceWorkflowState(workflowState)
+
+				@trigger 'JSONLoading', workflowState
 
 	        # First recreate the group definitions
 				if loaded_data.groups
 					for grp_def in loaded_data.groups
-						@group_definitions.create(grp_def)
+						workflowState.group_definitions.create(grp_def)
 
     	    # Create the nodes
 				for node in loaded_data.nodes
 					if node.type != "Group"
 					# Create a simple node
-						@nodes.createNode(node)
+						workflowState.nodes.createNode(node)
 					else
     	        # If the node is a group we first need to get the previously created group definition
-						def = @group_definitions.getByGid(node.definition_id)
+						def = workflowState.group_definitions.getByGid(node.definition_id)
 						if def
 							node.definition = def
-							grp = @nodes.createGroup(node)
+							grp = workflowState.nodes.createGroup(node)
 						else
 							console.log "can't find the GroupDefinition: #{node.definition_id}"
 
 			# Create the connections
 				for connection in loaded_data.connections
-					@nodes.createConnectionFromObject(connection)
+					workflowState.nodes.createConnectionFromObject(connection)
 
-				@nodes.indexer.uid = loaded_data.uid
-				delay = (ms, func) -> setTimeout func, ms
-				delay 1, => @nodes.renderAllConnections()
+				workflowState.nodes.indexer.uid = loaded_data.uid
+				delay = (ms, func) => setTimeout func, ms
+				delay 1, () =>
+					workflowState.nodes.renderAllConnections()
+
 
 			loadLocalFile: (e) =>
 				# Clear the workspace first

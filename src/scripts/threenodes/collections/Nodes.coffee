@@ -106,7 +106,6 @@ define [
         @timeline.on("stopSound", @stopSound)
 
       createNode: (options) =>
-        console.log('got the evnt')
         # If not is a string instead of an object then take the option as the node type
         if $.type(options) == "string"
           options = {type: options}

@@ -24,7 +24,6 @@ define [
 
       render: (nodes) =>
         console.log "should remove " + @views.length
-        console.log @views
         # Remove all existing views before displaying new ones
         _.each(@views, (view) -> view.remove())
 

@@ -52,11 +52,17 @@ define [
         @url_handler = new ThreeNodes.UrlHandler()
         @socket = new ThreeNodes.AppWebsocket(websocket_enabled)
         @webgl = new ThreeNodes.WebglBase()
-        @file_handler = new ThreeNodes.FileHandler(@workflowState, @group_definitions)
+        @file_handler = new ThreeNodes.FileHandler(@workflowState)
 
 
         # File and url events
-        @file_handler.on("ClearWorkspace", () => @clearWorkspace())
+        @file_handler.on("ClearWorkspace", () =>
+          @clearWorkspace()
+        , @)
+        @file_handler.on 'JSONLoading', (workflowState) =>
+          @replaceWorkflowState(workflowState)
+        , @
+
         @url_handler.on("ClearWorkspace", () => @clearWorkspace())
         @url_handler.on("LoadJSON", @file_handler.loadFromJsonData)
 
@@ -84,6 +90,11 @@ define [
 
 
         return true
+
+
+      clean: =>
+        @file_handler.off null, null, @
+
 
       # options.$elem, options.position
       notify: (options) =>
@@ -222,7 +233,7 @@ define [
 
       execute: =>
         if @workflowState.get 'abstract'
-          @runWorkflow()
+          @workflowState.runWorkflow()
         else
           @file_handler.executeAndSave()
 
@@ -257,7 +268,7 @@ define [
 
 
       # replace old one with the new one, deal with all dependencies
-      replaceWorkflowState: (workflowState)->
+      replaceWorkflowState: (workflowState) =>
         # Going to drop the old workflow model, first remove the corresponding view
         # stop listening events on this model
         @workflowState.nodes.off null, null, @
@@ -266,6 +277,7 @@ define [
         # Bind events on the new model
         @initWorkflowEvents();
         @ui.replaceWorkflowState(@workflowState)
+        @file_handler.replaceWorkflowState(@workflowState)
         # Workspace has coupling with the workflowState.nodes
         @workspace.render(workflowState.nodes)
 
