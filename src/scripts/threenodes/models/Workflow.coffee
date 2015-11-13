@@ -7,10 +7,10 @@ define [
 ], (_, Backbone, Utils) ->
   #"use strict"
 
-  ### workflowState model ###
+  ### workflow model ###
 
   namespace "ThreeNodes",
-    WorkflowState: class WorkflowState extends Backbone.Model
+    Workflow: class Workflow extends Backbone.Model
       defaults:
         # A workflow is considered not abstract unless there is an abstract node in
         # the workflow

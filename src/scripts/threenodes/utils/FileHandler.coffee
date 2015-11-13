@@ -11,11 +11,11 @@ define [
 
 	namespace "ThreeNodes",
 		FileHandler: class FileHandler extends Backbone.Events
-			constructor: (@workflowState) ->
+			constructor: (@workflow) ->
         		_.extend(FileHandler::, Backbone.Events)
 
-      replaceWorkflowState: (workflowState) =>
-      	@workflowState = workflowState
+      replaceWorkflow: (workflow) =>
+      	@workflow = workflow
 
 			saveLocalFile: () =>
 				bb = new BlobBuilder()
@@ -37,11 +37,11 @@ define [
 			# defalt will return json_str
 			getLocalJson: (stringify = true) =>
 				res =
-					uid: @workflowState.nodes.indexer.getUID(false)
-					workflowState: @workflowState.toJSON()
-					nodes: jQuery.map(@workflowState.nodes.models, (n, i) -> n.toJSON())
-					connections: jQuery.map(@workflowState.nodes.connections.models, (c, i) -> c.toJSON())
-					groups: jQuery.map(@workflowState.group_definitions.models, (g, i) -> g.toJSON())
+					uid: @workflow.nodes.indexer.getUID(false)
+					workflow: @workflow.toJSON()
+					nodes: jQuery.map(@workflow.nodes.models, (n, i) -> n.toJSON())
+					connections: jQuery.map(@workflow.nodes.connections.models, (c, i) -> c.toJSON())
+					groups: jQuery.map(@workflow.group_definitions.models, (g, i) -> g.toJSON())
 
 				if stringify
 					return JSON.stringify(res)
@@ -54,37 +54,37 @@ define [
 				loaded_data = JSON.parse(txt)
 
 				# load workflow model
-				workflowState = new ThreeNodes.WorkflowState(loaded_data.workflowState)
+				workflow = new ThreeNodes.Workflow(loaded_data.workflow)
 
-				@trigger 'JSONLoading', workflowState
+				@trigger 'JSONLoading', workflow
 
 	        # First recreate the group definitions
 				if loaded_data.groups
 					for grp_def in loaded_data.groups
-						workflowState.group_definitions.create(grp_def)
+						workflow.group_definitions.create(grp_def)
 
     	    # Create the nodes
 				for node in loaded_data.nodes
 					if node.type != "Group"
 					# Create a simple node
-						workflowState.nodes.createNode(node)
+						workflow.nodes.createNode(node)
 					else
     	        # If the node is a group we first need to get the previously created group definition
-						def = workflowState.group_definitions.getByGid(node.definition_id)
+						def = workflow.group_definitions.getByGid(node.definition_id)
 						if def
 							node.definition = def
-							grp = workflowState.nodes.createGroup(node)
+							grp = workflow.nodes.createGroup(node)
 						else
 							console.log "can't find the GroupDefinition: #{node.definition_id}"
 
 			# Create the connections
 				for connection in loaded_data.connections
-					workflowState.nodes.createConnectionFromObject(connection)
+					workflow.nodes.createConnectionFromObject(connection)
 
-				workflowState.nodes.indexer.uid = loaded_data.uid
+				workflow.nodes.indexer.uid = loaded_data.uid
 				delay = (ms, func) => setTimeout func, ms
 				delay 1, () =>
-					workflowState.nodes.renderAllConnections()
+					workflow.nodes.renderAllConnections()
 
 
 			loadLocalFile: (e) =>

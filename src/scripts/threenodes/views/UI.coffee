@@ -32,7 +32,7 @@ define [
         @settings = options.settings
         @is_grabbing = false
 
-        @workflowState = options.workflowState
+        @workflow = options.workflow
 
 
         # Bind events
@@ -58,7 +58,7 @@ define [
         @sidebar = new ThreeNodes.Sidebar({el: $("#sidebar")})
         @initMenubar()
         @initToolbar()
-        @dialogView = new ThreeNodes.DialogView(model: @workflowState.get('context'))
+        @dialogView = new ThreeNodes.DialogView(model: @workflow.get('context'))
         @$('#dialog').append(@dialogView.render().el)
 
         # Set the layout and show application
@@ -103,15 +103,15 @@ define [
             dx = ui.position.left + $("#container-wrapper").scrollLeft() - offset.left - 10
             dy = ui.position.top + $("#container-wrapper").scrollTop() - container.scrollTop() - offset.top
             #debugger
-            self.trigger("CreateNode", {type: nodename, x: dx, y: dy, definition: definition, context: self.workflowState.get('context').toJSON()})
+            self.trigger("CreateNode", {type: nodename, x: dx, y: dy, definition: definition, context: self.workflow.get('context').toJSON()})
             $("#sidebar").show()
 
         return this
 
-      replaceWorkflowState: (workflowState)->
-        @workflowState = workflowState
+      replaceWorkflow: (workflow)->
+        @workflow = workflow
         @dialogView.remove()
-        @dialogView = new ThreeNodes.DialogView(model: @workflowState.get('context'))
+        @dialogView = new ThreeNodes.DialogView(model: @workflow.get('context'))
         @$('#dialog').append(@dialogView.render().el)
         # using existing dom element for the view el has a drawback: when you remove
         # the subview, it will remove the corresponding dom element, and you can't

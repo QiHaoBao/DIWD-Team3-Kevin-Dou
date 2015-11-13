@@ -4,7 +4,7 @@ define [
   'jquery',
   'libs/namespace',
   "cs!threenodes/utils/Utils",
-  'cs!threenodes/models/WorkflowState',
+  'cs!threenodes/models/Workflow',
   'cs!threenodes/collections/Nodes',
   'cs!threenodes/collections/GroupDefinitions',
   'cs!threenodes/views/UI',
@@ -33,7 +33,7 @@ define [
 
         _.extend(@, Backbone.Events)
 
-        @workflowState = new ThreeNodes.WorkflowState()
+        @workflow = new ThreeNodes.Workflow()
         # a stack to store super workflow strs
         @superworkflows = []
         # a stack to store the plain JSON representation of subworkflow instance
@@ -52,15 +52,15 @@ define [
         @url_handler = new ThreeNodes.UrlHandler()
         @socket = new ThreeNodes.AppWebsocket(websocket_enabled)
         @webgl = new ThreeNodes.WebglBase()
-        @file_handler = new ThreeNodes.FileHandler(@workflowState)
+        @file_handler = new ThreeNodes.FileHandler(@workflow)
 
 
         # File and url events
         @file_handler.on("ClearWorkspace", () =>
           @clearWorkspace()
         , @)
-        @file_handler.on 'JSONLoading', (workflowState) =>
-          @replaceWorkflowState(workflowState)
+        @file_handler.on 'JSONLoading', (workflow) =>
+          @replaceWorkflow(workflow)
         , @
 
         @url_handler.on("ClearWorkspace", () => @clearWorkspace())
@@ -78,7 +78,7 @@ define [
           settings: @settings
         # Make the workspace display the global nodes and connections
         # todo:
-        @workspace.render(@workflowState.nodes)
+        @workspace.render(@workflow.nodes)
 
         # Start the url handling
         #
@@ -98,7 +98,7 @@ define [
 
       # options.$elem, options.position
       notify: (options) =>
-        if !@workflowState.get 'abstract'
+        if !@workflow.get 'abstract'
           options.$elem.notify 'Executing...',
             className: 'success'
             autoHide: true
@@ -124,11 +124,11 @@ define [
           @createNewWorkflow(null)
           count = 0
           for inputName in inputNames
-            @workflowState.nodes.createNode({type:'InputPort', x: 3, y: 5 + 50 * count, name: inputName, definition: null, context: null})
+            @workflow.nodes.createNode({type:'InputPort', x: 3, y: 5 + 50 * count, name: inputName, definition: null, context: null})
             count++
           count = 0
           for outputName in outputNames
-            @workflowState.nodes.createNode({type:'OutputPort', x: 803, y: 5 + 50 * count, name: outputName, definition: null, context: null})
+            @workflow.nodes.createNode({type:'OutputPort', x: 803, y: 5 + 50 * count, name: outputName, definition: null, context: null})
             count++
         @ui.showBackButton()
         # toggle the tabs to new
@@ -142,11 +142,11 @@ define [
           # maybe sync new modifications...
 
         if definition == "global"
-          @workspace.render(@workflowState.nodes)
+          @workspace.render(@workflow.nodes)
           @ui.breadcrumb.reset()
         else
           # create a hidden temporary group node from this definition
-          @edit_node = @workflowState.nodes.createGroup
+          @edit_node = @workflow.nodes.createGroup
             type: "Group"
             definition: definition
             x: -9999
@@ -159,18 +159,18 @@ define [
           @ui = new ThreeNodes.UI
             el: $("body")
             settings: @settings
-            workflowState: @workflowState
+            workflow: @workflow
 
 
           # Link UI to render events
           @ui.on("render", (options) =>
-            @workflowState.nodes.render(options))
+            @workflow.nodes.render(options))
           @ui.on("renderConnections", (options) =>
-            @workflowState.nodes.renderAllConnections(options))
+            @workflow.nodes.renderAllConnections(options))
 
           # Setup the main menu events
           @ui.menubar.on("RemoveSelectedNodes", (options) =>
-            @workflowState.nodes.removeSelectedNodes(options))
+            @workflow.nodes.removeSelectedNodes(options))
           @ui.menubar.on("CreateNewWorkflow", (options) =>
             @createNewWorkflow(options))
           @ui.menubar.on("SaveFile", (options) =>
@@ -184,7 +184,7 @@ define [
           @ui.menubar.on("ExportImage", (options) =>
             @webgl.exportImage(options))
           @ui.menubar.on("GroupSelectedNodes", (options) =>
-            @workflowState.group_definitions.groupSelectedNodes(options))
+            @workflow.group_definitions.groupSelectedNodes(options))
           # Added by Gautam
           @ui.menubar.on("Execute", @execute, @)
 
@@ -209,7 +209,7 @@ define [
 
           # Special events
           @ui.on("CreateNode", (options) =>
-            @workflowState.nodes.createNode(options))
+            @workflow.nodes.createNode(options))
           @initWorkflowEvents()
 
           #breadcrumb
@@ -227,13 +227,13 @@ define [
 
 
       initWorkflowEvents: =>
-        @workflowState.nodes.on("nodeslist:rebuild", (options) =>
+        @workflow.nodes.on("nodeslist:rebuild", (options) =>
           @ui.onNodeListRebuild(options)
         , @)
 
       execute: =>
-        if @workflowState.get 'abstract'
-          @workflowState.runWorkflow()
+        if @workflow.get 'abstract'
+          @workflow.runWorkflow()
         else
           @file_handler.executeAndSave()
 
@@ -252,14 +252,14 @@ define [
       backToSuperworkflow: ()->
         # pop from stack the saved superworkflow
         if @superworkflows.length != 0
-          implemented = not @workflowState.get 'abstract'
+          implemented = not @workflow.get 'abstract'
           cur = @file_handler.getLocalJson(true)
           superworkflow = @superworkflows.pop()
           @loadNewSceneFromJSONString(superworkflow)
           # find the subworkflow module by nid and set the implementation attr
           # @note: the cid will change each time a new model is created.
           enteredSubworkflow = @enteredSubworkflows.pop()
-          @workflowState.nodes.get(enteredSubworkflow.nid).set({implementation: cur, implemented: implemented})
+          @workflow.nodes.get(enteredSubworkflow.nid).set({implementation: cur, implemented: implemented})
           if @superworkflows.length is 0 then @ui.hideBackButton()
 
       loadNewSceneFromJSONString: (wf)->
@@ -268,32 +268,32 @@ define [
 
 
       # replace old one with the new one, deal with all dependencies
-      replaceWorkflowState: (workflowState) =>
+      replaceWorkflow: (workflow) =>
         # Going to drop the old workflow model, first remove the corresponding view
         # stop listening events on this model
-        @workflowState.nodes.off null, null, @
-        @workflowState = workflowState
+        @workflow.nodes.off null, null, @
+        @workflow = workflow
 
         # Bind events on the new model
         @initWorkflowEvents();
-        @ui.replaceWorkflowState(@workflowState)
-        @file_handler.replaceWorkflowState(@workflowState)
-        # Workspace has coupling with the workflowState.nodes
-        @workspace.render(workflowState.nodes)
+        @ui.replaceWorkflow(@workflow)
+        @file_handler.replaceWorkflow(@workflow)
+        # Workspace has coupling with the workflow.nodes
+        @workspace.render(workflow.nodes)
 
 
       # create a new workflow or use the provided workflow to replace the old one
-      createNewWorkflow: (workflowState)=>
-        workflowState = workflowState || new ThreeNodes.WorkflowState()
+      createNewWorkflow: (workflow)=>
+        workflow = workflow || new ThreeNodes.Workflow()
         @clearWorkspace()
-        @replaceWorkflowState(workflowState)
+        @replaceWorkflow(workflow)
         @setWorkflowContext()
 
       setWorkflowContext: =>
         @ui.dialogView.openDialog()
 
       clearWorkspace: () =>
-        @workflowState.clearWorkspace()
+        @workflow.clearWorkspace()
         if @ui then @ui.clearWorkspace()
         # @initTimeline()
 
