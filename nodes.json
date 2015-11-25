@@ -1,0 +1,87 @@
+{
+  "uid": 9,
+  "workflowState": {
+    "abstract": false,
+    "context": {
+      "author": "",
+      "affiliation": "",
+      "keywords": "",
+      "purpose": "",
+      "description": "",
+      "constraints": []
+    }
+  },
+  "nodes": [
+    {
+      "nid": 1,
+      "name": "Integer",
+      "type": "Integer",
+      "anim": false,
+      "x": 165,
+      "y": 80,
+      "fields": {
+        "in": [
+          {
+            "name": "in",
+            "type": "Float",
+            "custom": false,
+            "val": 0
+          }
+        ],
+        "out": [
+          {
+            "name": "out",
+            "type": "Float",
+            "custom": false
+          },
+          {
+            "name": "out0",
+            "type": "String",
+            "custom": false,
+            "val": 0
+          }
+        ]
+      }
+    },
+    {
+      "nid": 5,
+      "name": "Integer",
+      "type": "Integer",
+      "anim": false,
+      "x": 501,
+      "y": 245,
+      "fields": {
+        "in": [
+          {
+            "name": "in",
+            "type": "Float",
+            "custom": false
+          }
+        ],
+        "out": [
+          {
+            "name": "out",
+            "type": "Float",
+            "custom": false
+          },
+          {
+            "name": "out0",
+            "type": "String",
+            "custom": false,
+            "val": 0
+          }
+        ]
+      }
+    }
+  ],
+  "connections": [
+    {
+      "id": 9,
+      "from_node": 1,
+      "from": "out",
+      "to_node": 5,
+      "to": "in"
+    }
+  ],
+  "groups": []
+}
