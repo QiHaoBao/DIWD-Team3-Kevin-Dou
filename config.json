@@ -1,0 +1,420 @@
+{
+    "init_count": {
+        "function": 0, 
+        "portSpec": 0, 
+        "add": 0, 
+        "module": 0, 
+        "port": 0, 
+        "connection": 0, 
+        "location": 0, 
+        "action": 1, 
+        "parameter": 0, 
+        "portSpecItem": 0
+    }, 
+    "port_name_mapping": {
+        "MatlabSource": {
+            "string": "source", 
+            "out": "source"
+        }, 
+        "String": {
+            "string": "value", 
+            "out": "value"
+        }, 
+        "Not": {
+            "in": "input", 
+            "out": "value"
+        }, 
+        "Sum": {
+            "val": "InputList", 
+            "out": "Result"
+        }, 
+        "And": {
+            "val": "InputList", 
+            "out": "Result"
+        }, 
+        "Or": {
+            "val": "InputList", 
+            "out": "Result"
+        }, 
+        "StandardOutput": {
+            "in": "value"
+        }, 
+        "Float": {
+            "out0": "value_as_string", 
+            "out1": "value", 
+            "in": "value"
+        },
+		"Directory": {
+            "out0": "value_as_string",
+            "in": "value",
+			"out1": "value",
+			"out2": "itemList"
+		},
+        "List": {
+            "out0": "value", 
+            "in0": "head", 
+            "in1": "head"
+        }, 
+        "Round": {
+            "out": "out_value", 
+            "in": "in_value"
+        }, 
+        "PasswordDialog": {
+            "title": "title",
+            "cacheable": "cacheable",
+            "label": "label",
+			"default": "default",
+			"out": "result"
+        }, 
+        "Assert": {
+            "in": "value"
+        }, 
+        "PythonSource": {
+            "string": "source", 
+            "out": "source"
+        }, 
+        "WriteFile": {
+            "in": "in_value", 
+            "out": "out_value"
+        }, 
+        "ReadFile": {
+            "in": "in_value", 
+            "out": "out_value"
+        }, 
+        "Boolean": {
+            "out0": "value_as_string", 
+            "out1": "value", 
+            "in": "value"
+        }, 
+        "File": {
+			"filename": "value_as_string",
+            "file": "value"
+        }, 
+        "Integer": {
+            "out0": "value_as_string", 
+            "out": "value", 
+            "in": "value"
+        }, 
+        "Color": {
+            "out0": "value_as_string", 
+            "out1": "value", 
+            "in": "value"
+        }, 
+        "Unzip": {
+            "in0": "filename_in_archive", 
+            "in1": "archive_file", 
+            "out": "file"
+        }, 
+        "AssertEqual": {
+            "in1": "value", 
+            "in2": "value"
+        }, 
+        "FileSink": {
+            "in0": "file"
+        }, 
+        "ConcatenateString": {
+            "val2": "str2", 
+            "val1": "str1", 
+            "out": "value"
+        }
+    }, 
+    "version_mapping": {
+        "MatlabSource": "2.1", 
+        "Unzip": "2.1", 
+        "String": "2.1", 
+        "Sum": "0.2.4", 
+        "Float": "2.1", 
+        "Not": "2.1", 
+        "List": "2.1", 
+        "Integer": "2.1", 
+        "Assert": "2.1", 
+        "PythonSource": "2.1", 
+        "WriteFile": "2.1", 
+        "ReadFile": "2.1", 
+        "Boolean": "2.1", 
+        "File": "", 
+        "FileSink": "2.1", 
+        "AssertEqual": "2.1", 
+        "Round": "2.1", 
+        "Color": "2.1", 
+        "And": "2.1", 
+        "Or": "2.1", 
+        "PasswordDialog": "0.9.2", 
+        "ConcatenateString": "2.1",
+        "Directory": "2.1",
+        "StandardOutput": "2.1",
+        "Unzip": "2.1"
+    }, 
+    "package_mapping": {
+        "MatlabSource": "org.vistrails.vistrails.basic", 
+        "String": "org.vistrails.vistrails.basic", 
+        "Sum": "org.vistrails.vistrails.control_flow", 
+        "And": "org.vistrails.vistrails.control_flow", 
+        "Or": "org.vistrails.vistrails.control_flow", 
+        "Float": "org.vistrails.vistrails.basic", 
+        "Not": "org.vistrails.vistrails.basic", 
+        "List": "org.vistrails.vistrails.basic", 
+        "Integer": "org.vistrails.vistrails.basic", 
+        "Assert": "org.vistrails.vistrails.basic", 
+        "PythonSource": "org.vistrails.vistrails.basic", 
+        "WriteFile": "org.vistrails.vistrails.basic", 
+        "ReadFile": "org.vistrails.vistrails.basic", 
+        "Boolean": "org.vistrails.vistrails.basic", 
+        "File": "org.vistrails.vistrails.basic", 
+        "PasswordDialog": "org.vistrails.vistrails.dialogs", 
+        "FileSink": "org.vistrails.vistrails.basic", 
+        "AssertEqual": "org.vistrails.vistrails.basic", 
+        "Round": "org.vistrails.vistrails.basic", 
+        "Color": "org.vistrails.vistrails.basic", 
+        "ConcatenateString": "org.vistrails.vistrails.basic",
+        "Directory": "org.vistrails.vistrails.basic",
+        "StandardOutput": "org.vistrails.vistrails.basic",
+        "Unzip": "org.vistrails.vistrails.basic"
+    }, 
+    "name_mapping": {
+        "MatlabSource": "MatlabSource", 
+        "Float": "Float", 
+        "String": "String", 
+        "Color": "Color", 
+        "Sum": "Sum", 
+        "And": "And", 
+        "Or": "Or", 
+        "Not": "Not", 
+        "MathRound": "Round", 
+        "List": "List", 
+        "Integer": "Integer", 
+        "Assert": "Assert", 
+        "PythonSource": "PythonSource", 
+        "WriteFile": "WriteFile", 
+        "ReadFile": "ReadFile", 
+        "Boolean": "Boolean", 
+        "File": "File", 
+        "FileSink": "FileSink", 
+        "AssertEqual": "AssertEqual", 
+        "StringConcatenate": "ConcatenateString",
+        "PasswordDialog": "PasswordDialog",
+        "Directory": "Directory",
+        "StandardOutput": "StandardOutput",
+        "Unzip": "Unzip"
+    }, 
+    "sig_mapping": {
+        "MatlabSource": {
+            "out": "(org.vistrails.vistrails.basic:String)"
+        }, 
+        "Directory": {
+            "in": "(org.vistrails.vistrails.basic:Directory)", 
+            "out0": "(org.vistrails.vistrails.basic:String)",
+            "out1": "(org.vistrails.vistrails.basic:Directory)",
+            "out2": "(org.vistrails.vistrails.basic:List)"
+        }, 
+        "String": {
+            "string": "(org.vistrails.vistrails.basic:String)", 
+            "out": "(org.vistrails.vistrails.basic:String)"
+        }, 
+        "PasswordDialog": {
+            "default": "org.vistrails.vistrails.basic:String", 
+            "title": "org.vistrails.vistrails.basic:String", 
+            "label": "org.vistrails.vistrails.basic:String", 
+            "cacheable": "org.vistrails.vistrails.basic:Boolean", 
+            "out": "org.vistrails.vistrails.basic:String"
+        }, 
+        "Sum": {
+            "val": "(org.vistrails.vistrails.basic:List)", 
+            "out": "(org.vistrails.vistrails.basic:Variant)"
+        }, 
+        "And": {
+            "val": "(org.vistrails.vistrails.basic:List)", 
+            "out": "(org.vistrails.vistrails.basic:Boolean)"
+        }, 
+        "Or": {
+            "val": "(org.vistrails.vistrails.basic:List)", 
+            "out": "(org.vistrails.vistrails.basic:Boolean)"
+        }, 
+        "Not": {
+            "in": "(org.vistrails.vistrails.basic:Boolean)", 
+            "out": "(org.vistrails.vistrails.basic:Boolean)"
+        }, 
+        "Color": {
+            "out0": "(org.vistrails.vistrails.basic:String)", 
+            "out1": "(org.vistrails.vistrails.basic:Color)", 
+            "in": "(org.vistrails.vistrails.basic:Color)"
+        }, 
+        "Float": {
+            "out0": "(org.vistrails.vistrails.basic:String)", 
+            "out1": "(org.vistrails.vistrails.basic:Float)", 
+            "in": "(org.vistrails.vistrails.basic:Float)"
+        }, 
+        "List": {
+            "out0": "(org.vistrails.vistrails.basic:List)", 
+            "in0": "(org.vistrails.vistrails.basic:Module)", 
+            "in1": "(org.vistrails.vistrails.basic:Module)"
+        }, 
+        "Round": {
+            "out": "(org.vistrails.vistrails.basic:Integer)", 
+            "in": "(org.vistrails.vistrails.basic:Float)"
+        }, 
+        "Assert": {
+            "in": "(org.vistrails.vistrails.basic:Boolean)"
+        }, 
+        "PythonSource": {
+            "out": "(org.vistrails.vistrails.basic:String)"
+        }, 
+        "WriteFile": {
+            "in": "(org.vistrails.vistrails.basic:String)", 
+            "out": "(org.vistrails.vistrails.basic:File)"
+        }, 
+        "ReadFile": {
+            "in": "(org.vistrails.vistrails.basic:File)", 
+            "out": "(org.vistrails.vistrails.basic:String)"
+        }, 
+        "Boolean": {
+            "out0": "(org.vistrails.vistrails.basic:String)", 
+            "out1": "(org.vistrails.vistrails.basic:Boolean)", 
+            "in": "(org.vistrails.vistrails.basic:Boolean)"
+        }, 
+        "File": {
+			"filename": "(org.vistrails.vistrails.basic:String)",
+            "file": "(org.vistrails.vistrails.basic:File)"
+        }, 
+        "Unzip": {
+			"in0": "(org.vistrails.vistrails.basic:String)",
+			"in1": "(org.vistrails.vistrails.basic:File)",
+            "out": "(org.vistrails.vistrails.basic:File)"
+        }, 
+        "Integer": {
+            "out0": "(org.vistrails.vistrails.basic:String)", 
+            "out": "(org.vistrails.vistrails.basic:Integer)", 
+            "in": "(org.vistrails.vistrails.basic:Integer)"
+        }, 
+        "AssertEqual": {
+            "in1": "(org.vistrails.vistrails.basic:Variant)", 
+            "in2": "(org.vistrails.vistrails.basic:Variant)"
+        }, 
+        "StandardOutput": {
+            "in": "(org.vistrails.vistrails.basic:Variant)"
+        }, 
+        "FileSink": {
+            "in0": "(org.vistrails.vistrails.basic:File)"
+        }, 
+        "ConcatenateString": {
+            "val2": "(org.vistrails.vistrails.basic:String)", 
+            "val1": "(org.vistrails.vistrails.basic:String)", 
+            "out": "(org.vistrails.vistrails.basic:String)"
+        }
+    }, 
+    "port_type_mapping": {
+        "MatlabSource": {
+            "custom_in": "destination", 
+            "custom_out": "source", 
+            "string": "destination", 
+            "out": "source"
+        }, 
+        "String": {
+            "out": "source", 
+            "in": "destination"
+        }, 
+        "Not": {
+            "out": "source", 
+            "in": "destination"
+        }, 
+        "Sum": {
+            "val": "destination", 
+            "out": "source"
+        }, 
+        "And": {
+            "val": "destination", 
+            "out": "source"
+        }, 
+        "Or": {
+            "val": "destination", 
+            "out": "source"
+        }, 
+        "StandardOutput": {
+            "in": "destination" 
+        }, 
+        "Float": {
+            "out0": "source", 
+            "out1": "source", 
+            "in": "destination"
+        }, 
+        "File": {
+            "in0": "destination", 
+            "in1": "destination", 
+            "out": "source"
+        }, 
+        "Color": {
+            "out0": "source", 
+            "out1": "source", 
+            "in": "destination"
+        }, 
+        "Directory": {
+            "out0": "source", 
+            "out1": "source", 
+            "out2": "source", 
+            "in": "destination"
+        }, 
+        "PasswordDialog": {
+            "out": "source", 
+            "default": "destination",
+            "title": "destination",
+            "label": "destination",
+            "cacheable": "destination"
+        }, 
+        "List": {
+            "out0": "source", 
+            "in0": "destination", 
+            "in1": "destination"
+        }, 
+        "Round": {
+            "out": "source", 
+            "in": "destination"
+        }, 
+        "Assert": {
+            "in": "destination"
+        }, 
+        "PythonSource": {
+            "custom_in": "destination", 
+            "custom_out": "source", 
+            "string": "destination", 
+            "out": "source"
+        }, 
+        "ReadFile": {
+            "out": "source", 
+            "in": "destination"
+        }, 
+        "WriteFile": {
+            "out": "source", 
+            "in": "destination"
+        }, 
+        "Boolean": {
+            "out0": "source", 
+            "out1": "source", 
+            "in": "destination"
+        }, 
+        "File": {
+            "out": "source"
+        }, 
+        "Integer": {
+            "out0": "source", 
+            "out": "source", 
+            "in": "destination"
+        }, 
+        "Unzip": {
+            "in0": "destination", 
+            "in1": "destination", 
+            "out": "source"
+        }, 
+        "AssertEqual": {
+            "in1": "destination", 
+            "in2": "destination"
+        }, 
+        "FileSink": {
+            "in0": "destination"
+        }, 
+        "ConcatenateString": {
+            "val2": "destination", 
+            "val1": "destination", 
+            "out": "source"
+        }
+    }
+}
