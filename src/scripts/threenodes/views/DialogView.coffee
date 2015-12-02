@@ -51,6 +51,7 @@ define [
           formData[@name] = @value
         @dialog.dialog 'close'
         @model.set formData
+        console.log(@model)
 
 
       remove: ->

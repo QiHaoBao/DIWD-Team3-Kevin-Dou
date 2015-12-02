@@ -198,6 +198,7 @@ define [
           # cause the handler expects some event data
           @ui.toolbar.on 'open', @triggerLoadFile
           @ui.toolbar.on 'save', @file_handler.saveLocalFile
+          @ui.toolbar.on 'login', @createNewUser
           @ui.toolbar.on 'pipeline', @callWorkflowAPIs
           @ui.toolbar.on 'history', @callWorkflowAPIs
           @ui.toolbar.on 'search', @callWorkflowAPIs
@@ -283,17 +284,28 @@ define [
 
 
       # create a new workflow or use the provided workflow to replace the old one
-      createNewWorkflow: (workflow)=>
+      createNewWorkflow: (workflow) =>
         workflow = workflow || new ThreeNodes.Workflow()
         @clearWorkspace()
         @replaceWorkflow(workflow)
         @setWorkflowContext()
 
-      setWorkflowContext: =>
+      setWorkflowContext: () =>
         @ui.dialogView.openDialog()
 
       clearWorkspace: () =>
         @workflow.clearWorkspace()
         if @ui then @ui.clearWorkspace()
         # @initTimeline()
+
+      # create a new user, when user click 'login' button
+      createNewUser: () =>
+        @setUserProfile()
+
+      setUserProfile: () =>
+        @ui.dialogView.openDialog()
+
+
+
+
 
