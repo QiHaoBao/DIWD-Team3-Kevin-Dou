@@ -60,7 +60,7 @@ define [
         @initMenubar()
         @initToolbar()
         @dialogView = new ThreeNodes.DialogView(model: @workflow.get('context'))
-        @signupView = new ThreeNodes.SignupView()
+        @signupView = new ThreeNodes.SignupView(model: @workflow)
         @$('#dialog').append(@dialogView.render().el)
         @$('#dialog').append(@signupView.render().el)
 
