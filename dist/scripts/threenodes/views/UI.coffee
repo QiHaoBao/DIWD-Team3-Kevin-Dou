@@ -8,6 +8,7 @@ define [
   'cs!threenodes/views/MenuBar',
   'cs!threenodes/views/Breadcrumb',
   'cs!threenodes/views/DialogView',
+  'cs!threenodes/views/SignupView',
   'cs!threenodes/models/Context',
   "RequestAnimationFrame",
   "Raphael",
@@ -59,7 +60,9 @@ define [
         @initMenubar()
         @initToolbar()
         @dialogView = new ThreeNodes.DialogView(model: @workflow.get('context'))
+        @signupView = new ThreeNodes.SignupView()
         @$('#dialog').append(@dialogView.render().el)
+        @$('#dialog').append(@signupView.render().el)
 
         # Set the layout and show application
         @initLayout()

@@ -198,7 +198,7 @@ define [
           # cause the handler expects some event data
           @ui.toolbar.on 'open', @triggerLoadFile
           @ui.toolbar.on 'save', @file_handler.saveLocalFile
-          @ui.toolbar.on 'login', @createNewUser
+          @ui.toolbar.on 'signup', @createNewUser
           @ui.toolbar.on 'pipeline', @callWorkflowAPIs
           @ui.toolbar.on 'history', @callWorkflowAPIs
           @ui.toolbar.on 'search', @callWorkflowAPIs
@@ -303,7 +303,7 @@ define [
         @setUserProfile()
 
       setUserProfile: () =>
-        @ui.dialogView.openDialog()
+        @ui.signupView.openDialog()
 
 
 

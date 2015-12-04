@@ -2,14 +2,14 @@
 define [
   'Underscore',
   'Backbone',
-  "text!templates/app_dialog.tmpl.html",
+  "text!templates/app_signup.tmpl.html",
   'jquery'
 ], (_, Backbone, _template) ->
   #"use strict"
 
   ### DialogView ###
   namespace "ThreeNodes",
-    DialogView: class DialogView extends Backbone.View
+    SignupView: class SignupView extends Backbone.View
       # append it later will give you time for preprocessing
       # el: "#dialog-form"
       template: _.template(_template)
@@ -20,13 +20,14 @@ define [
         # it is very possible that the following code will hide the dialog part,
         # causing you not being able to find it again using $()
         # should use @dialog.find() to find it again
-        @dialog = this.$('#dialog-form').dialog(
+        @dialog = this.$('#signup-form').dialog(
           autoOpen: false
-          height: 300
+          height: 220
           width: 350
           modal: true
           buttons:
-            'Set Context': @setContext
+            # TODO: Save user profile info in server
+            'Sign up': @userSignup
             Cancel: =>
               @dialog.dialog 'close'
               return
@@ -42,17 +43,29 @@ define [
         @
 
       openDialog: =>
+        console.log @dialog
         @dialog.dialog "open"
 
       setContext: =>
         formData = {}
         $inputs = @.dialog.find("[name]")
         $inputs.each ->
-          formData[@name] = @value
+        formData[@name] = @value
         @dialog.dialog 'close'
         @model.set formData
         console.log(@model)
 
+
+      userSignup: =>
+        formData = {}
+        $inputs = @.dialog.find("[name]")
+        $inputs.each ->
+          formData[@name] = @value
+        @dialog.dialog 'close'
+#        @model.set formData
+#        console.log(@model)
+        nick_name = formData['nickname']
+        alert "Hello " + nick_name + "!"
 
       remove: ->
         super

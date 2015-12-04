@@ -42,6 +42,7 @@ define [
         @
 
       openDialog: =>
+        console.log @dialog
         @dialog.dialog "open"
 
       setContext: =>

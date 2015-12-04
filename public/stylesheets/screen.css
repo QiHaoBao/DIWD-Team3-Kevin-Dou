@@ -707,6 +707,9 @@ button.ui-button::-moz-focus-inner {
 #timeline li .save {
   background: url("../assets/images/save.png") no-repeat center top;
 }
+#timeline li .signup {
+  background: url("../assets/images/pipeline.png") no-repeat center top;
+}
 #timeline li .pipeline {
   background: url("../assets/images/pipeline.png") no-repeat center top;
 }
