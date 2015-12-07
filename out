@@ -1,0 +1,1853 @@
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   dist/assets/images/execute.png
+	modified:   dist/assets/images/explore.png
+	modified:   dist/assets/images/history.png
+	modified:   dist/assets/images/mashup.png
+	modified:   dist/assets/images/new.png
+	modified:   dist/assets/images/open.png
+	modified:   dist/assets/images/pipeline.png
+	modified:   dist/assets/images/provenance.png
+	modified:   dist/assets/images/save.png
+	modified:   dist/assets/images/search.png
+	modified:   dist/scripts/boot.js
+	modified:   dist/scripts/libs/jquery-ui/css/ui-darkness/images/ui-bg_flat_30_cccccc_40x100.png
+	modified:   dist/scripts/libs/jquery-ui/css/ui-darkness/images/ui-bg_flat_50_5c5c5c_40x100.png
+	modified:   dist/scripts/libs/jquery-ui/css/ui-darkness/images/ui-bg_glass_20_555555_1x400.png
+	modified:   dist/scripts/libs/jquery-ui/css/ui-darkness/images/ui-bg_glass_40_0078a3_1x400.png
+	modified:   dist/scripts/libs/jquery-ui/css/ui-darkness/images/ui-bg_glass_40_ffc73d_1x400.png
+	modified:   dist/scripts/libs/jquery-ui/css/ui-darkness/images/ui-bg_gloss-wave_25_333333_500x100.png
+	modified:   dist/scripts/libs/jquery-ui/css/ui-darkness/images/ui-bg_highlight-soft_80_eeeeee_1x100.png
+	modified:   dist/scripts/libs/jquery-ui/css/ui-darkness/images/ui-bg_inset-soft_25_000000_1x100.png
+	modified:   dist/scripts/libs/jquery-ui/css/ui-darkness/images/ui-bg_inset-soft_30_f58400_1x100.png
+	modified:   dist/scripts/libs/jquery-ui/css/ui-darkness/images/ui-icons_222222_256x240.png
+	modified:   dist/scripts/libs/jquery-ui/css/ui-darkness/images/ui-icons_4b8e0b_256x240.png
+	modified:   dist/scripts/libs/jquery-ui/css/ui-darkness/images/ui-icons_a83300_256x240.png
+	modified:   dist/scripts/libs/jquery-ui/css/ui-darkness/images/ui-icons_cccccc_256x240.png
+	modified:   dist/scripts/libs/jquery-ui/css/ui-darkness/images/ui-icons_ffffff_256x240.png
+	modified:   dist/scripts/libs/jquery-ui/css/ui-darkness/jquery-ui-1.8.16.custom.css
+	modified:   dist/scripts/libs/jquery-ui/css/ui-threenodes/images/ui-bg_diagonals-small_20_000000_40x40.png
+	modified:   dist/scripts/libs/jquery-ui/css/ui-threenodes/images/ui-bg_flat_30_1f1f1f_40x100.png
+	modified:   dist/scripts/libs/jquery-ui/css/ui-threenodes/images/ui-bg_glass_20_5e5e5e_1x400.png
+	modified:   dist/scripts/libs/jquery-ui/css/ui-threenodes/images/ui-bg_glass_40_00b8fa_1x400.png
+	modified:   dist/scripts/libs/jquery-ui/css/ui-threenodes/images/ui-bg_glass_40_ffc73d_1x400.png
+	modified:   dist/scripts/libs/jquery-ui/css/ui-threenodes/images/ui-bg_gloss-wave_0_333333_500x100.png
+	modified:   dist/scripts/libs/jquery-ui/css/ui-threenodes/images/ui-bg_highlight-soft_30_687687_1x100.png
+	modified:   dist/scripts/libs/jquery-ui/css/ui-threenodes/images/ui-bg_highlight-soft_80_eeeeee_1x100.png
+	modified:   dist/scripts/libs/jquery-ui/css/ui-threenodes/images/ui-bg_inset-soft_0_333333_1x100.png
+	modified:   dist/scripts/libs/jquery-ui/css/ui-threenodes/images/ui-icons_4b8e0b_256x240.png
+	modified:   dist/scripts/libs/jquery-ui/css/ui-threenodes/images/ui-icons_a83300_256x240.png
+	modified:   dist/scripts/libs/jquery-ui/css/ui-threenodes/images/ui-icons_cccccc_256x240.png
+	modified:   dist/scripts/libs/jquery-ui/css/ui-threenodes/images/ui-icons_ffffff_256x240.png
+	modified:   dist/scripts/libs/jquery-ui/css/ui-threenodes/jquery-ui-1.8.16.custom.css
+	modified:   dist/scripts/libs/jquery-ui/js/jquery-1.6.2.min.js
+	modified:   dist/scripts/libs/three-extras/fonts/LICENSE
+	modified:   dist/scripts/libs/three-extras/fonts/droid/NOTICE
+	modified:   dist/scripts/libs/three-extras/fonts/droid/README.txt
+	modified:   dist/scripts/libs/three-extras/fonts/droid/droid_sans_bold.typeface.js
+	modified:   dist/scripts/libs/three-extras/fonts/droid/droid_sans_mono_regular.typeface.js
+	modified:   dist/scripts/libs/three-extras/fonts/droid/droid_sans_regular.typeface.js
+	modified:   dist/scripts/libs/three-extras/fonts/droid/droid_serif_bold.typeface.js
+	modified:   dist/scripts/libs/three-extras/fonts/droid/droid_serif_regular.typeface.js
+	modified:   dist/scripts/libs/three-extras/fonts/gentilis_bold.typeface.js
+	modified:   dist/scripts/libs/three-extras/fonts/gentilis_regular.typeface.js
+	modified:   dist/scripts/libs/three-extras/fonts/helvetiker_bold.typeface.js
+	modified:   dist/scripts/libs/three-extras/fonts/helvetiker_regular.typeface.js
+	modified:   dist/scripts/libs/three-extras/fonts/optimer_bold.typeface.js
+	modified:   dist/scripts/libs/three-extras/fonts/optimer_regular.typeface.js
+	modified:   dist/scripts/libs/three-extras/js/Car.js
+	modified:   dist/scripts/libs/three-extras/js/Detector.js
+	modified:   dist/scripts/libs/three-extras/js/ImprovedNoise.js
+	modified:   dist/scripts/libs/three-extras/js/PRNG.js
+	modified:   dist/scripts/libs/three-extras/js/RequestAnimationFrame.js
+	modified:   dist/scripts/libs/three-extras/js/ShaderExtras.js
+	modified:   dist/scripts/libs/three-extras/js/ShaderSkin.js
+	modified:   dist/scripts/libs/three-extras/js/SimplexNoise.js
+	modified:   dist/scripts/libs/three-extras/js/Sparks.js
+	modified:   dist/scripts/libs/three-extras/js/Stats.js
+	modified:   dist/scripts/libs/three-extras/js/Tween.js
+	modified:   dist/scripts/libs/three-extras/js/gui/gui.css
+	modified:   dist/scripts/libs/three-extras/js/gui/gui.full.js
+	modified:   dist/scripts/libs/three-extras/js/gui/gui.min.js
+	modified:   dist/scripts/libs/three-extras/js/postprocessing/BloomPass.js
+	modified:   dist/scripts/libs/three-extras/js/postprocessing/DotScreenPass.js
+	modified:   dist/scripts/libs/three-extras/js/postprocessing/EffectComposer.js
+	modified:   dist/scripts/libs/three-extras/js/postprocessing/FilmPass.js
+	modified:   dist/scripts/libs/three-extras/js/postprocessing/MaskPass.js
+	modified:   dist/scripts/libs/three-extras/js/postprocessing/RenderPass.js
+	modified:   dist/scripts/libs/three-extras/js/postprocessing/SavePass.js
+	modified:   dist/scripts/libs/three-extras/js/postprocessing/ShaderPass.js
+	modified:   dist/scripts/libs/three-extras/js/postprocessing/TexturePass.js
+	modified:   dist/scripts/threenodes/App.coffee
+	modified:   dist/scripts/threenodes/models/Workflow.coffee
+	modified:   dist/scripts/threenodes/views/DialogView.coffee
+	modified:   dist/scripts/threenodes/views/UI.coffee
+	modified:   dist/stylesheets/screen.css
+	typechange: node_modules/.bin/cake
+	typechange: node_modules/.bin/coffee
+	new file:   node_modules/.bin/fly
+	typechange: node_modules/.bin/jade
+	typechange: node_modules/.bin/r.js
+	typechange: node_modules/.bin/stylus
+	typechange: node_modules/.bin/watch
+	modified:   node_modules/body-parser/node_modules/qs/package.json
+	modified:   node_modules/body-parser/node_modules/raw-body/node_modules/bytes/package.json
+	modified:   node_modules/body-parser/node_modules/raw-body/node_modules/string_decoder/package.json
+	modified:   node_modules/body-parser/node_modules/raw-body/package.json
+	modified:   node_modules/body-parser/node_modules/type-is/node_modules/mime/package.json
+	modified:   node_modules/body-parser/node_modules/type-is/package.json
+	modified:   node_modules/body-parser/package.json
+	modified:   node_modules/coffee-script/bin/cake
+	modified:   node_modules/coffee-script/bin/coffee
+	modified:   node_modules/coffee-script/lib/coffee-script/parser.js
+	modified:   node_modules/coffee-script/package.json
+	modified:   node_modules/express/node_modules/accepts/node_modules/mime-types/HISTORY.md
+	modified:   node_modules/express/node_modules/accepts/node_modules/mime-types/node_modules/mime-db/HISTORY.md
+	modified:   node_modules/express/node_modules/accepts/node_modules/mime-types/node_modules/mime-db/db.json
+	modified:   node_modules/express/node_modules/accepts/node_modules/mime-types/node_modules/mime-db/package.json
+	modified:   node_modules/express/node_modules/accepts/node_modules/mime-types/package.json
+	modified:   node_modules/express/node_modules/accepts/node_modules/negotiator/package.json
+	modified:   node_modules/express/node_modules/accepts/package.json
+	modified:   node_modules/express/node_modules/array-flatten/package.json
+	modified:   node_modules/express/node_modules/content-disposition/package.json
+	modified:   node_modules/express/node_modules/content-type/package.json
+	modified:   node_modules/express/node_modules/cookie-signature/package.json
+	modified:   node_modules/express/node_modules/cookie/package.json
+	modified:   node_modules/express/node_modules/debug/node_modules/ms/package.json
+	modified:   node_modules/express/node_modules/debug/package.json
+	modified:   node_modules/express/node_modules/depd/package.json
+	modified:   node_modules/express/node_modules/escape-html/package.json
+	modified:   node_modules/express/node_modules/etag/package.json
+	modified:   node_modules/express/node_modules/finalhandler/node_modules/unpipe/package.json
+	modified:   node_modules/express/node_modules/finalhandler/package.json
+	modified:   node_modules/express/node_modules/fresh/package.json
+	modified:   node_modules/express/node_modules/merge-descriptors/package.json
+	modified:   node_modules/express/node_modules/methods/package.json
+	modified:   node_modules/express/node_modules/on-finished/node_modules/ee-first/package.json
+	modified:   node_modules/express/node_modules/on-finished/package.json
+	modified:   node_modules/express/node_modules/parseurl/package.json
+	modified:   node_modules/express/node_modules/path-to-regexp/package.json
+	modified:   node_modules/express/node_modules/proxy-addr/HISTORY.md
+	modified:   node_modules/express/node_modules/proxy-addr/index.js
+	modified:   node_modules/express/node_modules/proxy-addr/node_modules/forwarded/package.json
+	new file:   node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/.travis.yml
+	modified:   node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/README.md
+	new file:   node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/bower.json
+	modified:   node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/ipaddr.min.js
+	modified:   node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/lib/ipaddr.js
+	modified:   node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/package.json
+	modified:   node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/src/ipaddr.coffee
+	modified:   node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/test/ipaddr.test.coffee
+	modified:   node_modules/express/node_modules/proxy-addr/package.json
+	modified:   node_modules/express/node_modules/qs/package.json
+	modified:   node_modules/express/node_modules/range-parser/package.json
+	typechange: node_modules/express/node_modules/send/node_modules/.bin/mime
+	modified:   node_modules/express/node_modules/send/node_modules/destroy/package.json
+	modified:   node_modules/express/node_modules/send/node_modules/http-errors/node_modules/inherits/package.json
+	modified:   node_modules/express/node_modules/send/node_modules/http-errors/package.json
+	modified:   node_modules/express/node_modules/send/node_modules/mime/cli.js
+	modified:   node_modules/express/node_modules/send/node_modules/mime/package.json
+	modified:   node_modules/express/node_modules/send/node_modules/ms/package.json
+	modified:   node_modules/express/node_modules/send/node_modules/statuses/package.json
+	modified:   node_modules/express/node_modules/send/package.json
+	modified:   node_modules/express/node_modules/serve-static/package.json
+	modified:   node_modules/express/node_modules/type-is/HISTORY.md
+	modified:   node_modules/express/node_modules/type-is/README.md
+	modified:   node_modules/express/node_modules/type-is/index.js
+	modified:   node_modules/express/node_modules/type-is/node_modules/media-typer/package.json
+	modified:   node_modules/express/node_modules/type-is/node_modules/mime-types/HISTORY.md
+	modified:   node_modules/express/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/HISTORY.md
+	modified:   node_modules/express/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/db.json
+	modified:   node_modules/express/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/package.json
+	modified:   node_modules/express/node_modules/type-is/node_modules/mime-types/package.json
+	modified:   node_modules/express/node_modules/type-is/package.json
+	modified:   node_modules/express/node_modules/utils-merge/package.json
+	modified:   node_modules/express/node_modules/vary/package.json
+	modified:   node_modules/express/package.json
+	new file:   node_modules/flightplan/.npmignore
+	new file:   node_modules/flightplan/LICENSE
+	new file:   node_modules/flightplan/README.md
+	new file:   node_modules/flightplan/bin/fly.js
+	new file:   node_modules/flightplan/docs/template.md.ejs
+	new file:   node_modules/flightplan/flightplan.coffee
+	new file:   node_modules/flightplan/flightplan.js
+	new file:   node_modules/flightplan/gulpfile.js
+	new file:   node_modules/flightplan/index.js
+	new file:   node_modules/flightplan/lib/errors.js
+	new file:   node_modules/flightplan/lib/flight/index.js
+	new file:   node_modules/flightplan/lib/flight/local.js
+	new file:   node_modules/flightplan/lib/flight/remote.js
+	new file:   node_modules/flightplan/lib/index.js
+	new file:   node_modules/flightplan/lib/logger/index.js
+	new file:   node_modules/flightplan/lib/transport/commands.js
+	new file:   node_modules/flightplan/lib/transport/index.js
+	new file:   node_modules/flightplan/lib/transport/shell.js
+	new file:   node_modules/flightplan/lib/transport/ssh.js
+	new file:   node_modules/flightplan/node_modules/.bin/nopt
+	new file:   node_modules/flightplan/node_modules/.bin/semver
+	new file:   node_modules/flightplan/node_modules/byline/.npmignore
+	new file:   node_modules/flightplan/node_modules/byline/LICENSE
+	new file:   node_modules/flightplan/node_modules/byline/README.md
+	new file:   node_modules/flightplan/node_modules/byline/lib/byline.js
+	new file:   node_modules/flightplan/node_modules/byline/package.json
+	new file:   node_modules/flightplan/node_modules/byline/test/CRLF.txt
+	new file:   node_modules/flightplan/node_modules/byline/test/empty.txt
+	new file:   node_modules/flightplan/node_modules/byline/test/rfc.txt
+	new file:   node_modules/flightplan/node_modules/byline/test/rfc_huge.txt
+	new file:   node_modules/flightplan/node_modules/byline/test/tests.js
+	new file:   node_modules/flightplan/node_modules/chalk/index.js
+	new file:   node_modules/flightplan/node_modules/chalk/node_modules/.bin/has-ansi
+	new file:   node_modules/flightplan/node_modules/chalk/node_modules/.bin/strip-ansi
+	new file:   node_modules/flightplan/node_modules/chalk/node_modules/.bin/supports-color
+	new file:   node_modules/flightplan/node_modules/chalk/node_modules/ansi-styles/index.js
+	new file:   node_modules/flightplan/node_modules/chalk/node_modules/ansi-styles/package.json
+	new file:   node_modules/flightplan/node_modules/chalk/node_modules/ansi-styles/readme.md
+	new file:   node_modules/flightplan/node_modules/chalk/node_modules/escape-string-regexp/index.js
+	new file:   node_modules/flightplan/node_modules/chalk/node_modules/escape-string-regexp/package.json
+	new file:   node_modules/flightplan/node_modules/chalk/node_modules/escape-string-regexp/readme.md
+	new file:   node_modules/flightplan/node_modules/chalk/node_modules/has-ansi/cli.js
+	new file:   node_modules/flightplan/node_modules/chalk/node_modules/has-ansi/index.js
+	new file:   node_modules/flightplan/node_modules/chalk/node_modules/has-ansi/node_modules/ansi-regex/index.js
+	new file:   node_modules/flightplan/node_modules/chalk/node_modules/has-ansi/node_modules/ansi-regex/package.json
+	new file:   node_modules/flightplan/node_modules/chalk/node_modules/has-ansi/node_modules/ansi-regex/readme.md
+	new file:   node_modules/flightplan/node_modules/chalk/node_modules/has-ansi/package.json
+	new file:   node_modules/flightplan/node_modules/chalk/node_modules/has-ansi/readme.md
+	new file:   node_modules/flightplan/node_modules/chalk/node_modules/strip-ansi/cli.js
+	new file:   node_modules/flightplan/node_modules/chalk/node_modules/strip-ansi/index.js
+	new file:   node_modules/flightplan/node_modules/chalk/node_modules/strip-ansi/node_modules/ansi-regex/index.js
+	new file:   node_modules/flightplan/node_modules/chalk/node_modules/strip-ansi/node_modules/ansi-regex/package.json
+	new file:   node_modules/flightplan/node_modules/chalk/node_modules/strip-ansi/node_modules/ansi-regex/readme.md
+	new file:   node_modules/flightplan/node_modules/chalk/node_modules/strip-ansi/package.json
+	new file:   node_modules/flightplan/node_modules/chalk/node_modules/strip-ansi/readme.md
+	new file:   node_modules/flightplan/node_modules/chalk/node_modules/supports-color/cli.js
+	new file:   node_modules/flightplan/node_modules/chalk/node_modules/supports-color/index.js
+	new file:   node_modules/flightplan/node_modules/chalk/node_modules/supports-color/package.json
+	new file:   node_modules/flightplan/node_modules/chalk/node_modules/supports-color/readme.md
+	new file:   node_modules/flightplan/node_modules/chalk/package.json
+	new file:   node_modules/flightplan/node_modules/chalk/readme.md
+	new file:   node_modules/flightplan/node_modules/fibers/.npmignore
+	new file:   node_modules/flightplan/node_modules/fibers/LICENSE
+	new file:   node_modules/flightplan/node_modules/fibers/README.md
+	new file:   node_modules/flightplan/node_modules/fibers/bin/.npmignore
+	new file:   node_modules/flightplan/node_modules/fibers/bin/darwin-ia32-v8-4.6/fibers.node
+	new file:   node_modules/flightplan/node_modules/fibers/bin/darwin-x64-v8-4.6/fibers.node
+	new file:   node_modules/flightplan/node_modules/fibers/bin/linux-ia32-v8-4.6/fibers.node
+	new file:   node_modules/flightplan/node_modules/fibers/bin/linux-x64-v8-3.14/fibers.node
+	new file:   node_modules/flightplan/node_modules/fibers/bin/linux-x64-v8-4.6/fibers.node
+	new file:   node_modules/flightplan/node_modules/fibers/bin/repl
+	new file:   node_modules/flightplan/node_modules/fibers/bin/win32-ia32-v8-4.6/fibers.node
+	new file:   node_modules/flightplan/node_modules/fibers/bin/win32-x64-v8-4.6/fibers.node
+	new file:   node_modules/flightplan/node_modules/fibers/binding.gyp
+	new file:   node_modules/flightplan/node_modules/fibers/build.js
+	new file:   node_modules/flightplan/node_modules/fibers/build/Makefile
+	new file:   node_modules/flightplan/node_modules/fibers/build/Release/.deps/Release/fibers.node.d
+	new file:   node_modules/flightplan/node_modules/fibers/build/Release/.deps/Release/obj.target/fibers.node.d
+	new file:   node_modules/flightplan/node_modules/fibers/build/Release/.deps/Release/obj.target/fibers/src/coroutine.o.d
+	new file:   node_modules/flightplan/node_modules/fibers/build/Release/.deps/Release/obj.target/fibers/src/fibers.o.d
+	new file:   node_modules/flightplan/node_modules/fibers/build/Release/.deps/Release/obj.target/fibers/src/libcoro/coro.o.d
+	new file:   node_modules/flightplan/node_modules/fibers/build/Release/linker.lock
+	new file:   node_modules/flightplan/node_modules/fibers/build/Release/obj.target/fibers.node
+	new file:   node_modules/flightplan/node_modules/fibers/build/Release/obj.target/fibers/src/coroutine.o
+	new file:   node_modules/flightplan/node_modules/fibers/build/Release/obj.target/fibers/src/fibers.o
+	new file:   node_modules/flightplan/node_modules/fibers/build/Release/obj.target/fibers/src/libcoro/coro.o
+	new file:   node_modules/flightplan/node_modules/fibers/build/binding.Makefile
+	new file:   node_modules/flightplan/node_modules/fibers/build/config.gypi
+	new file:   node_modules/flightplan/node_modules/fibers/build/fibers.target.mk
+	new file:   node_modules/flightplan/node_modules/fibers/fibers.js
+	new file:   node_modules/flightplan/node_modules/fibers/future.js
+	new file:   node_modules/flightplan/node_modules/fibers/package.json
+	new file:   node_modules/flightplan/node_modules/fibers/quick-test.js
+	new file:   node_modules/flightplan/node_modules/fibers/src/coroutine.cc
+	new file:   node_modules/flightplan/node_modules/fibers/src/coroutine.h
+	new file:   node_modules/flightplan/node_modules/fibers/src/fibers.cc
+	new file:   node_modules/flightplan/node_modules/fibers/src/libcoro/LICENSE
+	new file:   node_modules/flightplan/node_modules/fibers/src/libcoro/README
+	new file:   node_modules/flightplan/node_modules/fibers/src/libcoro/conftest.c
+	new file:   node_modules/flightplan/node_modules/fibers/src/libcoro/coro.c
+	new file:   node_modules/flightplan/node_modules/fibers/src/libcoro/coro.h
+	new file:   node_modules/flightplan/node_modules/fibers/test.js
+	new file:   node_modules/flightplan/node_modules/fibers/test/already-running.js
+	new file:   node_modules/flightplan/node_modules/fibers/test/bad-context.js
+	new file:   node_modules/flightplan/node_modules/fibers/test/child-process.js
+	new file:   node_modules/flightplan/node_modules/fibers/test/current.js
+	new file:   node_modules/flightplan/node_modules/fibers/test/exec.js
+	new file:   node_modules/flightplan/node_modules/fibers/test/exit.js
+	new file:   node_modules/flightplan/node_modules/fibers/test/fibonacci.js
+	new file:   node_modules/flightplan/node_modules/fibers/test/finish-multiple.js
+	new file:   node_modules/flightplan/node_modules/fibers/test/future-exception.js
+	new file:   node_modules/flightplan/node_modules/fibers/test/future.js
+	new file:   node_modules/flightplan/node_modules/fibers/test/illegal-yield.js
+	new file:   node_modules/flightplan/node_modules/fibers/test/pool.js
+	new file:   node_modules/flightplan/node_modules/fibers/test/process-title.js
+	new file:   node_modules/flightplan/node_modules/fibers/test/stack-overflow.js
+	new file:   node_modules/flightplan/node_modules/fibers/test/stack-overflow2.js
+	new file:   node_modules/flightplan/node_modules/fibers/test/stack-overflow3.js
+	new file:   node_modules/flightplan/node_modules/fibers/test/started.js
+	new file:   node_modules/flightplan/node_modules/fibers/test/unwind.js
+	new file:   node_modules/flightplan/node_modules/interpret/CHANGELOG
+	new file:   node_modules/flightplan/node_modules/interpret/LICENSE
+	new file:   node_modules/flightplan/node_modules/interpret/README.md
+	new file:   node_modules/flightplan/node_modules/interpret/index.js
+	new file:   node_modules/flightplan/node_modules/interpret/package.json
+	new file:   node_modules/flightplan/node_modules/liftoff/.jscsrc
+	new file:   node_modules/flightplan/node_modules/liftoff/.jshintrc
+	new file:   node_modules/flightplan/node_modules/liftoff/.npmignore
+	new file:   node_modules/flightplan/node_modules/liftoff/.travis.yml
+	new file:   node_modules/flightplan/node_modules/liftoff/CHANGELOG
+	new file:   node_modules/flightplan/node_modules/liftoff/LICENSE
+	new file:   node_modules/flightplan/node_modules/liftoff/README.md
+	new file:   node_modules/flightplan/node_modules/liftoff/UPGRADING.md
+	new file:   node_modules/flightplan/node_modules/liftoff/appveyor.yml
+	new file:   node_modules/flightplan/node_modules/liftoff/index.js
+	new file:   node_modules/flightplan/node_modules/liftoff/lib/build_config_name.js
+	new file:   node_modules/flightplan/node_modules/liftoff/lib/file_search.js
+	new file:   node_modules/flightplan/node_modules/liftoff/lib/find_config.js
+	new file:   node_modules/flightplan/node_modules/liftoff/lib/find_cwd.js
+	new file:   node_modules/flightplan/node_modules/liftoff/lib/parse_options.js
+	new file:   node_modules/flightplan/node_modules/liftoff/lib/silent_require.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/extend/.jscs.json
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/extend/.npmignore
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/extend/.travis.yml
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/extend/CHANGELOG.md
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/extend/LICENSE
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/extend/README.md
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/extend/component.json
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/extend/index.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/extend/package.json
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/.npmignore
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/LICENSE-MIT
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/README.md
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/lib/findup-sync.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/README.md
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/common.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/glob.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/inflight/.eslintrc
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/inflight/LICENSE
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/inflight/README.md
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/inflight/inflight.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/inflight/node_modules/wrappy/LICENSE
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/inflight/node_modules/wrappy/README.md
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/inflight/node_modules/wrappy/package.json
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/inflight/node_modules/wrappy/test/basic.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/inflight/node_modules/wrappy/wrappy.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/inflight/package.json
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/inflight/test.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/inherits/LICENSE
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/inherits/README.md
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/inherits/inherits.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/inherits/inherits_browser.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/inherits/package.json
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/inherits/test.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/README.md
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/minimatch.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/.npmignore
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/README.md
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/example.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/index.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/.npmignore
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/.travis.yml
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/LICENSE.md
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/Makefile
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/README.md
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/example.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/index.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/package.json
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/test/balanced.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/.travis.yml
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/LICENSE
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/README.markdown
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/example/map.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/index.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/package.json
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/test/map.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/package.json
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/package.json
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/once/README.md
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/once/node_modules/wrappy/LICENSE
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/once/node_modules/wrappy/README.md
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/once/node_modules/wrappy/package.json
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/once/node_modules/wrappy/test/basic.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/once/node_modules/wrappy/wrappy.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/once/once.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/once/package.json
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/path-is-absolute/index.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/path-is-absolute/package.json
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/path-is-absolute/readme.md
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/package.json
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/sync.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/findup-sync/package.json
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/flagged-respawn/.npmignore
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/flagged-respawn/.travis.yml
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/flagged-respawn/LICENSE
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/flagged-respawn/README.md
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/flagged-respawn/index.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/flagged-respawn/lib/reorder.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/flagged-respawn/lib/respawn.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/flagged-respawn/package.json
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/flagged-respawn/test/bin/exit_code.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/flagged-respawn/test/bin/respawner.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/flagged-respawn/test/bin/signal.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/flagged-respawn/test/index.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/rechoir/.npmignore
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/rechoir/.travis.yml
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/rechoir/CHANGELOG
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/rechoir/LICENSE
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/rechoir/README.md
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/rechoir/index.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/rechoir/lib/extension.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/rechoir/lib/normalize.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/rechoir/lib/register.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/rechoir/package.json
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/.travis.yml
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/LICENSE
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/example/async.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/example/sync.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/index.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/lib/async.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/lib/caller.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/lib/core.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/lib/core.json
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/lib/node-modules-paths.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/lib/sync.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/package.json
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/readme.markdown
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/core.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/dotdot.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/dotdot/abc/index.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/dotdot/index.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/faulty_basedir.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/filter.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/filter_sync.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/mock.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/mock_sync.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/module_dir.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/module_dir/xmodules/aaa/index.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/module_dir/ymodules/aaa/index.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/module_dir/zmodules/bbb/main.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/module_dir/zmodules/bbb/package.json
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/node_path.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/node_path/x/aaa/index.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/node_path/x/ccc/index.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/node_path/y/bbb/index.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/node_path/y/ccc/index.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/nonstring.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/pathfilter.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/pathfilter/deep_ref/main.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/pathfilter/deep_ref/node_modules/deep/alt.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/pathfilter/deep_ref/node_modules/deep/deeper/ref.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/pathfilter/deep_ref/node_modules/deep/package.json
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/pathfilter/deep_ref/node_modules/deep/ref.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/precedence.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/precedence/aaa.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/precedence/aaa/index.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/precedence/aaa/main.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/precedence/bbb.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/precedence/bbb/main.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/resolver.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/resolver/bar/node_modules/foo/index.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/resolver/baz/doom.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/resolver/baz/package.json
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/resolver/baz/quux.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/resolver/biz/node_modules/garply/lib/index.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/resolver/biz/node_modules/garply/package.json
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/resolver/biz/node_modules/grux/index.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/resolver/biz/node_modules/tiv/index.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/resolver/cup.coffee
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/resolver/foo.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/resolver/incorrect_main/index.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/resolver/incorrect_main/package.json
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/resolver/mug.coffee
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/resolver/mug.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/resolver/other_path/lib/other-lib.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/resolver/other_path/root.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/resolver/punycode/node_modules/punycode/index.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/resolver/quux/foo/index.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/resolver/without_basedir/main.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/resolver/without_basedir/node_modules/mymodule.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/resolver_sync.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/subdirs.js
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/subdirs/node_modules/a/b/c/x.json
+	new file:   node_modules/flightplan/node_modules/liftoff/node_modules/resolve/test/subdirs/node_modules/a/package.json
+	new file:   node_modules/flightplan/node_modules/liftoff/package.json
+	new file:   node_modules/flightplan/node_modules/nopt/.npmignore
+	new file:   node_modules/flightplan/node_modules/nopt/.travis.yml
+	new file:   node_modules/flightplan/node_modules/nopt/LICENSE
+	new file:   node_modules/flightplan/node_modules/nopt/README.md
+	new file:   node_modules/flightplan/node_modules/nopt/bin/nopt.js
+	new file:   node_modules/flightplan/node_modules/nopt/examples/my-program.js
+	new file:   node_modules/flightplan/node_modules/nopt/lib/nopt.js
+	new file:   node_modules/flightplan/node_modules/nopt/node_modules/abbrev/.npmignore
+	new file:   node_modules/flightplan/node_modules/nopt/node_modules/abbrev/.travis.yml
+	new file:   node_modules/flightplan/node_modules/nopt/node_modules/abbrev/CONTRIBUTING.md
+	new file:   node_modules/flightplan/node_modules/nopt/node_modules/abbrev/LICENSE
+	new file:   node_modules/flightplan/node_modules/nopt/node_modules/abbrev/README.md
+	new file:   node_modules/flightplan/node_modules/nopt/node_modules/abbrev/abbrev.js
+	new file:   node_modules/flightplan/node_modules/nopt/node_modules/abbrev/package.json
+	new file:   node_modules/flightplan/node_modules/nopt/node_modules/abbrev/test.js
+	new file:   node_modules/flightplan/node_modules/nopt/package.json
+	new file:   node_modules/flightplan/node_modules/nopt/test/basic.js
+	new file:   node_modules/flightplan/node_modules/pretty-hrtime/.jshintignore
+	new file:   node_modules/flightplan/node_modules/pretty-hrtime/.npmignore
+	new file:   node_modules/flightplan/node_modules/pretty-hrtime/LICENSE
+	new file:   node_modules/flightplan/node_modules/pretty-hrtime/README.md
+	new file:   node_modules/flightplan/node_modules/pretty-hrtime/index.js
+	new file:   node_modules/flightplan/node_modules/pretty-hrtime/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/.jshintrc
+	new file:   node_modules/flightplan/node_modules/prompt/.npmignore
+	new file:   node_modules/flightplan/node_modules/prompt/.travis.yml
+	new file:   node_modules/flightplan/node_modules/prompt/CHANGELOG.md
+	new file:   node_modules/flightplan/node_modules/prompt/LICENSE
+	new file:   node_modules/flightplan/node_modules/prompt/README.md
+	new file:   node_modules/flightplan/node_modules/prompt/docs/docco.css
+	new file:   node_modules/flightplan/node_modules/prompt/docs/prompt.html
+	new file:   node_modules/flightplan/node_modules/prompt/examples/add-properties.js
+	new file:   node_modules/flightplan/node_modules/prompt/examples/existing-properties.js
+	new file:   node_modules/flightplan/node_modules/prompt/examples/history.js
+	new file:   node_modules/flightplan/node_modules/prompt/examples/nested-properties-prompt.js
+	new file:   node_modules/flightplan/node_modules/prompt/examples/old-schema.js
+	new file:   node_modules/flightplan/node_modules/prompt/examples/override-validation.js
+	new file:   node_modules/flightplan/node_modules/prompt/examples/password.js
+	new file:   node_modules/flightplan/node_modules/prompt/examples/prompt-override.js
+	new file:   node_modules/flightplan/node_modules/prompt/examples/property-prompt.js
+	new file:   node_modules/flightplan/node_modules/prompt/examples/simple-prompt.js
+	new file:   node_modules/flightplan/node_modules/prompt/examples/yes-or-no-prompt.js
+	new file:   node_modules/flightplan/node_modules/prompt/lib/prompt.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/pkginfo/.npmignore
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/pkginfo/LICENSE
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/pkginfo/README.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/pkginfo/docs/docco.css
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/pkginfo/docs/pkginfo.html
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/pkginfo/examples/all-properties.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/pkginfo/examples/array-argument.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/pkginfo/examples/multiple-properties.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/pkginfo/examples/object-argument.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/pkginfo/examples/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/pkginfo/examples/single-property.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/pkginfo/examples/subdir/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/pkginfo/examples/target-dir.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/pkginfo/lib/pkginfo.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/pkginfo/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/pkginfo/test/pkginfo-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/read/README.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/read/lib/read.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/read/node_modules/mute-stream/LICENSE
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/read/node_modules/mute-stream/README.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/read/node_modules/mute-stream/mute.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/read/node_modules/mute-stream/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/read/node_modules/mute-stream/test/basic.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/read/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/revalidator/.npmignore
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/revalidator/.travis.yml
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/revalidator/CHANGELOG.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/revalidator/LICENSE
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/revalidator/README.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/revalidator/example/webservice.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/revalidator/lib/revalidator.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/revalidator/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/revalidator/test/validator-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/.npmignore
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/.travis.yml
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/CHANGELOG.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/LICENSE
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/README.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/lib/args.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/lib/base64.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/lib/file.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/lib/format.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/lib/index.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/.bin/mkdirp
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/.bin/ncp
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/.bin/rimraf
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/async/LICENSE
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/async/README.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/async/component.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/async/lib/async.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/async/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/deep-equal/.travis.yml
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/deep-equal/LICENSE
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/deep-equal/example/cmp.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/deep-equal/index.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/deep-equal/lib/is_arguments.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/deep-equal/lib/keys.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/deep-equal/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/deep-equal/readme.markdown
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/deep-equal/test/cmp.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/i/.npmignore
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/i/.travis.yml
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/i/LICENSE
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/i/README.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/i/lib/defaults.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/i/lib/inflect.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/i/lib/inflections.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/i/lib/methods.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/i/lib/native.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/i/lib/util.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/i/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/i/test/inflector/cases.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/i/test/inflector/inflections-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/i/test/inflector/methods-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/i/test/utils/array-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/i/test/utils/string-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/.travis.yml
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/LICENSE
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/bin/cmd.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/bin/usage.txt
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/examples/pow.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/index.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/node_modules/minimist/.travis.yml
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/node_modules/minimist/LICENSE
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/node_modules/minimist/example/parse.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/node_modules/minimist/index.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/node_modules/minimist/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/node_modules/minimist/readme.markdown
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/node_modules/minimist/test/dash.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/node_modules/minimist/test/default_bool.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/node_modules/minimist/test/dotted.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/node_modules/minimist/test/long.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/node_modules/minimist/test/parse.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/node_modules/minimist/test/parse_modified.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/node_modules/minimist/test/short.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/node_modules/minimist/test/whitespace.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/readme.markdown
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/test/chmod.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/test/clobber.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/test/mkdirp.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/test/opts_fs.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/test/opts_fs_sync.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/test/perm.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/test/perm_sync.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/test/race.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/test/rel.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/test/return.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/test/return_sync.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/test/root.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/test/sync.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/test/umask.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/mkdirp/test/umask_sync.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/ncp/.npmignore
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/ncp/.travis.yml
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/ncp/LICENSE.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/ncp/README.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/ncp/bin/ncp
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/ncp/lib/ncp.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/ncp/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/ncp/test/fixtures/src/a
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/ncp/test/fixtures/src/b
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/ncp/test/fixtures/src/c
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/ncp/test/fixtures/src/d
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/ncp/test/fixtures/src/e
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/ncp/test/fixtures/src/f
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/ncp/test/fixtures/src/sub/a
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/ncp/test/fixtures/src/sub/b
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/ncp/test/ncp-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/LICENSE
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/README.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/bin.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/README.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/common.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/glob.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inflight/.eslintrc
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inflight/LICENSE
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inflight/README.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inflight/inflight.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inflight/node_modules/wrappy/LICENSE
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inflight/node_modules/wrappy/README.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inflight/node_modules/wrappy/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inflight/node_modules/wrappy/test/basic.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inflight/node_modules/wrappy/wrappy.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inflight/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inflight/test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inherits/LICENSE
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inherits/README.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inherits/inherits.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inherits/inherits_browser.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inherits/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inherits/test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/minimatch/README.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/minimatch/minimatch.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/.npmignore
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/README.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/example.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/index.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/.npmignore
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/.travis.yml
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/LICENSE.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/Makefile
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/README.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/example.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/index.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/test/balanced.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/.travis.yml
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/LICENSE
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/README.markdown
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/example/map.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/index.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/test/map.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/minimatch/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/once/README.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/once/node_modules/wrappy/LICENSE
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/once/node_modules/wrappy/README.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/once/node_modules/wrappy/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/once/node_modules/wrappy/test/basic.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/once/node_modules/wrappy/wrappy.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/once/once.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/once/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/path-is-absolute/index.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/path-is-absolute/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/path-is-absolute/readme.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/sync.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/node_modules/rimraf/rimraf.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/test/file-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/test/fixtures/read-json-file/config.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/test/fixtures/require-directory/directory/index.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/test/fixtures/require-directory/helloWorld.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/test/format-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/test/function-args-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/test/helpers/macros.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/test/random-string-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/test/require-directory-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/utile/test/utile-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/.jshintrc
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/.npmignore
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/.travis.yml
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/CHANGELOG.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/LICENSE
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/README.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/docs/transports.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/examples/couchdb.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/examples/custom-levels.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/examples/exception.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/examples/raw-mode.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/examples/webhook-post.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/lib/winston.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/lib/winston/common.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/lib/winston/config.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/lib/winston/config/cli-config.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/lib/winston/config/npm-config.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/lib/winston/config/syslog-config.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/lib/winston/container.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/lib/winston/exception.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/lib/winston/logger.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/lib/winston/transports.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/lib/winston/transports/console.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/lib/winston/transports/daily-rotate-file.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/lib/winston/transports/file.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/lib/winston/transports/http.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/lib/winston/transports/memory.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/lib/winston/transports/transport.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/lib/winston/transports/webhook.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/async/LICENSE
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/async/README.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/async/component.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/async/lib/async.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/async/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/colors/MIT-LICENSE.txt
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/colors/ReadMe.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/colors/colors.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/colors/example.html
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/colors/example.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/colors/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/colors/test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/colors/themes/winston-dark.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/colors/themes/winston-light.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/cycle/README.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/cycle/cycle.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/cycle/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/eyes/LICENSE
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/eyes/Makefile
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/eyes/README.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/eyes/lib/eyes.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/eyes/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/eyes/test/eyes-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/isstream/.jshintrc
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/isstream/.npmignore
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/isstream/.travis.yml
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/isstream/LICENSE.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/isstream/README.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/isstream/isstream.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/isstream/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/isstream/test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/stack-trace/.npmignore
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/stack-trace/License
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/stack-trace/Makefile
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/stack-trace/Readme.md
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/stack-trace/lib/stack-trace.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/node_modules/stack-trace/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/cli-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/container-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/custom-timestamp-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/exception-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/fixtures/.gitkeep
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/fixtures/keys/agent2-cert.pem
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/fixtures/keys/agent2-key.pem
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/fixtures/logs/.gitkeep
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/fixtures/scripts/default-exceptions.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/fixtures/scripts/exit-on-error.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/fixtures/scripts/log-exceptions.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/fixtures/scripts/log-string-exception.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/fixtures/scripts/unhandle-exceptions.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/helpers.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/log-exception-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/log-rewriter-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/logger-levels-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/logger-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/stress/http-server.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/transports/console-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/transports/daily-rotate-file-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/transports/file-maxfiles-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/transports/file-maxsize-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/transports/file-open-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/transports/file-stress-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/transports/file-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/transports/memory-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/transports/transport.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/transports/webhook-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/node_modules/winston/test/winston-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/package.json
+	new file:   node_modules/flightplan/node_modules/prompt/test/helpers.js
+	new file:   node_modules/flightplan/node_modules/prompt/test/interactive-prompt-test.js
+	new file:   node_modules/flightplan/node_modules/prompt/test/macros.js
+	new file:   node_modules/flightplan/node_modules/prompt/test/prompt-test.js
+	new file:   node_modules/flightplan/node_modules/semver/.npmignore
+	new file:   node_modules/flightplan/node_modules/semver/.travis.yml
+	new file:   node_modules/flightplan/node_modules/semver/LICENSE
+	new file:   node_modules/flightplan/node_modules/semver/Makefile
+	new file:   node_modules/flightplan/node_modules/semver/README.md
+	new file:   node_modules/flightplan/node_modules/semver/bin/semver
+	new file:   node_modules/flightplan/node_modules/semver/foot.js.txt
+	new file:   node_modules/flightplan/node_modules/semver/head.js.txt
+	new file:   node_modules/flightplan/node_modules/semver/package.json
+	new file:   node_modules/flightplan/node_modules/semver/semver.browser.js
+	new file:   node_modules/flightplan/node_modules/semver/semver.browser.js.gz
+	new file:   node_modules/flightplan/node_modules/semver/semver.js
+	new file:   node_modules/flightplan/node_modules/semver/semver.min.js
+	new file:   node_modules/flightplan/node_modules/semver/semver.min.js.gz
+	new file:   node_modules/flightplan/node_modules/semver/test/amd.js
+	new file:   node_modules/flightplan/node_modules/semver/test/big-numbers.js
+	new file:   node_modules/flightplan/node_modules/semver/test/clean.js
+	new file:   node_modules/flightplan/node_modules/semver/test/gtr.js
+	new file:   node_modules/flightplan/node_modules/semver/test/index.js
+	new file:   node_modules/flightplan/node_modules/semver/test/ltr.js
+	new file:   node_modules/flightplan/node_modules/semver/test/major-minor-patch.js
+	new file:   node_modules/flightplan/node_modules/semver/test/no-module.js
+	new file:   node_modules/flightplan/node_modules/ssh2/LICENSE
+	new file:   node_modules/flightplan/node_modules/ssh2/README.md
+	new file:   node_modules/flightplan/node_modules/ssh2/TODO
+	new file:   node_modules/flightplan/node_modules/ssh2/lib/Channel.js
+	new file:   node_modules/flightplan/node_modules/ssh2/lib/Connection.js
+	new file:   node_modules/flightplan/node_modules/ssh2/lib/Parser.constants.js
+	new file:   node_modules/flightplan/node_modules/ssh2/lib/Parser.js
+	new file:   node_modules/flightplan/node_modules/ssh2/lib/SFTP/SFTPv3.js
+	new file:   node_modules/flightplan/node_modules/ssh2/lib/SFTP/Stats.js
+	new file:   node_modules/flightplan/node_modules/ssh2/lib/agent.js
+	new file:   node_modules/flightplan/node_modules/ssh2/lib/keyParser.js
+	new file:   node_modules/flightplan/node_modules/ssh2/lib/utils.js
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/asn1/.npmignore
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/asn1/.travis.yml
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/asn1/LICENSE
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/asn1/README.md
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/asn1/lib/ber/errors.js
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/asn1/lib/ber/index.js
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/asn1/lib/ber/reader.js
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/asn1/lib/ber/types.js
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/asn1/lib/ber/writer.js
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/asn1/lib/index.js
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/asn1/package.json
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/asn1/tst/ber/reader.test.js
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/asn1/tst/ber/writer.test.js
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/.npmignore
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/LICENSE
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/README.md
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/duplex.js
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/lib/_stream_duplex.js
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/lib/_stream_passthrough.js
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/lib/_stream_readable.js
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/lib/_stream_transform.js
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/lib/_stream_writable.js
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/node_modules/core-util-is/LICENSE
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/node_modules/core-util-is/README.md
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/node_modules/core-util-is/float.patch
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/node_modules/core-util-is/lib/util.js
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/node_modules/core-util-is/package.json
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/node_modules/core-util-is/test.js
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/node_modules/inherits/LICENSE
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/node_modules/inherits/README.md
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/node_modules/inherits/inherits.js
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/node_modules/inherits/inherits_browser.js
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/node_modules/inherits/package.json
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/node_modules/inherits/test.js
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/node_modules/isarray/README.md
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/node_modules/isarray/build/build.js
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/node_modules/isarray/component.json
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/node_modules/isarray/index.js
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/node_modules/isarray/package.json
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/node_modules/string_decoder/.npmignore
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/node_modules/string_decoder/LICENSE
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/node_modules/string_decoder/README.md
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/node_modules/string_decoder/index.js
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/node_modules/string_decoder/package.json
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/package.json
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/passthrough.js
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/readable.js
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/transform.js
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/readable-stream/writable.js
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/streamsearch/LICENSE
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/streamsearch/README.md
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/streamsearch/lib/sbmh.js
+	new file:   node_modules/flightplan/node_modules/ssh2/node_modules/streamsearch/package.json
+	new file:   node_modules/flightplan/node_modules/ssh2/package.json
+	new file:   node_modules/flightplan/node_modules/ssh2/test/fixtures/authorized_keys
+	new file:   node_modules/flightplan/node_modules/ssh2/test/fixtures/banner
+	new file:   node_modules/flightplan/node_modules/ssh2/test/fixtures/id_dsa
+	new file:   node_modules/flightplan/node_modules/ssh2/test/fixtures/id_dsa.pub
+	new file:   node_modules/flightplan/node_modules/ssh2/test/fixtures/id_rsa
+	new file:   node_modules/flightplan/node_modules/ssh2/test/fixtures/id_rsa.bad
+	new file:   node_modules/flightplan/node_modules/ssh2/test/fixtures/id_rsa.bad.pub
+	new file:   node_modules/flightplan/node_modules/ssh2/test/fixtures/id_rsa.pub
+	new file:   node_modules/flightplan/node_modules/ssh2/test/fixtures/ssh_host_rsa_key
+	new file:   node_modules/flightplan/node_modules/ssh2/test/fixtures/ssh_host_rsa_key.pub
+	new file:   node_modules/flightplan/node_modules/ssh2/test/fixtures/sshd_config
+	new file:   node_modules/flightplan/node_modules/ssh2/test/temp/.npmignore
+	new file:   node_modules/flightplan/node_modules/ssh2/test/test-integration-sftp.js
+	new file:   node_modules/flightplan/node_modules/ssh2/test/test-integration.js
+	new file:   node_modules/flightplan/node_modules/ssh2/test/test-keyparser.js
+	new file:   node_modules/flightplan/node_modules/ssh2/test/test.js
+	new file:   node_modules/flightplan/node_modules/ssh2/util/build_pagent.bat
+	new file:   node_modules/flightplan/node_modules/ssh2/util/pagent.c
+	new file:   node_modules/flightplan/node_modules/ssh2/util/pagent.exe
+	new file:   node_modules/flightplan/node_modules/temp-write/index.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/.bin/mkdirp
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/graceful-fs/README.md
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/graceful-fs/fs.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/graceful-fs/graceful-fs.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/graceful-fs/legacy-streams.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/graceful-fs/package.json
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/graceful-fs/polyfills.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/.travis.yml
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/LICENSE
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/bin/cmd.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/bin/usage.txt
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/examples/pow.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/index.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/node_modules/minimist/.travis.yml
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/node_modules/minimist/LICENSE
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/node_modules/minimist/example/parse.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/node_modules/minimist/index.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/node_modules/minimist/package.json
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/node_modules/minimist/readme.markdown
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/node_modules/minimist/test/dash.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/node_modules/minimist/test/default_bool.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/node_modules/minimist/test/dotted.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/node_modules/minimist/test/long.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/node_modules/minimist/test/parse.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/node_modules/minimist/test/parse_modified.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/node_modules/minimist/test/short.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/node_modules/minimist/test/whitespace.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/package.json
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/readme.markdown
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/test/chmod.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/test/clobber.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/test/mkdirp.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/test/opts_fs.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/test/opts_fs_sync.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/test/perm.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/test/perm_sync.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/test/race.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/test/rel.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/test/return.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/test/return_sync.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/test/root.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/test/sync.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/test/umask.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/mkdirp/test/umask_sync.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/os-tmpdir/index.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/os-tmpdir/package.json
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/os-tmpdir/readme.md
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/uuid/.npmignore
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/uuid/.travis.yml
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/uuid/LICENSE.md
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/uuid/README.md
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/uuid/benchmark/README.md
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/uuid/benchmark/bench.gnu
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/uuid/benchmark/bench.sh
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/uuid/benchmark/benchmark-native.c
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/uuid/benchmark/benchmark.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/uuid/benchmark/package.json
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/uuid/misc/compare.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/uuid/misc/perf.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/uuid/package.json
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/uuid/rng-browser.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/uuid/rng.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/uuid/test/mocha.opts
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/uuid/test/test.js
+	new file:   node_modules/flightplan/node_modules/temp-write/node_modules/uuid/uuid.js
+	new file:   node_modules/flightplan/node_modules/temp-write/package.json
+	new file:   node_modules/flightplan/node_modules/temp-write/readme.md
+	new file:   node_modules/flightplan/node_modules/util-extend/README.md
+	new file:   node_modules/flightplan/node_modules/util-extend/extend.js
+	new file:   node_modules/flightplan/node_modules/util-extend/package.json
+	new file:   node_modules/flightplan/node_modules/util-extend/test.js
+	new file:   node_modules/flightplan/node_modules/v8flags/.npmignore
+	new file:   node_modules/flightplan/node_modules/v8flags/README.md
+	new file:   node_modules/flightplan/node_modules/v8flags/index.js
+	new file:   node_modules/flightplan/node_modules/v8flags/node_modules/.bin/user-home
+	new file:   node_modules/flightplan/node_modules/v8flags/node_modules/user-home/cli.js
+	new file:   node_modules/flightplan/node_modules/v8flags/node_modules/user-home/index.js
+	new file:   node_modules/flightplan/node_modules/v8flags/node_modules/user-home/package.json
+	new file:   node_modules/flightplan/node_modules/v8flags/node_modules/user-home/readme.md
+	new file:   node_modules/flightplan/node_modules/v8flags/package.json
+	new file:   node_modules/flightplan/package.json
+	modified:   node_modules/jade/bin/jade.js
+	typechange: node_modules/jade/node_modules/.bin/cleancss
+	typechange: node_modules/jade/node_modules/.bin/mkdirp
+	typechange: node_modules/jade/node_modules/.bin/uglifyjs
+	modified:   node_modules/jade/node_modules/character-parser/package.json
+	modified:   node_modules/jade/node_modules/clean-css/bin/cleancss
+	modified:   node_modules/jade/node_modules/clean-css/node_modules/commander/node_modules/graceful-readlink/package.json
+	modified:   node_modules/jade/node_modules/clean-css/node_modules/commander/package.json
+	modified:   node_modules/jade/node_modules/clean-css/node_modules/source-map/node_modules/amdefine/package.json
+	modified:   node_modules/jade/node_modules/clean-css/node_modules/source-map/package.json
+	modified:   node_modules/jade/node_modules/clean-css/package.json
+	modified:   node_modules/jade/node_modules/commander/package.json
+	typechange: node_modules/jade/node_modules/constantinople/node_modules/.bin/acorn
+	modified:   node_modules/jade/node_modules/constantinople/node_modules/acorn/bin/acorn
+	modified:   node_modules/jade/node_modules/constantinople/node_modules/acorn/bin/update_authors.sh
+	modified:   node_modules/jade/node_modules/constantinople/node_modules/acorn/package.json
+	modified:   node_modules/jade/node_modules/constantinople/package.json
+	modified:   node_modules/jade/node_modules/jstransformer/node_modules/is-promise/package.json
+	modified:   node_modules/jade/node_modules/jstransformer/node_modules/promise/node_modules/asap/package.json
+	modified:   node_modules/jade/node_modules/jstransformer/node_modules/promise/package.json
+	modified:   node_modules/jade/node_modules/jstransformer/package.json
+	modified:   node_modules/jade/node_modules/mkdirp/bin/cmd.js
+	modified:   node_modules/jade/node_modules/mkdirp/node_modules/minimist/package.json
+	modified:   node_modules/jade/node_modules/mkdirp/package.json
+	typechange: node_modules/jade/node_modules/transformers/node_modules/.bin/uglifyjs
+	modified:   node_modules/jade/node_modules/transformers/node_modules/css/node_modules/css-parse/package.json
+	modified:   node_modules/jade/node_modules/transformers/node_modules/css/node_modules/css-stringify/package.json
+	modified:   node_modules/jade/node_modules/transformers/node_modules/css/package.json
+	modified:   node_modules/jade/node_modules/transformers/node_modules/promise/node_modules/is-promise/package.json
+	modified:   node_modules/jade/node_modules/transformers/node_modules/promise/package.json
+	modified:   node_modules/jade/node_modules/transformers/node_modules/uglify-js/bin/uglifyjs
+	modified:   node_modules/jade/node_modules/transformers/node_modules/uglify-js/node_modules/optimist/node_modules/wordwrap/package.json
+	modified:   node_modules/jade/node_modules/transformers/node_modules/uglify-js/node_modules/optimist/package.json
+	modified:   node_modules/jade/node_modules/transformers/node_modules/uglify-js/node_modules/optimist/test/_/bin.js
+	modified:   node_modules/jade/node_modules/transformers/node_modules/uglify-js/node_modules/source-map/node_modules/amdefine/package.json
+	modified:   node_modules/jade/node_modules/transformers/node_modules/uglify-js/node_modules/source-map/package.json
+	modified:   node_modules/jade/node_modules/transformers/node_modules/uglify-js/node_modules/source-map/test/run-tests.js
+	modified:   node_modules/jade/node_modules/transformers/node_modules/uglify-js/package.json
+	modified:   node_modules/jade/node_modules/transformers/node_modules/uglify-js/test/run-tests.js
+	modified:   node_modules/jade/node_modules/transformers/package.json
+	modified:   node_modules/jade/node_modules/uglify-js/bin/extract-props.js
+	modified:   node_modules/jade/node_modules/uglify-js/bin/uglifyjs
+	modified:   node_modules/jade/node_modules/uglify-js/node_modules/async/lib/async.js
+	modified:   node_modules/jade/node_modules/uglify-js/node_modules/async/package.json
+	modified:   node_modules/jade/node_modules/uglify-js/node_modules/source-map/package.json
+	modified:   node_modules/jade/node_modules/uglify-js/node_modules/uglify-to-browserify/package.json
+	modified:   node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/camelcase/package.json
+	modified:   node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/center-align/node_modules/align-text/node_modules/kind-of/node_modules/is-buffer/package.json
+	modified:   node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/center-align/node_modules/align-text/node_modules/kind-of/package.json
+	modified:   node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/center-align/node_modules/align-text/node_modules/longest/package.json
+	modified:   node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/center-align/node_modules/align-text/node_modules/repeat-string/package.json
+	modified:   node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/center-align/node_modules/align-text/package.json
+	modified:   node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/center-align/node_modules/lazy-cache/package.json
+	modified:   node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/center-align/package.json
+	modified:   node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/right-align/node_modules/align-text/node_modules/kind-of/node_modules/is-buffer/package.json
+	modified:   node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/right-align/node_modules/align-text/node_modules/kind-of/package.json
+	modified:   node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/right-align/node_modules/align-text/node_modules/longest/package.json
+	modified:   node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/right-align/node_modules/align-text/node_modules/repeat-string/package.json
+	modified:   node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/right-align/node_modules/align-text/package.json
+	modified:   node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/right-align/package.json
+	modified:   node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/wordwrap/package.json
+	modified:   node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/package.json
+	modified:   node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/decamelize/package.json
+	modified:   node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/window-size/package.json
+	modified:   node_modules/jade/node_modules/uglify-js/node_modules/yargs/package.json
+	modified:   node_modules/jade/node_modules/uglify-js/package.json
+	modified:   node_modules/jade/node_modules/void-elements/package.json
+	typechange: node_modules/jade/node_modules/with/node_modules/.bin/acorn
+	typechange: node_modules/jade/node_modules/with/node_modules/acorn-globals/node_modules/.bin/acorn
+	modified:   node_modules/jade/node_modules/with/node_modules/acorn-globals/node_modules/acorn/bin/acorn
+	modified:   node_modules/jade/node_modules/with/node_modules/acorn-globals/node_modules/acorn/bin/update_authors.sh
+	modified:   node_modules/jade/node_modules/with/node_modules/acorn-globals/node_modules/acorn/package.json
+	modified:   node_modules/jade/node_modules/with/node_modules/acorn-globals/package.json
+	modified:   node_modules/jade/node_modules/with/node_modules/acorn/bin/acorn
+	modified:   node_modules/jade/node_modules/with/node_modules/acorn/bin/prepublish.sh
+	modified:   node_modules/jade/node_modules/with/node_modules/acorn/bin/update_authors.sh
+	modified:   node_modules/jade/node_modules/with/node_modules/acorn/bin/without_eval
+	modified:   node_modules/jade/node_modules/with/node_modules/acorn/package.json
+	modified:   node_modules/jade/node_modules/with/node_modules/acorn/src/expression.js
+	modified:   node_modules/jade/node_modules/with/node_modules/acorn/src/location.js
+	modified:   node_modules/jade/node_modules/with/node_modules/acorn/src/lval.js
+	modified:   node_modules/jade/node_modules/with/node_modules/acorn/src/node.js
+	modified:   node_modules/jade/node_modules/with/package.json
+	modified:   node_modules/jade/package.json
+	modified:   node_modules/js-logger/package.json
+	modified:   node_modules/method-override/node_modules/methods/package.json
+	modified:   node_modules/method-override/package.json
+	typechange: node_modules/nib/node_modules/.bin/stylus
+	modified:   node_modules/nib/node_modules/stylus/bin/stylus
+	modified:   node_modules/nib/node_modules/stylus/node_modules/css-parse/package.json
+	modified:   node_modules/nib/node_modules/stylus/node_modules/debug/node_modules/ms/package.json
+	modified:   node_modules/nib/node_modules/stylus/node_modules/debug/package.json
+	modified:   node_modules/nib/node_modules/stylus/node_modules/glob/node_modules/inherits/package.json
+	modified:   node_modules/nib/node_modules/stylus/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/README.md
+	modified:   node_modules/nib/node_modules/stylus/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/lib/lru-cache.js
+	modified:   node_modules/nib/node_modules/stylus/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/package.json
+	modified:   node_modules/nib/node_modules/stylus/node_modules/glob/node_modules/minimatch/node_modules/sigmund/package.json
+	modified:   node_modules/nib/node_modules/stylus/node_modules/glob/node_modules/minimatch/package.json
+	modified:   node_modules/nib/node_modules/stylus/node_modules/glob/package.json
+	modified:   node_modules/nib/node_modules/stylus/node_modules/mkdirp/package.json
+	modified:   node_modules/nib/node_modules/stylus/node_modules/sax/package.json
+	modified:   node_modules/nib/node_modules/stylus/node_modules/source-map/node_modules/amdefine/package.json
+	modified:   node_modules/nib/node_modules/stylus/node_modules/source-map/package.json
+	modified:   node_modules/nib/node_modules/stylus/node_modules/source-map/test/run-tests.js
+	modified:   node_modules/nib/node_modules/stylus/package.json
+	modified:   node_modules/nib/package.json
+	typechange: node_modules/phantom/node_modules/.bin/express
+	modified:   node_modules/phantom/node_modules/dnode-protocol/node_modules/jsonify/package.json
+	modified:   node_modules/phantom/node_modules/dnode-protocol/node_modules/traverse/examples/json.js
+	modified:   node_modules/phantom/node_modules/dnode-protocol/node_modules/traverse/examples/leaves.js
+	modified:   node_modules/phantom/node_modules/dnode-protocol/node_modules/traverse/examples/negative.js
+	modified:   node_modules/phantom/node_modules/dnode-protocol/node_modules/traverse/examples/scrub.js
+	modified:   node_modules/phantom/node_modules/dnode-protocol/node_modules/traverse/examples/stringify.js
+	modified:   node_modules/phantom/node_modules/dnode-protocol/node_modules/traverse/package.json
+	modified:   node_modules/phantom/node_modules/dnode-protocol/package.json
+	modified:   node_modules/phantom/node_modules/dnode-protocol/testling/test.sh
+	modified:   node_modules/phantom/node_modules/dnode/bin/bundle.js
+	modified:   node_modules/phantom/node_modules/dnode/examples/auth/client.js
+	modified:   node_modules/phantom/node_modules/dnode/examples/auth/server.js
+	modified:   node_modules/phantom/node_modules/dnode/examples/chat/server.js
+	modified:   node_modules/phantom/node_modules/dnode/examples/https/server.js
+	modified:   node_modules/phantom/node_modules/dnode/examples/saturate/saturate.js
+	modified:   node_modules/phantom/node_modules/dnode/examples/web-browserify/server.js
+	modified:   node_modules/phantom/node_modules/dnode/examples/web-connect/server.js
+	modified:   node_modules/phantom/node_modules/dnode/examples/web-express/server.js
+	modified:   node_modules/phantom/node_modules/dnode/examples/web-http/server.js
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/dnode-protocol/node_modules/traverse/examples/json.js
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/dnode-protocol/node_modules/traverse/examples/leaves.js
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/dnode-protocol/node_modules/traverse/examples/negative.js
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/dnode-protocol/node_modules/traverse/examples/scrub.js
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/dnode-protocol/node_modules/traverse/examples/stringify.js
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/dnode-protocol/node_modules/traverse/package.json
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/dnode-protocol/package.json
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/dnode-protocol/testling/test.sh
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/jsonify/package.json
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/lazy/package.json
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/bin/browserify.js
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/bin/builder.js
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/build.sh
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/cert/MozillaRootCertificates.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/cert/X509Certificate.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/cert/X509CertificateCollection.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/hash/IHMAC.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/hash/MAC.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/SSLPad.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/AESKeyTest.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/ARC4Test.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/BigIntegerTest.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/BlowFishKeyTest.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/CBCModeTest.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/CFB8ModeTest.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/CFBModeTest.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/CTRModeTest.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/DESKeyTest.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/ECBModeTest.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/HMACTest.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/ITestHarness.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/MD2Test.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/MD5Test.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/OFBModeTest.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/RSAKeyTest.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/SHA1Test.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/SHA224Test.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/SHA256Test.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/TLSPRFTest.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/TestCase.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/TripleDESKeyTest.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/XTeaKeyTest.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/ISecurityParameters.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/SSLEvent.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/SSLSecurityParameters.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/math/BarrettReduction.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/math/ClassicReduction.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/math/IReduction.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/math/MontgomeryReduction.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/math/NullReduction.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/math/bi_internal.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/ArrayUtil.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/Base64.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/Hex.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/Memory.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/ByteString.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/DER.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/IAsn1Type.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/Integer.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/OID.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/ObjectIdentifier.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/PEM.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/PrintableString.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/Sequence.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/Set.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/Type.as
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/UTCTime.as
+	typechange: node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/node_modules/.bin/uglifyjs
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/node_modules/uglify-js/bin/uglifyjs
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/node_modules/uglify-js/package.json
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/node_modules/uglify-js/test/beautify.js
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/node_modules/uglify-js/test/testparser.js
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/node_modules/websocket-client/package.json
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/node_modules/xmlhttprequest/package.json
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/package.json
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io/node_modules/policyfile/package.json
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io/node_modules/redis/package.json
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io/node_modules/redis/tests/stress/pubsub/run
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io/node_modules/redis/tests/stress/rpushblpop/run
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io/node_modules/redis/tests/stress/speed/plot
+	modified:   node_modules/phantom/node_modules/dnode/node_modules/socket.io/package.json
+	modified:   node_modules/phantom/node_modules/dnode/package.json
+	modified:   node_modules/phantom/node_modules/express/bin/express
+	modified:   node_modules/phantom/node_modules/express/node_modules/buffer-crc32/package.json
+	modified:   node_modules/phantom/node_modules/express/node_modules/commander/package.json
+	modified:   node_modules/phantom/node_modules/express/node_modules/connect/node_modules/bytes/package.json
+	modified:   node_modules/phantom/node_modules/express/node_modules/connect/node_modules/formidable/package.json
+	modified:   node_modules/phantom/node_modules/express/node_modules/connect/node_modules/formidable/test/run.js
+	modified:   node_modules/phantom/node_modules/express/node_modules/connect/node_modules/pause/package.json
+	modified:   node_modules/phantom/node_modules/express/node_modules/connect/node_modules/qs/package.json
+	modified:   node_modules/phantom/node_modules/express/node_modules/connect/package.json
+	modified:   node_modules/phantom/node_modules/express/node_modules/cookie-signature/package.json
+	modified:   node_modules/phantom/node_modules/express/node_modules/cookie/package.json
+	modified:   node_modules/phantom/node_modules/express/node_modules/debug/node_modules/ms/package.json
+	modified:   node_modules/phantom/node_modules/express/node_modules/debug/package.json
+	modified:   node_modules/phantom/node_modules/express/node_modules/fresh/package.json
+	modified:   node_modules/phantom/node_modules/express/node_modules/methods/package.json
+	modified:   node_modules/phantom/node_modules/express/node_modules/mkdirp/package.json
+	modified:   node_modules/phantom/node_modules/express/node_modules/range-parser/package.json
+	modified:   node_modules/phantom/node_modules/express/node_modules/send/node_modules/mime/package.json
+	modified:   node_modules/phantom/node_modules/express/node_modules/send/package.json
+	modified:   node_modules/phantom/node_modules/express/package.json
+	modified:   node_modules/phantom/package.json
+	modified:   node_modules/requirejs/bin/r.js
+	modified:   node_modules/requirejs/package.json
+	modified:   node_modules/socket.io-client/node_modules/backo2/package.json
+	modified:   node_modules/socket.io-client/node_modules/component-bind/package.json
+	modified:   node_modules/socket.io-client/node_modules/component-emitter/package.json
+	modified:   node_modules/socket.io-client/node_modules/debug/package.json
+	modified:   node_modules/socket.io-client/node_modules/engine.io-client/lib/transports/index.js
+	modified:   node_modules/socket.io-client/node_modules/engine.io-client/lib/transports/polling-xhr.js
+	modified:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/component-inherit/package.json
+	modified:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/debug/node_modules/ms/package.json
+	modified:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/debug/package.json
+	modified:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/after/package.json
+	modified:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/arraybuffer.slice/package.json
+	modified:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/base64-arraybuffer/package.json
+	modified:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/blob/package.json
+	modified:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/package.json
+	modified:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/tests/generate-test-data.py
+	modified:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/package.json
+	modified:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/has-cors/node_modules/global/package.json
+	modified:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/has-cors/package.json
+	modified:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/parsejson/node_modules/better-assert/node_modules/callsite/package.json
+	modified:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/parsejson/node_modules/better-assert/package.json
+	modified:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/parsejson/package.json
+	modified:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/parseqs/node_modules/better-assert/node_modules/callsite/package.json
+	modified:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/parseqs/node_modules/better-assert/package.json
+	modified:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/parseqs/package.json
+	modified:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/parseuri/node_modules/better-assert/node_modules/callsite/package.json
+	modified:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/parseuri/node_modules/better-assert/package.json
+	modified:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/parseuri/package.json
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/.npmignore
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/.travis.yml
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/README.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/binding.gyp
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/build/Makefile
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/build/Release/.deps/Release/bufferutil.node.d
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/build/Release/.deps/Release/obj.target/bufferutil.node.d
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/build/Release/.deps/Release/obj.target/bufferutil/src/bufferutil.o.d
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/build/Release/bufferutil.node
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/build/Release/linker.lock
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/build/Release/obj.target/bufferutil.node
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/build/Release/obj.target/bufferutil/src/bufferutil.o
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/build/binding.Makefile
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/build/bufferutil.target.mk
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/build/config.gypi
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/fallback.js
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/index.js
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/bindings/README.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/bindings/bindings.js
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/bindings/package.json
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/.dntrc
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/CHANGELOG.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/LICENSE.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/README.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/appveyor.yml
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/doc/.build.sh
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/doc/asyncworker.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/doc/buffers.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/doc/callback.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/doc/converters.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/doc/errors.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/doc/maybe_types.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/doc/methods.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/doc/new.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/doc/node_misc.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/doc/persistent.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/doc/scopes.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/doc/script.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/doc/string_bytes.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/doc/v8_internals.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/doc/v8_misc.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/include_dirs.js
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/nan.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/nan_callbacks.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/nan_callbacks_12_inl.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/nan_callbacks_pre_12_inl.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/nan_converters.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/nan_converters_43_inl.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/nan_converters_pre_43_inl.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/nan_implementation_12_inl.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/nan_implementation_pre_12_inl.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/nan_maybe_43_inl.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/nan_maybe_pre_43_inl.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/nan_new.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/nan_object_wrap.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/nan_persistent_12_inl.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/nan_persistent_pre_12_inl.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/nan_string_bytes.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/nan_typedarray_contents.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/nan_weak.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/package.json
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/tools/1to2.js
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/tools/README.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/node_modules/nan/tools/package.json
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/package.json
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/src/bufferutil.cc
+	modified:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/options/package.json
+	modified:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/ultron/package.json
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/.npmignore
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/.travis.yml
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/README.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/binding.gyp
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/build/Makefile
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/build/Release/.deps/Release/obj.target/validation.node.d
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/build/Release/.deps/Release/obj.target/validation/src/validation.o.d
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/build/Release/.deps/Release/validation.node.d
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/build/Release/linker.lock
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/build/Release/obj.target/validation.node
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/build/Release/obj.target/validation/src/validation.o
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/build/Release/validation.node
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/build/binding.Makefile
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/build/config.gypi
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/build/validation.target.mk
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/fallback.js
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/index.js
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/bindings/README.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/bindings/bindings.js
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/bindings/package.json
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/.dntrc
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/CHANGELOG.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/LICENSE.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/README.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/appveyor.yml
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/doc/.build.sh
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/doc/asyncworker.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/doc/buffers.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/doc/callback.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/doc/converters.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/doc/errors.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/doc/maybe_types.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/doc/methods.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/doc/new.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/doc/node_misc.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/doc/persistent.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/doc/scopes.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/doc/script.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/doc/string_bytes.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/doc/v8_internals.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/doc/v8_misc.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/include_dirs.js
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/nan.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/nan_callbacks.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/nan_callbacks_12_inl.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/nan_callbacks_pre_12_inl.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/nan_converters.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/nan_converters_43_inl.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/nan_converters_pre_43_inl.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/nan_implementation_12_inl.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/nan_implementation_pre_12_inl.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/nan_maybe_43_inl.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/nan_maybe_pre_43_inl.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/nan_new.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/nan_object_wrap.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/nan_persistent_12_inl.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/nan_persistent_pre_12_inl.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/nan_string_bytes.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/nan_typedarray_contents.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/nan_weak.h
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/package.json
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/tools/1to2.js
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/tools/README.md
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/node_modules/nan/tools/package.json
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/package.json
+	new file:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/src/validation.cc
+	modified:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/package.json
+	modified:   node_modules/socket.io-client/node_modules/engine.io-client/node_modules/xmlhttprequest/package.json
+	modified:   node_modules/socket.io-client/node_modules/engine.io-client/package.json
+	modified:   node_modules/socket.io-client/node_modules/has-binary/node_modules/isarray/package.json
+	modified:   node_modules/socket.io-client/node_modules/has-binary/package.json
+	modified:   node_modules/socket.io-client/node_modules/indexof/package.json
+	modified:   node_modules/socket.io-client/node_modules/object-component/package.json
+	modified:   node_modules/socket.io-client/node_modules/parseuri/node_modules/better-assert/node_modules/callsite/package.json
+	modified:   node_modules/socket.io-client/node_modules/parseuri/node_modules/better-assert/package.json
+	modified:   node_modules/socket.io-client/node_modules/parseuri/package.json
+	modified:   node_modules/socket.io-client/node_modules/socket.io-parser/node_modules/benchmark/package.json
+	modified:   node_modules/socket.io-client/node_modules/socket.io-parser/node_modules/benchmark/test/run-test.sh
+	modified:   node_modules/socket.io-client/node_modules/socket.io-parser/node_modules/isarray/package.json
+	modified:   node_modules/socket.io-client/node_modules/socket.io-parser/node_modules/json3/package.json
+	modified:   node_modules/socket.io-client/node_modules/socket.io-parser/package.json
+	modified:   node_modules/socket.io-client/node_modules/to-array/package.json
+	modified:   node_modules/socket.io-client/package.json
+	modified:   node_modules/sty/package.json
+	modified:   node_modules/stylus-blueprint/package.json
+	modified:   node_modules/stylus/bin/stylus
+	typechange: node_modules/stylus/node_modules/.bin/mkdirp
+	modified:   node_modules/stylus/node_modules/css-parse/package.json
+	modified:   node_modules/stylus/node_modules/debug/node_modules/ms/package.json
+	modified:   node_modules/stylus/node_modules/debug/package.json
+	modified:   node_modules/stylus/node_modules/glob/node_modules/inherits/package.json
+	modified:   node_modules/stylus/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/README.md
+	modified:   node_modules/stylus/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/lib/lru-cache.js
+	modified:   node_modules/stylus/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/package.json
+	modified:   node_modules/stylus/node_modules/glob/node_modules/minimatch/node_modules/sigmund/package.json
+	modified:   node_modules/stylus/node_modules/glob/node_modules/minimatch/package.json
+	modified:   node_modules/stylus/node_modules/glob/package.json
+	modified:   node_modules/stylus/node_modules/mkdirp/bin/cmd.js
+	modified:   node_modules/stylus/node_modules/mkdirp/node_modules/minimist/package.json
+	modified:   node_modules/stylus/node_modules/mkdirp/package.json
+	modified:   node_modules/stylus/node_modules/sax/package.json
+	modified:   node_modules/stylus/node_modules/source-map/node_modules/amdefine/package.json
+	modified:   node_modules/stylus/node_modules/source-map/package.json
+	modified:   node_modules/stylus/node_modules/source-map/test/run-tests.js
+	modified:   node_modules/stylus/package.json
+	modified:   node_modules/watch/cli.js
+	modified:   node_modules/watch/node_modules/exec-sh/node_modules/merge/package.json
+	modified:   node_modules/watch/node_modules/exec-sh/package.json
+	modified:   node_modules/watch/node_modules/minimist/package.json
+	modified:   node_modules/watch/package.json
+	modified:   node_modules/watch/release.sh
+	modified:   node_modules/wrench/package.json
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	deleted:    node_modules/.bin/cake.cmd
+	deleted:    node_modules/.bin/coffee.cmd
+	deleted:    node_modules/.bin/jade.cmd
+	deleted:    node_modules/.bin/r.js.cmd
+	deleted:    node_modules/.bin/stylus.cmd
+	deleted:    node_modules/.bin/watch.cmd
+	deleted:    node_modules/express/node_modules/debug/node_modules/ms/History.md
+	deleted:    node_modules/express/node_modules/path-to-regexp/History.md
+	deleted:    node_modules/express/node_modules/send/node_modules/.bin/mime.cmd
+	deleted:    node_modules/express/node_modules/send/node_modules/ms/History.md
+	deleted:    node_modules/jade/History.md
+	deleted:    node_modules/jade/node_modules/.bin/cleancss.cmd
+	deleted:    node_modules/jade/node_modules/.bin/mkdirp.cmd
+	deleted:    node_modules/jade/node_modules/.bin/uglifyjs.cmd
+	deleted:    node_modules/jade/node_modules/clean-css/node_modules/commander/History.md
+	deleted:    node_modules/jade/node_modules/clean-css/node_modules/commander/LICENSE
+	deleted:    node_modules/jade/node_modules/commander/History.md
+	deleted:    node_modules/jade/node_modules/constantinople/node_modules/.bin/acorn.cmd
+	deleted:    node_modules/jade/node_modules/transformers/node_modules/.bin/uglifyjs.cmd
+	deleted:    node_modules/jade/node_modules/uglify-js/node_modules/yargs/CHANGELOG.md
+	deleted:    node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/camelcase/license
+	deleted:    node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/center-align/LICENSE
+	deleted:    node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/center-align/node_modules/align-text/LICENSE
+	deleted:    node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/center-align/node_modules/align-text/node_modules/kind-of/LICENSE
+	deleted:    node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/center-align/node_modules/align-text/node_modules/longest/LICENSE
+	deleted:    node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/center-align/node_modules/align-text/node_modules/repeat-string/LICENSE
+	deleted:    node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/center-align/node_modules/lazy-cache/LICENSE
+	deleted:    node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/right-align/LICENSE
+	deleted:    node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/right-align/node_modules/align-text/LICENSE
+	deleted:    node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/right-align/node_modules/align-text/node_modules/kind-of/LICENSE
+	deleted:    node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/right-align/node_modules/align-text/node_modules/longest/LICENSE
+	deleted:    node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/right-align/node_modules/align-text/node_modules/repeat-string/LICENSE
+	deleted:    node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/decamelize/license
+	deleted:    node_modules/jade/node_modules/with/node_modules/.bin/acorn.cmd
+	deleted:    node_modules/jade/node_modules/with/node_modules/acorn-globals/node_modules/.bin/acorn.cmd
+	deleted:    node_modules/nib/node_modules/.bin/stylus.cmd
+	deleted:    node_modules/nib/node_modules/stylus/node_modules/debug/node_modules/ms/History.md
+	deleted:    node_modules/phantom/node_modules/.bin/express.cmd
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/node_modules/.bin/uglifyjs.cmd
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/node_modules/websocket-client/lib/.websocket.js.swp
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/support/should.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/support/test-runner/app.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/support/test-runner/index.jade
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/support/test-runner/public/javascript/jquery.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/support/test-runner/public/javascript/runner.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/support/test-runner/public/javascript/script.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/support/test-runner/public/stylesheets/main.css
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io-client/support/test-runner/public/stylesheets/main.styl
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/examples/chat/app.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/examples/chat/index.jade
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/examples/chat/package.json
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/examples/chat/public/stylesheets/mixins.styl
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/examples/chat/public/stylesheets/style.css
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/examples/chat/public/stylesheets/style.styl
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/examples/irc-output/app.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/examples/irc-output/index.jade
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/examples/irc-output/irc.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/examples/irc-output/package.json
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/examples/irc-output/public/stylesheets/style.styl
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/support/node-websocket-client/LICENSE
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/support/node-websocket-client/Makefile
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/support/node-websocket-client/README.md
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/support/node-websocket-client/examples/client-unix.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/support/node-websocket-client/examples/client.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/support/node-websocket-client/examples/server-unix.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/support/node-websocket-client/lib/websocket.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/support/node-websocket-client/package.json
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/support/node-websocket-client/test/test-basic.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/support/node-websocket-client/test/test-client-close.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/support/node-websocket-client/test/test-readonly-attrs.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/support/node-websocket-client/test/test-ready-state.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/support/node-websocket-client/test/test-server-close.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/support/node-websocket-client/test/test-unix-send-fd.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/support/node-websocket-client/test/test-unix-sockets.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/test/common.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/test/fixtures/cert.crt
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/test/fixtures/key.key
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/test/hybi-common.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/test/io.test.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/test/leaks/socket.leaktest.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/test/manager.test.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/test/namespace.test.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/test/parser.test.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/test/socket.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/test/static.test.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/test/stores.memory.test.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/test/stores.redis.test.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/test/transports.flashsocket.test.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/test/transports.htmlfile.test.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/test/transports.jsonp-polling.test.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/test/transports.websocket.hybi07-12.parser.test.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/test/transports.websocket.hybi16.parser.test.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/test/transports.websocket.test.js
+	deleted:    node_modules/phantom/node_modules/dnode/node_modules/socket.io/test/transports.xhr-polling.test.js
+	deleted:    node_modules/phantom/node_modules/express/node_modules/debug/node_modules/ms/History.md
+	deleted:    node_modules/stylus-blueprint/node_modules/.bin/stylus
+	deleted:    node_modules/stylus-blueprint/node_modules/.bin/stylus.cmd
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/LICENSE
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/Readme.md
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/bin/stylus
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/index.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/browserify.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/cache/fs.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/cache/index.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/cache/memory.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/cache/null.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/colors.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/convert/css.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/errors.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/functions/image.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/functions/index.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/functions/index.styl
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/functions/resolver.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/functions/url.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/lexer.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/middleware.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/arguments.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/atblock.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/atrule.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/binop.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/block.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/boolean.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/call.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/charset.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/comment.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/each.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/expression.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/extend.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/feature.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/function.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/group.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/hsla.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/ident.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/if.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/import.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/index.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/keyframes.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/literal.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/media.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/member.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/namespace.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/node.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/null.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/object.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/params.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/property.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/query-list.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/query.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/return.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/rgba.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/root.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/selector.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/string.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/supports.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/ternary.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/unaryop.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/nodes/unit.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/parser.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/renderer.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/stack/frame.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/stack/index.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/stack/scope.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/stylus.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/token.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/units.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/utils.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/visitor/compiler.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/visitor/deps-resolver.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/visitor/evaluator.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/visitor/index.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/visitor/normalizer.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/lib/visitor/sourcemapper.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/.bin/mkdirp
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/.bin/mkdirp.cmd
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/css-parse/Readme.md
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/css-parse/index.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/css-parse/package.json
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/debug/.jshintrc
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/debug/.npmignore
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/debug/History.md
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/debug/Makefile
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/debug/Readme.md
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/debug/bower.json
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/debug/browser.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/debug/component.json
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/debug/debug.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/debug/node.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/debug/node_modules/ms/.npmignore
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/debug/node_modules/ms/History.md
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/debug/node_modules/ms/LICENSE
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/debug/node_modules/ms/README.md
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/debug/node_modules/ms/index.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/debug/node_modules/ms/package.json
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/debug/package.json
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/.npmignore
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/.travis.yml
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/LICENSE
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/README.md
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/examples/g.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/examples/usr-local.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/glob.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/inherits/LICENSE
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/inherits/README.md
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/inherits/inherits.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/inherits/inherits_browser.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/inherits/package.json
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/inherits/test.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/minimatch/.npmignore
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/minimatch/LICENSE
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/minimatch/README.md
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/minimatch/minimatch.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/.npmignore
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/.travis.yml
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/CONTRIBUTORS
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/LICENSE
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/README.md
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/lib/lru-cache.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/package.json
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/test/basic.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/test/foreach.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/test/memory-leak.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/test/serialize.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/minimatch/node_modules/sigmund/LICENSE
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/minimatch/node_modules/sigmund/README.md
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/minimatch/node_modules/sigmund/bench.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/minimatch/node_modules/sigmund/package.json
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/minimatch/node_modules/sigmund/sigmund.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/minimatch/node_modules/sigmund/test/basic.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/minimatch/package.json
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/minimatch/test/basic.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/minimatch/test/brace-expand.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/minimatch/test/caching.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/minimatch/test/defaults.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/node_modules/minimatch/test/extglob-ending-with-state-char.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/package.json
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/test/00-setup.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/test/bash-comparison.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/test/bash-results.json
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/test/cwd-test.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/test/globstar-match.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/test/mark.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/test/new-glob-optional-options.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/test/nocase-nomagic.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/test/pause-resume.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/test/readme-issue.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/test/root-nomount.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/test/root.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/test/stat.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/glob/test/zz-cleanup.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/.travis.yml
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/LICENSE
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/bin/cmd.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/bin/usage.txt
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/examples/pow.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/index.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/node_modules/minimist/.travis.yml
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/node_modules/minimist/LICENSE
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/node_modules/minimist/example/parse.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/node_modules/minimist/index.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/node_modules/minimist/package.json
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/node_modules/minimist/readme.markdown
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/node_modules/minimist/test/dash.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/node_modules/minimist/test/default_bool.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/node_modules/minimist/test/dotted.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/node_modules/minimist/test/long.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/node_modules/minimist/test/parse.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/node_modules/minimist/test/parse_modified.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/node_modules/minimist/test/short.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/node_modules/minimist/test/whitespace.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/package.json
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/readme.markdown
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/test/chmod.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/test/clobber.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/test/mkdirp.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/test/opts_fs.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/test/opts_fs_sync.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/test/perm.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/test/perm_sync.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/test/race.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/test/rel.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/test/return.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/test/return_sync.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/test/root.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/test/sync.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/test/umask.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/mkdirp/test/umask_sync.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/AUTHORS
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/LICENSE
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/LICENSE-W3C.html
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/README.md
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/component.json
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/examples/big-not-pretty.xml
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/examples/example.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/examples/get-products.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/examples/hello-world.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/examples/not-pretty.xml
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/examples/pretty-print.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/examples/shopping.xml
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/examples/strict.dtd
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/examples/test.html
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/examples/test.xml
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/lib/sax.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/package.json
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/attribute-name.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/attribute-no-space.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/buffer-overrun.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/case.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/cdata-chunked.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/cdata-end-split.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/cdata-fake-end.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/cdata-multiple.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/cdata.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/cyrillic.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/duplicate-attribute.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/end_empty_stream.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/entities.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/entity-mega.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/flush.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/index.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/issue-23.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/issue-30.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/issue-35.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/issue-47.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/issue-49.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/issue-84.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/parser-position.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/script-close-better.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/script.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/self-closing-child-strict.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/self-closing-child.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/self-closing-tag.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/stray-ending.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/trailing-attribute-no-value.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/trailing-non-whitespace.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/unclosed-root.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/unquoted.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/utf8-split.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/xmlns-as-tag-name.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/xmlns-issue-41.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/xmlns-rebinding.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/xmlns-strict.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/xmlns-unbound-element.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/xmlns-unbound.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/xmlns-xml-default-ns.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/xmlns-xml-default-prefix-attribute.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/xmlns-xml-default-prefix.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/sax/test/xmlns-xml-default-redefine.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/.npmignore
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/.travis.yml
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/CHANGELOG.md
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/LICENSE
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/Makefile.dryice.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/README.md
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/build/assert-shim.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/build/mini-require.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/build/prefix-source-map.jsm
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/build/prefix-utils.jsm
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/build/suffix-browser.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/build/suffix-source-map.jsm
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/build/suffix-utils.jsm
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/build/test-prefix.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/build/test-suffix.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/lib/source-map.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/lib/source-map/array-set.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/lib/source-map/base64-vlq.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/lib/source-map/base64.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/lib/source-map/binary-search.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/lib/source-map/mapping-list.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/lib/source-map/source-map-consumer.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/lib/source-map/source-map-generator.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/lib/source-map/source-node.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/lib/source-map/util.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/node_modules/amdefine/LICENSE
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/node_modules/amdefine/README.md
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/node_modules/amdefine/amdefine.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/node_modules/amdefine/intercept.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/node_modules/amdefine/package.json
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/package.json
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/test/run-tests.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/test/source-map/test-api.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/test/source-map/test-array-set.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/test/source-map/test-base64-vlq.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/test/source-map/test-base64.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/test/source-map/test-binary-search.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/test/source-map/test-dog-fooding.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/test/source-map/test-source-map-consumer.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/test/source-map/test-source-map-generator.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/test/source-map/test-source-node.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/test/source-map/test-util.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/node_modules/source-map/test/source-map/util.js
+	deleted:    node_modules/stylus-blueprint/node_modules/stylus/package.json
+	deleted:    node_modules/stylus/node_modules/.bin/mkdirp.cmd
+	deleted:    node_modules/stylus/node_modules/debug/node_modules/ms/History.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	out
+
