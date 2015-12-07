@@ -5,6 +5,7 @@ Thumbs.db
 .sass-cache/
 .project
 public/tmp/
+node_modules/
 output_static/
 output_static/*
 output_static/*/*
