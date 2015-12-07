@@ -31,6 +31,7 @@ define [
             Cancel: =>
               @dialog.dialog 'close'
               return
+            'Test' : @testButton
           close: ->
             form[0].reset()
             return
@@ -67,6 +68,8 @@ define [
         nick_name = formData['nickname']
         alert "Hello " + nick_name + "!"
 
+      testButton: =>
+        window.location.href = "index"
       remove: ->
         super
         @off()
