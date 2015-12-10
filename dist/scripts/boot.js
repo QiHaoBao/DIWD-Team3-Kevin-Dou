@@ -86933,11 +86933,25 @@ define("libs/json2", function(){});
         };
 
         FileHandler.prototype.loadServerFile = function() {
-          var txt;
           this.trigger("ClearWorkspace");
           console.log("calling [loadServerFile]");
-          txt = '{"uid":12,"workflow":{"abstract":false,"context":{"author":"","affiliation":"","keywords":"","purpose":"","description":"","constraints":[]},"user":{"username":"","nickname":"","affiliation":"","note":"","constraints":[]}},"nodes":[{"nid":4,"name":"Integer","type":"Integer","anim":false,"x":154,"y":73,"fields":{"in":[{"name":"in","type":"Float","custom":false,"val":0}],"out":[{"name":"out","type":"Float","custom":false},{"name":"out0","type":"String","custom":false,"val":0}]}},{"nid":8,"name":"Integer","type":"Integer","anim":false,"x":456,"y":166,"fields":{"in":[{"name":"in","type":"Float","custom":false}],"out":[{"name":"out","type":"Float","custom":false},{"name":"out0","type":"String","custom":false,"val":0}]}}],"connections":[{"id":12,"from_node":4,"from":"out","to_node":8,"to":"in"}],"groups":[]}';
-          return this.loadFromJsonData(txt);
+          return $.ajax({
+            type: "GET",
+            url: "/vistrails/load",
+            data: {
+              workflowId: $("#dataId").attr('data-workflowId')
+            },
+            dataType: 'json',
+            success: function(response) {
+              console.log("success");
+              return this.loadFromJsonData(response);
+            },
+            error: function(response) {
+              console.log("success");
+              this.loadFromJsonData(response);
+              return "Error from Server";
+            }
+          });
         };
 
         FileHandler.prototype.executeAndSave = function() {
@@ -86962,8 +86976,7 @@ define("libs/json2", function(){});
             url: "/vistrails/save",
             data: {
               workflowId: $("#dataId").attr('data-workflowId'),
-              jsonString: this.getLocalJson(),
-              csrfmiddlewaretoken: $("#dataId").attr('data-csrf')
+              jsonString: this.getLocalJson()
             },
             dataType: 'json',
             success: function(response) {
