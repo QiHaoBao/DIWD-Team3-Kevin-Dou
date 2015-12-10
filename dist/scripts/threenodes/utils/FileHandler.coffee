@@ -117,11 +117,17 @@ define [
  					
  					success: (response) ->
  						console.log "success"
- 						self.loadFromJsonData(response)
+ 						console.log response
+ 						console.log typeof(response)
+ 						console.log response.responseText
+ 						self.loadFromJsonData(response.responseText)
 
  					error: (response) ->
  						console.log "success"
- 						self.loadFromJsonData(response)
+ 						console.log response
+ 						console.log typeof(response)
+ 						console.log response.responseText
+ 						self.loadFromJsonData(response.responseText)
  						return "Error from Server"
 
 

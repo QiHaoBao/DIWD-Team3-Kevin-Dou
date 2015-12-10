@@ -86946,11 +86946,17 @@ define("libs/json2", function(){});
             dataType: 'json',
             success: function(response) {
               console.log("success");
-              return self.loadFromJsonData(response);
+              console.log(response);
+              console.log(typeof response);
+              console.log(response.responseText);
+              return self.loadFromJsonData(response.responseText);
             },
             error: function(response) {
               console.log("success");
-              self.loadFromJsonData(response);
+              console.log(response);
+              console.log(typeof response);
+              console.log(response.responseText);
+              self.loadFromJsonData(response.responseText);
               return "Error from Server";
             }
           });
