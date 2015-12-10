@@ -33,36 +33,9 @@ define [
 
         _.extend(@, Backbone.Events)
         
-        loaded_data = JSON.parse($("#dataId").attr('data-jsonString'))
-        @workflow = new ThreeNodes.Workflow(loaded_data.workflow)
-        
-        # First recreate the group definitions
-        if loaded_data.groups
-          for grp_def in loaded_data.groups
-            @workflow.group_definitions.create(grp_def)
-
-          # Create the nodes
-        for node in loaded_data.nodes
-          if node.type != "Group"
-          # Create a simple node
-            @workflow.nodes.createNode(node)
-          else
-              # If the node is a group we first need to get the previously created group definition
-            def = @workflow.group_definitions.getByGid(node.definition_id)
-            if def
-              node.definition = def
-              grp = @workflow.nodes.createGroup(node)
-            else
-              console.log "can't find the GroupDefinition: #{node.definition_id}"
-
-      # Create the connections
-        for connection in loaded_data.connections
-          @workflow.nodes.createConnectionFromObject(connection)
-
-        @workflow.nodes.indexer.uid = loaded_data.uid
-        delay = (ms, func) => setTimeout func, ms
-        delay 1, () =>
-          @workflow.nodes.renderAllConnections()
+        #loaded_data = JSON.parse($("#dataId").attr('data-jsonString'))
+        @workflow = new ThreeNodes.Workflow()
+               
 
         # a stack to store super workflow strs
         @superworkflows = []
@@ -83,7 +56,7 @@ define [
         @socket = new ThreeNodes.AppWebsocket(websocket_enabled)
         @webgl = new ThreeNodes.WebglBase()
         @file_handler = new ThreeNodes.FileHandler(@workflow)
-
+        @workflow = @file_handler.loadFromJsonData($("#dataId").attr('data-jsonString'))
 
         # File and url events
         @file_handler.on("ClearWorkspace", () =>
@@ -232,7 +205,7 @@ define [
           @ui.toolbar.on 'open', @triggerLoadFile
           @ui.toolbar.on 'save', @file_handler.saveLocalFile
           @ui.toolbar.on 'sync', @file_handler.loadServerFile
-          @ui.toolbar.on 'signup', @createNewUser
+          @ui.toolbar.on 'signup', @file_handler.sendToServer
           @ui.toolbar.on 'pipeline', @callWorkflowAPIs
           @ui.toolbar.on 'history', @callWorkflowAPIs
           @ui.toolbar.on 'search', @callWorkflowAPIs
