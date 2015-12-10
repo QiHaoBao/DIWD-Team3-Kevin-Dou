@@ -89070,7 +89070,7 @@ define("libs/notify.min", function(){});
           };
           this.settings = $.extend(settings, options);
           _.extend(this, Backbone.Events);
-          loaded_data = JSON.parse('{"uid":12,"workflow":{"abstract":false,"context":{"author":"yalei","affiliation":"","keywords":"","purpose":"","description":"","constraints":[]},"user":{"username":"","nickname":"","affiliation":"","note":"","constraints":[]}},"nodes":[{"nid":4,"name":"Integer","type":"Integer","anim":false,"x":154,"y":73,"fields":{"in":[{"name":"in","type":"Float","custom":false,"val":0}],"out":[{"name":"out","type":"Float","custom":false},{"name":"out0","type":"String","custom":false,"val":0}]}},{"nid":8,"name":"Integer","type":"Integer","anim":false,"x":456,"y":166,"fields":{"in":[{"name":"in","type":"Float","custom":false}],"out":[{"name":"out","type":"Float","custom":false},{"name":"out0","type":"String","custom":false,"val":0}]}}],"connections":[{"id":12,"from_node":4,"from":"out","to_node":8,"to":"in"}],"groups":[]}');
+          loaded_data = JSON.parse($("#dataId").attr('data-jsonString'));
           this.workflow = new ThreeNodes.Workflow(loaded_data.workflow);
           if (loaded_data.groups) {
             _ref = loaded_data.groups;
