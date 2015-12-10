@@ -86933,6 +86933,7 @@ define("libs/json2", function(){});
         };
 
         FileHandler.prototype.loadServerFile = function() {
+          var self;
           this.trigger("ClearWorkspace");
           console.log("calling [loadServerFile]");
           return $.ajax({
@@ -86941,14 +86942,15 @@ define("libs/json2", function(){});
             data: {
               workflowId: $("#dataId").attr('data-workflowId')
             },
-            dataType: 'json',
+            dataType: 'json'
+          }, self = this, {
             success: function(response) {
               console.log("success");
-              return this.loadFromJsonData(response);
+              return self.loadFromJsonData(response);
             },
             error: function(response) {
               console.log("success");
-              this.loadFromJsonData(response);
+              self.loadFromJsonData(response);
               return "Error from Server";
             }
           });
@@ -89099,6 +89101,7 @@ define("libs/notify.min", function(){});
           this.webgl = new ThreeNodes.WebglBase();
           this.file_handler = new ThreeNodes.FileHandler(this.workflow);
           this.workflow = this.file_handler.loadFromJsonData($("#dataId").attr('data-jsonString'));
+          this.file_handler = new ThreeNodes.FileHandler(this.workflow);
           this.file_handler.on("ClearWorkspace", function() {
             return _this.clearWorkspace();
           }, this);

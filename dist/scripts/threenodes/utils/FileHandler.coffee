@@ -114,13 +114,14 @@ define [
  						workflowId: $("#dataId").attr('data-workflowId')
 
  					dataType: 'json'
+ 					self = this
  					success: (response) ->
  						console.log "success"
- 						@loadFromJsonData(response)
+ 						self.loadFromJsonData(response)
 
  					error: (response) ->
  						console.log "success"
- 						@loadFromJsonData(response)
+ 						self.loadFromJsonData(response)
  						return "Error from Server"
 
 
