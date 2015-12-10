@@ -90,16 +90,26 @@ define [
 			loadLocalFile: (e) =>
 				# Clear the workspace first
 				@trigger("ClearWorkspace")
-
 				# Load the file
 				file = e.target.files[0]
 				reader = new FileReader()
 				self = this
 				reader.onload = (e) ->
 					txt = e.target.result
+					console.log(txt)
 					# Call loadFromJsonData when the file is loaded
 					self.loadFromJsonData(txt)
 				reader.readAsText(file, "UTF-8")
+
+			loadServerFile: () =>
+				# Clear the workspace first
+				@trigger("ClearWorkspace")
+				console.log "calling [loadServerFile]"
+
+				# Load the file
+				txt = '{"uid":12,"workflow":{"abstract":false,"context":{"author":"","affiliation":"","keywords":"","purpose":"","description":"","constraints":[]},"user":{"username":"","nickname":"","affiliation":"","note":"","constraints":[]}},"nodes":[{"nid":4,"name":"Integer","type":"Integer","anim":false,"x":154,"y":73,"fields":{"in":[{"name":"in","type":"Float","custom":false,"val":0}],"out":[{"name":"out","type":"Float","custom":false},{"name":"out0","type":"String","custom":false,"val":0}]}},{"nid":8,"name":"Integer","type":"Integer","anim":false,"x":456,"y":166,"fields":{"in":[{"name":"in","type":"Float","custom":false}],"out":[{"name":"out","type":"Float","custom":false},{"name":"out0","type":"String","custom":false,"val":0}]}}],"connections":[{"id":12,"from_node":4,"from":"out","to_node":8,"to":"in"}],"groups":[]}'
+				@loadFromJsonData(txt)
+
 
 		# Execute event to give output
 			executeAndSave: () =>

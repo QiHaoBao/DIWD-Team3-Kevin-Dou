@@ -42,6 +42,7 @@ define [
         @
 
       openDialog: =>
+        console.log @dialog
         @dialog.dialog "open"
 
       setContext: =>
@@ -51,6 +52,7 @@ define [
           formData[@name] = @value
         @dialog.dialog 'close'
         @model.set formData
+        console.log(@model)
 
 
       remove: ->

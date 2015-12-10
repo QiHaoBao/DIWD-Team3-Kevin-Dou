@@ -12126,6 +12126,45 @@ define("libs/namespace", function(){});
 
 
 (function() {
+  var __hasProp = {}.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
+
+  define('cs!threenodes/models/User',['Underscore', 'Backbone'], function(_, Backbone) {
+    /* Context Model
+    */
+
+    var User;
+    return namespace("ThreeNodes", {
+      User: User = (function(_super) {
+
+        __extends(User, _super);
+
+        User.name = 'User';
+
+        function User() {
+          return User.__super__.constructor.apply(this, arguments);
+        }
+
+        User.prototype.defaults = function() {
+          return {
+            username: "",
+            nickname: "",
+            affiliation: "",
+            note: "",
+            constraints: []
+          };
+        };
+
+        return User;
+
+      })(Backbone.Model)
+    });
+  });
+
+}).call(this);
+
+
+(function() {
 
   define('cs!threenodes/utils/Indexer',['Underscore', 'Backbone'], function(_, Backbone) {
     var Indexer;
@@ -13477,7 +13516,7 @@ define("libs/namespace", function(){});
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
 
-  define('cs!threenodes/models/Workflow',['Underscore', 'Backbone', 'cs!threenodes/utils/Utils', 'cs!threenodes/models/Context', 'cs!threenodes/collections/Fields'], function(_, Backbone, Utils) {
+  define('cs!threenodes/models/Workflow',['Underscore', 'Backbone', 'cs!threenodes/utils/Utils', 'cs!threenodes/models/Context', 'cs!threenodes/models/User', 'cs!threenodes/collections/Fields'], function(_, Backbone, Utils) {
     /* workflow model
     */
 
@@ -13511,7 +13550,7 @@ define("libs/namespace", function(){});
         };
 
         Workflow.prototype.initialize = function(options) {
-          var context, settings,
+          var context, settings, user,
             _this = this;
           options = options || {};
           settings = {
@@ -13557,8 +13596,12 @@ define("libs/namespace", function(){});
             return _this.decreaseAbstractCount();
           });
           context = new ThreeNodes.Context(options.context);
-          return this.set({
+          this.set({
             context: context
+          });
+          user = new ThreeNodes.User(options.user);
+          return this.set({
+            user: user
           });
         };
 
@@ -32075,6 +32118,7 @@ define('text!templates/app_dialog.tmpl.html',[],function () { return '<div id="d
         };
 
         DialogView.prototype.openDialog = function() {
+          console.log(this.dialog);
           return this.dialog.dialog("open");
         };
 
@@ -32086,7 +32130,8 @@ define('text!templates/app_dialog.tmpl.html',[],function () { return '<div id="d
             return formData[this.name] = this.value;
           });
           this.dialog.dialog('close');
-          return this.model.set(formData);
+          this.model.set(formData);
+          return console.log(this.model);
         };
 
         DialogView.prototype.remove = function() {
@@ -32096,6 +32141,115 @@ define('text!templates/app_dialog.tmpl.html',[],function () { return '<div id="d
         };
 
         return DialogView;
+
+      })(Backbone.View)
+    });
+  });
+
+}).call(this);
+
+
+define('text!templates/app_signup.tmpl.html',[],function () { return '<div id="signup-form" title="User Sign Up">\n   <form>\n    <fieldset>\n      <div>\n        <label for="d_username">Username</label>\n        <input type="text" name="username" id="d_username" required class="text ui-widget-content ui-corner-all">\n      </div>\n      <div>\n        <label for="d_nickname">Nickname</label>\n        <input type="text" name="nickname" id="d_nickname" class="text ui-widget-content ui-corner-all">\n      </div>\n      <div>\n        <label for="d_affiliation">Affiliation</label>\n        <input type="text" name="affiliation" id="d_affiliation" required class="text ui-widget-content ui-corner-all">\n      </div>\n      <div>\n        <label for="d_note">Note</label>\n        <textarea rows="3" cols="3" name="note" id="d_note" placeholder="Enter note for this user"></textarea>\n      </div>\n\n      <!-- Allow form submission with keyboard without duplicating the dialog button -->\n      <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">\n    </fieldset>\n  </form>\n</div>\n';});
+
+
+(function() {
+  var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
+    __hasProp = {}.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
+
+  define('cs!threenodes/views/SignupView',['Underscore', 'Backbone', "text!templates/app_signup.tmpl.html", 'jquery'], function(_, Backbone, _template) {
+    /* DialogView
+    */
+
+    var SignupView;
+    return namespace("ThreeNodes", {
+      SignupView: SignupView = (function(_super) {
+
+        __extends(SignupView, _super);
+
+        SignupView.name = 'SignupView';
+
+        function SignupView() {
+          this.testButton = __bind(this.testButton, this);
+
+          this.userSignup = __bind(this.userSignup, this);
+
+          this.setContext = __bind(this.setContext, this);
+
+          this.openDialog = __bind(this.openDialog, this);
+
+          this.render = __bind(this.render, this);
+          return SignupView.__super__.constructor.apply(this, arguments);
+        }
+
+        SignupView.prototype.template = _.template(_template);
+
+        SignupView.prototype.render = function() {
+          var form,
+            _this = this;
+          this.$el.html(this.template());
+          this.dialog = this.$('#signup-form').dialog({
+            autoOpen: false,
+            height: 220,
+            width: 350,
+            modal: true,
+            buttons: {
+              'Sign up': this.userSignup,
+              Cancel: function() {
+                _this.dialog.dialog('close');
+              },
+              'Test': this.testButton
+            },
+            close: function() {
+              form[0].reset();
+            }
+          });
+          form = this.dialog.find('form').on('submit', function(event) {
+            event.preventDefault();
+            this.setContext();
+          });
+          return this;
+        };
+
+        SignupView.prototype.openDialog = function() {
+          console.log(this.dialog);
+          return this.dialog.dialog("open");
+        };
+
+        SignupView.prototype.setContext = function() {
+          var $inputs, formData;
+          formData = {};
+          $inputs = this.dialog.find("[name]");
+          $inputs.each(function() {});
+          formData[this.name] = this.value;
+          this.dialog.dialog('close');
+          this.model.set(formData);
+          return console.log(this.model);
+        };
+
+        SignupView.prototype.userSignup = function() {
+          var $inputs, formData, nick_name;
+          formData = {};
+          $inputs = this.dialog.find("[name]");
+          $inputs.each(function() {
+            return formData[this.name] = this.value;
+          });
+          this.dialog.dialog('close');
+          nick_name = formData['nickname'];
+          return alert("Hello " + nick_name + "!");
+        };
+
+        SignupView.prototype.testButton = function() {
+          return window.location.href = "index";
+        };
+
+        SignupView.prototype.remove = function() {
+          SignupView.__super__.remove.apply(this, arguments);
+          this.off();
+          return this.model.off(null, null, this);
+        };
+
+        return SignupView;
 
       })(Backbone.View)
     });
@@ -38207,7 +38361,7 @@ define("libs/jquery.layout-latest", function(){});
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
 
-  define('cs!threenodes/views/UI',['Underscore', 'Backbone', "text!templates/field_context_menu.tmpl.html", "text!templates/node_context_menu.tmpl.html", "text!templates/app_ui.tmpl.html", 'cs!threenodes/views/sidebar/Sidebar', 'cs!threenodes/views/MenuBar', 'cs!threenodes/views/Breadcrumb', 'cs!threenodes/views/DialogView', 'cs!threenodes/models/Context', "RequestAnimationFrame", "Raphael", "libs/jquery.contextMenu", "jquery.ui", "libs/jquery.transform2d", "libs/jquery-scrollview/jquery.scrollview", "libs/jquery.layout-latest"], function(_, Backbone, _view_field_context_menu, _view_node_context_menu, _view_app_ui) {
+  define('cs!threenodes/views/UI',['Underscore', 'Backbone', "text!templates/field_context_menu.tmpl.html", "text!templates/node_context_menu.tmpl.html", "text!templates/app_ui.tmpl.html", 'cs!threenodes/views/sidebar/Sidebar', 'cs!threenodes/views/MenuBar', 'cs!threenodes/views/Breadcrumb', 'cs!threenodes/views/DialogView', 'cs!threenodes/views/SignupView', 'cs!threenodes/models/Context', "RequestAnimationFrame", "Raphael", "libs/jquery.contextMenu", "jquery.ui", "libs/jquery.transform2d", "libs/jquery-scrollview/jquery.scrollview", "libs/jquery.layout-latest"], function(_, Backbone, _view_field_context_menu, _view_node_context_menu, _view_app_ui) {
     /* UI View
     */
 
@@ -38284,7 +38438,11 @@ define("libs/jquery.layout-latest", function(){});
           this.dialogView = new ThreeNodes.DialogView({
             model: this.workflow.get('context')
           });
+          this.signupView = new ThreeNodes.SignupView({
+            model: this.workflow
+          });
           this.$('#dialog').append(this.dialogView.render().el);
+          this.$('#dialog').append(this.signupView.render().el);
           this.initLayout();
           this.initDrop();
           this.showApplication();
@@ -82628,7 +82786,7 @@ define("csg", ["ThreeCSG"], function(){});
 }).call(this);
 
 
-define('text!templates/app_toolbar.tmpl.html',[],function () { return '<ul id="toolbar">\n  <li class=\'common\'>\n    <ul>\n      <li class=\'new\' data-event=\'new\'>\n        <span>New</span>\n      </li>\n      <li class=\'open\' data-event=\'open\'>\n        <span>Open</span>\n      </li>\n      <li class=\'save\' data-event=\'save\'>\n        <span>Save</span>\n      </li>\n      <li class=\'save\' data-event=\'save\'>\n        <span>Login</span>\n      </li>\n    </ul>\n  </li>\n  <li class=\'more\'>\n    <ul>\n      <li class=\'pipeline\' data-event=\'pipeline\'>\n        <span>Pipeline</span>\n      </li>\n      <li class=\'history\' data-event=\'history\'>\n        <span>History</span>\n      </li>\n      <li class=\'search\' data-event=\'search\'>\n        <span>Search</span>\n      </li>\n      <li class=\'explore\' data-event=\'explore\'>\n        <span>Explore</span>\n      </li>\n      <li class=\'provenance\' data-event=\'provenance\'>\n        <span>Provenance</span>\n      </li>\n      <li class=\'mashup\' data-event=\'mashup\'>\n        <span>Mashup</span>\n      </li>\n      <li class=\'execute\' data-event=\'execute\'>\n        <span>Execute</span>\n      </li>\n    </ul>\n  </li>\n</ul>\n';});
+define('text!templates/app_toolbar.tmpl.html',[],function () { return '<ul id="toolbar">\n  <li class=\'common\'>\n    <ul>\n      <li class=\'new\' data-event=\'new\'>\n        <span>New</span>\n      </li>\n      <li class=\'open\' data-event=\'open\'>\n        <span>Open</span>\n      </li>\n      <li class=\'open\' data-event=\'sync\'>\n        <span>Sync</span>\n      </li>\n      <li class=\'save\' data-event=\'save\'>\n        <span>Save</span>\n      </li>\n      <li class=\'signup\' data-event=\'signup\'>\n        <span>Sign Up</span>\n      </li>\n    </ul>\n  </li>\n  <li class=\'more\'>\n    <ul>\n      <li class=\'pipeline\' data-event=\'pipeline\'>\n        <span>Pipeline</span>\n      </li>\n      <li class=\'history\' data-event=\'history\'>\n        <span>History</span>\n      </li>\n      <li class=\'search\' data-event=\'search\'>\n        <span>Search</span>\n      </li>\n      <li class=\'explore\' data-event=\'explore\'>\n        <span>Explore</span>\n      </li>\n      <li class=\'provenance\' data-event=\'provenance\'>\n        <span>Provenance</span>\n      </li>\n      <li class=\'mashup\' data-event=\'mashup\'>\n        <span>Mashup</span>\n      </li>\n      <li class=\'execute\' data-event=\'execute\'>\n        <span>Execute</span>\n      </li>\n    </ul>\n  </li>\n</ul>\n';});
 
 
 (function() {
@@ -86652,6 +86810,8 @@ define("libs/json2", function(){});
 
           this.executeAndSave = __bind(this.executeAndSave, this);
 
+          this.loadServerFile = __bind(this.loadServerFile, this);
+
           this.loadLocalFile = __bind(this.loadLocalFile, this);
 
           this.loadFromJsonData = __bind(this.loadFromJsonData, this);
@@ -86765,9 +86925,18 @@ define("libs/json2", function(){});
           reader.onload = function(e) {
             var txt;
             txt = e.target.result;
+            console.log(txt);
             return self.loadFromJsonData(txt);
           };
           return reader.readAsText(file, "UTF-8");
+        };
+
+        FileHandler.prototype.loadServerFile = function() {
+          var txt;
+          this.trigger("ClearWorkspace");
+          console.log("calling [loadServerFile]");
+          txt = '{"uid":12,"workflow":{"abstract":false,"context":{"author":"","affiliation":"","keywords":"","purpose":"","description":"","constraints":[]},"user":{"username":"","nickname":"","affiliation":"","note":"","constraints":[]}},"nodes":[{"nid":4,"name":"Integer","type":"Integer","anim":false,"x":154,"y":73,"fields":{"in":[{"name":"in","type":"Float","custom":false,"val":0}],"out":[{"name":"out","type":"Float","custom":false},{"name":"out0","type":"String","custom":false,"val":0}]}},{"nid":8,"name":"Integer","type":"Integer","anim":false,"x":456,"y":166,"fields":{"in":[{"name":"in","type":"Float","custom":false}],"out":[{"name":"out","type":"Float","custom":false},{"name":"out0","type":"String","custom":false,"val":0}]}}],"connections":[{"id":12,"from_node":4,"from":"out","to_node":8,"to":"in"}],"groups":[]}';
+          return this.loadFromJsonData(txt);
         };
 
         FileHandler.prototype.executeAndSave = function() {
@@ -88866,6 +89035,10 @@ define("libs/notify.min", function(){});
         App.name = 'App';
 
         function App(options) {
+          this.setUserProfile = __bind(this.setUserProfile, this);
+
+          this.createNewUser = __bind(this.createNewUser, this);
+
           this.clearWorkspace = __bind(this.clearWorkspace, this);
 
           this.setWorkflowContext = __bind(this.setWorkflowContext, this);
@@ -88888,7 +89061,7 @@ define("libs/notify.min", function(){});
 
           this.clean = __bind(this.clean, this);
 
-          var settings, websocket_enabled,
+          var connection, def, delay, grp, grp_def, loaded_data, node, settings, websocket_enabled, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2,
             _this = this;
           window.app = this;
           settings = {
@@ -88897,7 +89070,42 @@ define("libs/notify.min", function(){});
           };
           this.settings = $.extend(settings, options);
           _.extend(this, Backbone.Events);
-          this.workflow = new ThreeNodes.Workflow();
+          loaded_data = JSON.parse('{"uid":12,"workflow":{"abstract":false,"context":{"author":"yalei","affiliation":"","keywords":"","purpose":"","description":"","constraints":[]},"user":{"username":"","nickname":"","affiliation":"","note":"","constraints":[]}},"nodes":[{"nid":4,"name":"Integer","type":"Integer","anim":false,"x":154,"y":73,"fields":{"in":[{"name":"in","type":"Float","custom":false,"val":0}],"out":[{"name":"out","type":"Float","custom":false},{"name":"out0","type":"String","custom":false,"val":0}]}},{"nid":8,"name":"Integer","type":"Integer","anim":false,"x":456,"y":166,"fields":{"in":[{"name":"in","type":"Float","custom":false}],"out":[{"name":"out","type":"Float","custom":false},{"name":"out0","type":"String","custom":false,"val":0}]}}],"connections":[{"id":12,"from_node":4,"from":"out","to_node":8,"to":"in"}],"groups":[]}');
+          this.workflow = new ThreeNodes.Workflow(loaded_data.workflow);
+          if (loaded_data.groups) {
+            _ref = loaded_data.groups;
+            for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+              grp_def = _ref[_i];
+              this.workflow.group_definitions.create(grp_def);
+            }
+          }
+          _ref1 = loaded_data.nodes;
+          for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
+            node = _ref1[_j];
+            if (node.type !== "Group") {
+              this.workflow.nodes.createNode(node);
+            } else {
+              def = this.workflow.group_definitions.getByGid(node.definition_id);
+              if (def) {
+                node.definition = def;
+                grp = this.workflow.nodes.createGroup(node);
+              } else {
+                console.log("can't find the GroupDefinition: " + node.definition_id);
+              }
+            }
+          }
+          _ref2 = loaded_data.connections;
+          for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
+            connection = _ref2[_k];
+            this.workflow.nodes.createConnectionFromObject(connection);
+          }
+          this.workflow.nodes.indexer.uid = loaded_data.uid;
+          delay = function(ms, func) {
+            return setTimeout(func, ms);
+          };
+          delay(1, function() {
+            return _this.workflow.nodes.renderAllConnections();
+          });
           this.superworkflows = [];
           this.enteredSubworkflows = [];
           ThreeNodes.renderer = {
@@ -88913,6 +89121,7 @@ define("libs/notify.min", function(){});
             return _this.clearWorkspace();
           }, this);
           this.file_handler.on('JSONLoading', function(workflow) {
+            console.log("[file_handler.on 'JSONLoading']");
             return _this.replaceWorkflow(workflow);
           }, this);
           this.url_handler.on("ClearWorkspace", function() {
@@ -89068,6 +89277,8 @@ define("libs/notify.min", function(){});
             });
             this.ui.toolbar.on('open', this.triggerLoadFile);
             this.ui.toolbar.on('save', this.file_handler.saveLocalFile);
+            this.ui.toolbar.on('sync', this.file_handler.loadServerFile);
+            this.ui.toolbar.on('signup', this.createNewUser);
             this.ui.toolbar.on('pipeline', this.callWorkflowAPIs);
             this.ui.toolbar.on('history', this.callWorkflowAPIs);
             this.ui.toolbar.on('search', this.callWorkflowAPIs);
@@ -89165,6 +89376,14 @@ define("libs/notify.min", function(){});
           if (this.ui) {
             return this.ui.clearWorkspace();
           }
+        };
+
+        App.prototype.createNewUser = function() {
+          return this.setUserProfile();
+        };
+
+        App.prototype.setUserProfile = function() {
+          return this.ui.signupView.openDialog();
         };
 
         return App;

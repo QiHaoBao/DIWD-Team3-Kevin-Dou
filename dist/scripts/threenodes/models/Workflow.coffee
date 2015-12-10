@@ -3,6 +3,7 @@ define [
   'Backbone',
   'cs!threenodes/utils/Utils',
   'cs!threenodes/models/Context',
+  'cs!threenodes/models/User',
   'cs!threenodes/collections/Fields',
 ], (_, Backbone, Utils) ->
   #"use strict"
@@ -80,6 +81,10 @@ define [
         # nested model
         context = new ThreeNodes.Context(options.context)
         @set {context: context}
+
+        # nested model
+        user = new ThreeNodes.User(options.user)
+        @set {user: user}
 
       decreaseAbstractCount: =>
         @abstractCount--
