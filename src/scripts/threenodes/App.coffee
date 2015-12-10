@@ -32,8 +32,38 @@ define [
         @settings = $.extend(settings, options)
 
         _.extend(@, Backbone.Events)
+        
+        loaded_data = JSON.parse('{"uid":12,"workflow":{"abstract":false,"context":{"author":"yalei","affiliation":"","keywords":"","purpose":"","description":"","constraints":[]},"user":{"username":"","nickname":"","affiliation":"","note":"","constraints":[]}},"nodes":[{"nid":4,"name":"Integer","type":"Integer","anim":false,"x":154,"y":73,"fields":{"in":[{"name":"in","type":"Float","custom":false,"val":0}],"out":[{"name":"out","type":"Float","custom":false},{"name":"out0","type":"String","custom":false,"val":0}]}},{"nid":8,"name":"Integer","type":"Integer","anim":false,"x":456,"y":166,"fields":{"in":[{"name":"in","type":"Float","custom":false}],"out":[{"name":"out","type":"Float","custom":false},{"name":"out0","type":"String","custom":false,"val":0}]}}],"connections":[{"id":12,"from_node":4,"from":"out","to_node":8,"to":"in"}],"groups":[]}')
+        @workflow = new ThreeNodes.Workflow(loaded_data.workflow)
+        
+        # First recreate the group definitions
+        if loaded_data.groups
+          for grp_def in loaded_data.groups
+            @workflow.group_definitions.create(grp_def)
 
-        @workflow = new ThreeNodes.Workflow()
+          # Create the nodes
+        for node in loaded_data.nodes
+          if node.type != "Group"
+          # Create a simple node
+            @workflow.nodes.createNode(node)
+          else
+              # If the node is a group we first need to get the previously created group definition
+            def = @workflow.group_definitions.getByGid(node.definition_id)
+            if def
+              node.definition = def
+              grp = @workflow.nodes.createGroup(node)
+            else
+              console.log "can't find the GroupDefinition: #{node.definition_id}"
+
+      # Create the connections
+        for connection in loaded_data.connections
+          @workflow.nodes.createConnectionFromObject(connection)
+
+        @workflow.nodes.indexer.uid = loaded_data.uid
+        delay = (ms, func) => setTimeout func, ms
+        delay 1, () =>
+          @workflow.nodes.renderAllConnections()
+
         # a stack to store super workflow strs
         @superworkflows = []
         # a stack to store the plain JSON representation of subworkflow instance
@@ -60,6 +90,7 @@ define [
           @clearWorkspace()
         , @)
         @file_handler.on 'JSONLoading', (workflow) =>
+          console.log "[file_handler.on 'JSONLoading']"
           @replaceWorkflow(workflow)
         , @
 
@@ -72,6 +103,8 @@ define [
         # Initialize the user interface and timeline
         @initUI()
 
+        
+        
         # Initialize the workspace view
         @workspace = new ThreeNodes.Workspace
           el: "#container"
@@ -305,6 +338,8 @@ define [
 
       setUserProfile: () =>
         @ui.signupView.openDialog()
+
+
 
 
 
