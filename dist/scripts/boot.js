@@ -86911,9 +86911,10 @@ define("libs/json2", function(){});
           delay = function(ms, func) {
             return setTimeout(func, ms);
           };
-          return delay(1, function() {
+          delay(1, function() {
             return workflow.nodes.renderAllConnections();
           });
+          return workflow;
         };
 
         FileHandler.prototype.loadLocalFile = function(e) {
@@ -86958,13 +86959,14 @@ define("libs/json2", function(){});
           };
           return $.ajax({
             type: "POST",
-            url: "/workflows",
-            data: JSON.stringify(data),
-            contentType: 'application/json',
-            cache: false,
-            success: function(xml) {
-              console.log("success");
-              return xml;
+            url: "/vistrails/save",
+            data: {
+              workflowId: $("#dataId").attr('data-workflowId'),
+              jsonString: this.getLocalJson()
+            },
+            dataType: 'json',
+            success: function(response) {
+              return console.log("success");
             },
             error: function(xml) {
               console.log("error case");
@@ -89061,7 +89063,7 @@ define("libs/notify.min", function(){});
 
           this.clean = __bind(this.clean, this);
 
-          var connection, def, delay, grp, grp_def, loaded_data, node, settings, websocket_enabled, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2,
+          var settings, websocket_enabled,
             _this = this;
           window.app = this;
           settings = {
@@ -89070,42 +89072,7 @@ define("libs/notify.min", function(){});
           };
           this.settings = $.extend(settings, options);
           _.extend(this, Backbone.Events);
-          loaded_data = JSON.parse($("#dataId").attr('data-jsonString'));
-          this.workflow = new ThreeNodes.Workflow(loaded_data.workflow);
-          if (loaded_data.groups) {
-            _ref = loaded_data.groups;
-            for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-              grp_def = _ref[_i];
-              this.workflow.group_definitions.create(grp_def);
-            }
-          }
-          _ref1 = loaded_data.nodes;
-          for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
-            node = _ref1[_j];
-            if (node.type !== "Group") {
-              this.workflow.nodes.createNode(node);
-            } else {
-              def = this.workflow.group_definitions.getByGid(node.definition_id);
-              if (def) {
-                node.definition = def;
-                grp = this.workflow.nodes.createGroup(node);
-              } else {
-                console.log("can't find the GroupDefinition: " + node.definition_id);
-              }
-            }
-          }
-          _ref2 = loaded_data.connections;
-          for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
-            connection = _ref2[_k];
-            this.workflow.nodes.createConnectionFromObject(connection);
-          }
-          this.workflow.nodes.indexer.uid = loaded_data.uid;
-          delay = function(ms, func) {
-            return setTimeout(func, ms);
-          };
-          delay(1, function() {
-            return _this.workflow.nodes.renderAllConnections();
-          });
+          this.workflow = new ThreeNodes.Workflow();
           this.superworkflows = [];
           this.enteredSubworkflows = [];
           ThreeNodes.renderer = {
@@ -89117,6 +89084,7 @@ define("libs/notify.min", function(){});
           this.socket = new ThreeNodes.AppWebsocket(websocket_enabled);
           this.webgl = new ThreeNodes.WebglBase();
           this.file_handler = new ThreeNodes.FileHandler(this.workflow);
+          this.workflow = this.file_handler.loadFromJsonData($("#dataId").attr('data-jsonString'));
           this.file_handler.on("ClearWorkspace", function() {
             return _this.clearWorkspace();
           }, this);
@@ -89278,7 +89246,7 @@ define("libs/notify.min", function(){});
             this.ui.toolbar.on('open', this.triggerLoadFile);
             this.ui.toolbar.on('save', this.file_handler.saveLocalFile);
             this.ui.toolbar.on('sync', this.file_handler.loadServerFile);
-            this.ui.toolbar.on('signup', this.createNewUser);
+            this.ui.toolbar.on('signup', this.file_handler.sendToServer);
             this.ui.toolbar.on('pipeline', this.callWorkflowAPIs);
             this.ui.toolbar.on('history', this.callWorkflowAPIs);
             this.ui.toolbar.on('search', this.callWorkflowAPIs);

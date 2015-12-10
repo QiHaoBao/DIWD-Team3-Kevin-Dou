@@ -86,6 +86,7 @@ define [
 				delay 1, () =>
 					workflow.nodes.renderAllConnections()
 
+				workflow
 
 			loadLocalFile: (e) =>
 				# Clear the workspace first
@@ -129,16 +130,13 @@ define [
 					workflow: workflow
 				$.ajax
 					type: "POST"
-					url: "/workflows" #"http://einstein.sv.cmu.edu:9018/vistrails"
-					data: JSON.stringify(data)
-					contentType: 'application/json'
-					# crossDomain: true
-					# dataType: "json"
-					cache: false
-					# async: false
-					success: (xml) ->
+					url: "/vistrails/save" #"http://einstein.sv.cmu.edu:9018/vistrails"
+					data: 
+						workflowId: $("#dataId").attr('data-workflowId')
+						jsonString: @getLocalJson()
+					dataType: 'json'
+					success: (response) ->
 						console.log "success"
-						return xml
 					error: (xml) ->
 						console.log "error case"
 						console.log xml
