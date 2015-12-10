@@ -707,11 +707,11 @@ button.ui-button::-moz-focus-inner {
 #timeline li .save {
   background: url("../assets/images/save.png") no-repeat center top;
 }
-#timeline li .serverLoad {
-  background: url("../assets/images/execute.png") no-repeat center top;
-}
 #timeline li .serverSave {
   background: url("../assets/images/pipeline.png") no-repeat center top;
+}
+#timeline li .serverLoad {
+  background: url("../assets/images/execute.png") no-repeat center top;
 }
 #timeline li .pipeline {
   background: url("../assets/images/pipeline.png") no-repeat center top;
