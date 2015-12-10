@@ -86948,16 +86948,15 @@ define("libs/json2", function(){});
               console.log("success");
               console.log(response);
               console.log(typeof response);
-              console.log(response.responseText);
-              return self.loadFromJsonData(response.responseText);
+              console.log(JSON.stringify(response));
+              return self.loadFromJsonData(JSON.stringify(response));
             },
             error: function(response) {
-              console.log("success");
+              console.log("error");
               console.log(response);
               console.log(typeof response);
-              console.log(response.responseText);
-              self.loadFromJsonData(response.responseText);
-              return "Error from Server";
+              console.log(JSON.stringify(response));
+              return self.loadFromJsonData(JSON.stringify(response));
             }
           });
         };

@@ -119,16 +119,15 @@ define [
  						console.log "success"
  						console.log response
  						console.log typeof(response)
- 						console.log response.responseText
- 						self.loadFromJsonData(response.responseText)
+ 						console.log JSON.stringify(response)
+ 						self.loadFromJsonData(JSON.stringify(response))
 
  					error: (response) ->
- 						console.log "success"
+ 						console.log "error"
  						console.log response
  						console.log typeof(response)
- 						console.log response.responseText
- 						self.loadFromJsonData(response.responseText)
- 						return "Error from Server"
+ 						console.log JSON.stringify(response)
+ 						self.loadFromJsonData(JSON.stringify(response))
 
 
 		# Execute event to give output
