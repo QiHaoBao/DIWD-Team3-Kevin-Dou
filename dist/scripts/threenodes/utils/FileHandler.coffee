@@ -114,21 +114,15 @@ define [
  						workflowId: $("#dataId").attr('data-workflowId')
 
  					dataType: 'json'
- 					
+
  					success: (response) ->
  						console.log "success"
- 						console.log response
- 						console.log typeof(response)
- 						console.log JSON.stringify(response)
- 						self.loadFromJsonData(JSON.stringify(response))
+ 						self.loadFromJsonData(response.toString())
 
  					error: (response) ->
- 						console.log "error"
- 						console.log response
- 						console.log typeof(response)
- 						console.log JSON.stringify(response)
- 						self.loadFromJsonData(JSON.stringify(response))
-
+ 						console.log "success"
+ 						self.loadFromJsonData(response)
+ 						return "Error from Server"
 
 		# Execute event to give output
 			executeAndSave: () =>
@@ -152,11 +146,12 @@ define [
 					data: 
 						workflowId: $("#dataId").attr('data-workflowId')
 						jsonString: @getLocalJson()
+						csrfmiddlewaretoken: $("#dataId").attr('data-csrf')
 					dataType: 'json'
 					success: (response) ->
 						console.log "success"
 					error: (xml) ->
-						console.log "error case"
+						console.log "success"
 						console.log xml
 						return "Error from Server"
 
