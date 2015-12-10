@@ -134,6 +134,7 @@ define [
 					data: 
 						workflowId: $("#dataId").attr('data-workflowId')
 						jsonString: @getLocalJson()
+						csrfmiddlewaretoken: $("#dataId").attr('data-csrf')
 					dataType: 'json'
 					success: (response) ->
 						console.log "success"

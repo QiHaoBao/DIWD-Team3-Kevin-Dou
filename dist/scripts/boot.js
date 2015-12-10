@@ -86962,7 +86962,8 @@ define("libs/json2", function(){});
             url: "/vistrails/save",
             data: {
               workflowId: $("#dataId").attr('data-workflowId'),
-              jsonString: this.getLocalJson()
+              jsonString: this.getLocalJson(),
+              csrfmiddlewaretoken: $("#dataId").attr('data-csrf')
             },
             dataType: 'json',
             success: function(response) {
