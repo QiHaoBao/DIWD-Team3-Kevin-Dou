@@ -86936,14 +86936,14 @@ define("libs/json2", function(){});
           var self;
           this.trigger("ClearWorkspace");
           console.log("calling [loadServerFile]");
+          self = this;
           return $.ajax({
             type: "GET",
             url: "/vistrails/load",
             data: {
               workflowId: $("#dataId").attr('data-workflowId')
             },
-            dataType: 'json'
-          }, self = this, {
+            dataType: 'json',
             success: function(response) {
               console.log("success");
               return self.loadFromJsonData(response);

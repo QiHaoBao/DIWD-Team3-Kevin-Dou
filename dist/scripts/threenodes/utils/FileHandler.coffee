@@ -106,7 +106,7 @@ define [
 				# Clear the workspace first
 				@trigger("ClearWorkspace")
 				console.log "calling [loadServerFile]"
-
+				self = this
 				$.ajax
  					type: "GET"
  					url: "/vistrails/load"
@@ -114,7 +114,7 @@ define [
  						workflowId: $("#dataId").attr('data-workflowId')
 
  					dataType: 'json'
- 					self = this
+ 					
  					success: (response) ->
  						console.log "success"
  						self.loadFromJsonData(response)
