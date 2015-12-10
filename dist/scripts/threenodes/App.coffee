@@ -57,6 +57,7 @@ define [
         @webgl = new ThreeNodes.WebglBase()
         @file_handler = new ThreeNodes.FileHandler(@workflow)
         @workflow = @file_handler.loadFromJsonData($("#dataId").attr('data-jsonString'))
+        @file_handler = new ThreeNodes.FileHandler(@workflow)
 
         # File and url events
         @file_handler.on("ClearWorkspace", () =>

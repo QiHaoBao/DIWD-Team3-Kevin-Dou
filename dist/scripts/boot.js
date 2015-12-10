@@ -86945,13 +86945,12 @@ define("libs/json2", function(){});
             },
             dataType: 'json',
             success: function(response) {
-              console.log("success");
-              return self.loadFromJsonData(response.toString());
+              console.log("success loading");
+              return self.loadFromJsonData(JSON.stringify(response));
             },
             error: function(response) {
-              console.log("success");
-              self.loadFromJsonData(response);
-              return "Error from Server";
+              console.log("error loading");
+              return self.loadFromJsonData(JSON.stringify(response));
             }
           });
         };
@@ -86978,17 +86977,14 @@ define("libs/json2", function(){});
             url: "/vistrails/save",
             data: {
               workflowId: $("#dataId").attr('data-workflowId'),
-              jsonString: this.getLocalJson(),
-              csrfmiddlewaretoken: $("#dataId").attr('data-csrf')
+              jsonString: this.getLocalJson()
             },
             dataType: 'json',
             success: function(response) {
-              return console.log("success");
+              return console.log("success saving");
             },
             error: function(xml) {
-              console.log("success");
-              console.log(xml);
-              return "Error from Server";
+              return console.log("error saving");
             }
           });
         };
@@ -89102,6 +89098,7 @@ define("libs/notify.min", function(){});
           this.webgl = new ThreeNodes.WebglBase();
           this.file_handler = new ThreeNodes.FileHandler(this.workflow);
           this.workflow = this.file_handler.loadFromJsonData($("#dataId").attr('data-jsonString'));
+          this.file_handler = new ThreeNodes.FileHandler(this.workflow);
           this.file_handler.on("ClearWorkspace", function() {
             return _this.clearWorkspace();
           }, this);
