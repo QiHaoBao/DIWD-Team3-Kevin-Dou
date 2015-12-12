@@ -252,7 +252,7 @@ define [
 
       goHome: ->
         # handled in menubar view
-        window.location.href = "home"
+        window.location.href = "/vistrails/home"
 
 
       callWorkflowAPIs: (eventName) =>

@@ -89304,7 +89304,7 @@ define("libs/notify.min", function(){});
         };
 
         App.prototype.goHome = function() {
-          return window.location.href = "home";
+          return window.location.href = "/vistrails/home";
         };
 
         App.prototype.callWorkflowAPIs = function(eventName) {
