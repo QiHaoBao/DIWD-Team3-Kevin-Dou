@@ -82786,7 +82786,7 @@ define("csg", ["ThreeCSG"], function(){});
 }).call(this);
 
 
-define('text!templates/app_toolbar.tmpl.html',[],function () { return '<ul id="toolbar">\n  <li class=\'common\'>\n    <ul>\n      <li class=\'new\' data-event=\'new\'>\n        <span>New</span>\n      </li>\n      <li class=\'save\' data-event=\'save\'>\n        <span>Save</span>\n      </li>\n      <li class=\'open\' data-event=\'open\'>\n        <span>Open</span>\n      </li>\n      <li class=\'serverSave\' data-event=\'signup\'>\n        <span>Sync</span>\n      </li>\n      <li class=\'serverLoad\' data-event=\'sync\'>\n        <span>Load</span>\n      </li>\n    </ul>\n  </li>\n  <li class=\'more\'>\n    <ul>\n      <li class=\'pipeline\' data-event=\'pipeline\'>\n        <span>Pipeline</span>\n      </li>\n      <li class=\'history\' data-event=\'history\'>\n        <span>History</span>\n      </li>\n      <li class=\'search\' data-event=\'search\'>\n        <span>Search</span>\n      </li>\n      <li class=\'explore\' data-event=\'explore\'>\n        <span>Explore</span>\n      </li>\n      <li class=\'provenance\' data-event=\'provenance\'>\n        <span>Provenance</span>\n      </li>\n      <li class=\'mashup\' data-event=\'mashup\'>\n        <span>Mashup</span>\n      </li>\n      <li class=\'execute\' data-event=\'execute\'>\n        <span>Execute</span>\n      </li>\n    </ul>\n  </li>\n</ul>\n';});
+define('text!templates/app_toolbar.tmpl.html',[],function () { return '<ul id="toolbar">\n  <li class=\'common\'>\n    <ul>\n      <li class=\'new\' data-event=\'new\'>\n        <span>New</span>\n      </li>\n      <li class=\'save\' data-event=\'save\'>\n        <span>Save</span>\n      </li>\n      <li class=\'open\' data-event=\'open\'>\n        <span>Open</span>\n      </li>\n      <li class=\'serverSave\' data-event=\'signup\'>\n        <span>Sync</span>\n      </li>\n      <li class=\'serverLoad\' data-event=\'sync\'>\n        <span>Load</span>\n      </li>\n      <li class=\'provenance\' data-event=\'home\'>\n        <span>Home</span>\n      </li>\n    </ul>\n  </li>\n  <li class=\'more\'>\n    <ul>\n      <li class=\'pipeline\' data-event=\'pipeline\'>\n        <span>Pipeline</span>\n      </li>\n      <li class=\'history\' data-event=\'history\'>\n        <span>History</span>\n      </li>\n      <li class=\'search\' data-event=\'search\'>\n        <span>Search</span>\n      </li>\n      <li class=\'explore\' data-event=\'explore\'>\n        <span>Explore</span>\n      </li>\n      <li class=\'provenance\' data-event=\'provenance\'>\n        <span>Provenance</span>\n      </li>\n      <li class=\'mashup\' data-event=\'mashup\'>\n        <span>Mashup</span>\n      </li>\n      <li class=\'execute\' data-event=\'execute\'>\n        <span>Execute</span>\n      </li>\n    </ul>\n  </li>\n</ul>\n';});
 
 
 (function() {
@@ -86945,12 +86945,13 @@ define("libs/json2", function(){});
             },
             dataType: 'json',
             success: function(response) {
-              console.log("success loading");
-              return self.loadFromJsonData(JSON.stringify(response));
+              console.log("success");
+              return self.loadFromJsonData(response.toString());
             },
             error: function(response) {
-              console.log("error loading");
-              return self.loadFromJsonData(JSON.stringify(response));
+              console.log("success");
+              self.loadFromJsonData(response);
+              return "Error from Server";
             }
           });
         };
@@ -86977,14 +86978,17 @@ define("libs/json2", function(){});
             url: "/vistrails/save",
             data: {
               workflowId: $("#dataId").attr('data-workflowId'),
-              jsonString: this.getLocalJson()
+              jsonString: this.getLocalJson(),
+              csrfmiddlewaretoken: $("#dataId").attr('data-csrf')
             },
             dataType: 'json',
             success: function(response) {
-              return console.log("success saving");
+              return console.log("success");
             },
             error: function(xml) {
-              return console.log("error saving");
+              console.log("success");
+              console.log(xml);
+              return "Error from Server";
             }
           });
         };
@@ -89098,7 +89102,6 @@ define("libs/notify.min", function(){});
           this.webgl = new ThreeNodes.WebglBase();
           this.file_handler = new ThreeNodes.FileHandler(this.workflow);
           this.workflow = this.file_handler.loadFromJsonData($("#dataId").attr('data-jsonString'));
-          this.file_handler = new ThreeNodes.FileHandler(this.workflow);
           this.file_handler.on("ClearWorkspace", function() {
             return _this.clearWorkspace();
           }, this);
@@ -89267,6 +89270,7 @@ define("libs/notify.min", function(){});
             this.ui.toolbar.on('explore', this.callWorkflowAPIs);
             this.ui.toolbar.on('provenance', this.callWorkflowAPIs);
             this.ui.toolbar.on('mashup', this.callWorkflowAPIs);
+            this.ui.toolbar.on('home', this.goHome);
             this.ui.toolbar.on('execute', this.execute, this);
             this.ui.on("CreateNode", function(options) {
               return _this.workflow.nodes.createNode(options);
@@ -89297,6 +89301,10 @@ define("libs/notify.min", function(){});
 
         App.prototype.triggerLoadFile = function() {
           return $("#main_file_input_open").click();
+        };
+
+        App.prototype.goHome = function() {
+          return window.location.href = "home";
         };
 
         App.prototype.callWorkflowAPIs = function(eventName) {

@@ -57,7 +57,6 @@ define [
         @webgl = new ThreeNodes.WebglBase()
         @file_handler = new ThreeNodes.FileHandler(@workflow)
         @workflow = @file_handler.loadFromJsonData($("#dataId").attr('data-jsonString'))
-        @file_handler = new ThreeNodes.FileHandler(@workflow)
 
         # File and url events
         @file_handler.on("ClearWorkspace", () =>
@@ -213,6 +212,7 @@ define [
           @ui.toolbar.on 'explore', @callWorkflowAPIs
           @ui.toolbar.on 'provenance', @callWorkflowAPIs
           @ui.toolbar.on 'mashup', @callWorkflowAPIs
+          @ui.toolbar.on 'home', @goHome
           @ui.toolbar.on 'execute', @execute, @
 
 
@@ -249,6 +249,11 @@ define [
       triggerLoadFile: ->
         # handled in menubar view
         $("#main_file_input_open").click()
+
+      goHome: ->
+        # handled in menubar view
+        window.location.href = "home"
+
 
       callWorkflowAPIs: (eventName) =>
         data =
